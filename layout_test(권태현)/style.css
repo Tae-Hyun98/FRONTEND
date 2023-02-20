@@ -3,9 +3,13 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body{height: 10000px;}
+body {
+  height: 100%;
+}
+
 .container {
   width: 1070px;
   margin: 0 auto;
@@ -99,9 +103,10 @@ li {
 /* second */
 .second .ev_bg {
   background-color: gainsboro;
-  height: 700px;
+  height: 800px;
   padding: 0 10px 0 10px;
   box-sizing: border-box;
+  margin-bottom: 10px;
 }
 
 .second .event {
@@ -132,21 +137,166 @@ li {
 }
 
 .event .ev_box2 .box1 {
-  height: 48%;
+  height: 49%;
   border: 1px solid #000;
   margin-bottom: 10px;
 }
 
 .event .ev_box2 .box2 {
-  height: 48%;
+  height: 49%;
   border: 1px solid #000;
 }
 
-.product_bg{
+.product_bg {
+  display: flex;
   background-color: gray;
   height: 49.3%;
   box-sizing: border-box;
   border: 1px solid #000;
 }
 
-.product_bg .product_L{}
+.green {
+  background-color: green;
+}
+
+.product_bg .product {
+  width: 50%;
+  height: 393px;
+  border: 1px solid #000;
+  margin-right: 10px;
+}
+
+.product_bg .product .product_L {
+  height: 100%;
+}
+
+.product_bg .product .product_L .p_box1 {
+  width: 100%;
+}
+
+.product_bg .product .p_box1 {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.product_bg .product .p_box1>div {
+  width: 100%;
+  height: 190px;
+  background-color: yellow;
+}
+
+.product_bg .product .p_box1>div:first-child {
+  margin-right: 10px;
+}
+
+.product_bg .product .product_L .p_box2 {
+  display: flex;
+}
+
+.product_bg .product .product_L .p_box2>div {
+  width: 100%;
+  height: 190px;
+  background-color: yellow;
+}
+
+.product_bg .product .product_L .p_box2>div:first-child {
+  margin-right: 10px;
+}
+
+.product_bg .product_R {
+  border: 1px solid #000;
+  width: 50%;
+}
+
+.wide {
+  width: 100%;
+  height: 250px;
+  background-color: gainsboro;
+  text-align: center;
+  line-height: 250px;
+  margin-bottom: 10px;
+}
+
+.third .ev_bg {
+  position: relative;
+  background-color: gainsboro;
+  height: 800px;
+  padding: 10px 10px 10px 10px;
+  box-sizing: border-box;
+}
+
+.third .best {
+  position: absolute;
+  right: 10px;
+  width: 60%;
+  background-color: gray;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.third .best>div {
+  border: 1px solid #000;
+  width: 23%;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.third .best>div:nth-child(5),
+.third .best>div:nth-child(6),
+.third .best>div:nth-child(7),
+.third .best>div:nth-child(8) {
+  margin-bottom: 0;
+}
+
+.blank {
+  height: 320px;
+}
+
+table {
+  width: 100%;
+}
+
+table,
+tr,
+th,
+td {
+  border-collapse: collapse;
+  border: 1px solid #000;
+  background-color: gray;
+}
+
+tr,
+td {
+  width: 200px;
+  height: 234px;
+}
+
+footer {
+  margin-top: 10px;
+  height: 261px;
+}
+
+footer .wide {
+  background-color: gray;
+  margin-bottom: 0;
+  height: 100%;
+}
+
+footer .bottom {
+  background-color: gainsboro;
+  display: flex;
+  height: 100%;
+}
+
+footer .bottom .logobox {
+  width: 20%;
+  border: 1px solid #000;
+  margin: 10px 10px 0 10px;
+}
+
+footer .bottom .copyright {
+  width: 80%;
+  border: 1px solid #000;
+  margin: 10px 10px 0 0;
+}
