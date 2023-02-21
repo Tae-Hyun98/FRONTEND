@@ -146,7 +146,7 @@ img {
   height: 60px;
 }
 
-.content_right .content_right_bottom li{
+.content_right .content_right_bottom li {
   float: left;
   width: 20%;
   height: 60px;
@@ -184,25 +184,23 @@ img {
 
 .second_banner {
   width: 100%;
-  height: 500px;
+  height: 600px;
   background-color: pink;
 }
 
 .s_banner {
   width: 1024px;
-  height: 500px;
+  height: 600px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .s_banner .s_banner_font {
   text-align: center;
+  padding-bottom: 30px;
 }
 
 .s_banner .s_banner_font h2 {
-  padding-top: 20px;
-}
-
-.s_banner .s_banner_font p {
   padding-top: 20px;
 }
 
@@ -213,17 +211,67 @@ img {
   padding: 5px 15px;
 }
 
+.s_banner .s_banner_font .q {
+  font-size: 30px;
+}
+
 .center_box {
   width: 100%;
-  height: 200px;
+  height: 235px;
   margin: 0 auto;
+  margin-bottom: 30px;
+
 }
 
 .center_box .box {
-  width: 20%;
-  height: 200px;
+  width: 23%;
+  height: 235px;
   background-color: #fff;
-  text-align: center;
   float: left;
   margin-right: 10px;
+}
+
+.center_box .box:last-child {
+  margin-right: 0;
+}
+
+.center_box .box .box_font {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.center_box .box .box_font p {
+  color: gray;
+}
+
+.btn {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.btn .vote_btn {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 40px;
+  padding: 20px 30px;
+}
+
+.btn .vote_btn h4 {
+  color: tomato;
+}
+
+.btn .vote_btn h1 {
+  color: #fff;
+}
+
+.second_bottom {
+  margin-top: 40px;
+}
+
+.second_bottom .s_bottom ul li {
+  text-align: left;
+}
+
+.second_bottom .s_bottom ul i{
+  font-size: 1px;
 }
