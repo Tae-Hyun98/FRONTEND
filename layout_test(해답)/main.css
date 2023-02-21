@@ -188,7 +188,7 @@ a {
 .best .best_item .best_sub {
   width: 100%;
   height: 200px;
- /*  background-color: yellow; */
+  /*  background-color: yellow; */
 }
 
 .best .best_item .best_top {
@@ -208,16 +208,47 @@ a {
   margin: 0;
 }
 
-.insta{
+.insta {
   width: 100%;
   height: 428px;
   background-color: #ccc;
 }
 
-.insta li{
+.insta li {
   width: 214px;
   height: 214px;
   border: 1px solid black;
   float: left;
   box-sizing: border-box;
+}
+
+.footer_ex {
+  width: 100%;
+  height: 214px;
+  background-color: #ccc;
+  margin-top: 50px;
+}
+
+.footer {
+  width: 1070px;
+  height: 214px;
+  margin: 0 auto;
+  background-color: #999;
+}
+
+.footer .footer_logo {
+  width: 214px;
+  height: 214px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  margin-right: 10px;
+  float: left;
+}
+
+.footer .copy {
+  width: calc(100% - (214px + 10px));
+  height: 214px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  float: left;
 }
