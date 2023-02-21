@@ -158,3 +158,13 @@ a {
 .product .pro .pro_sub div:nth-child(3) {
   margin-right: 10px;
 }
+
+/************wide_banner*************/
+.wide_banner{
+  width: 100%;
+  height: 300px;
+  background-color: #ccc;
+  margin-bottom: 50px;
+  text-align: center;
+  line-height: 300px;
+}
