@@ -31,7 +31,7 @@ a {
 
 img {
   width: 90px;
-  height: 40px;
+  height: 50px;
 }
 
 
@@ -39,24 +39,25 @@ img {
 /****************header**************/
 .header {
   width: 100%;
-  height: 40px;
+  height: 50px;
 }
 
 .gnb {
-  overflow: hidden;
+  height: 50px;
+
 }
 
 .gnb .left_gnb {
   float: left;
-  height: 40px;
+  height: 50px;
+  overflow: hidden;
 }
 
 .gnb .left_gnb li {
   float: left;
   font-size: 11px;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 5px;
+  line-height: 50px;
+  margin: 0 5px;
 }
 
 .gnb .left_gnb li i.fa-search {
@@ -65,27 +66,27 @@ img {
 
 .gnb .right_gnb {
   float: right;
+  height: 50px;
+  overflow: hidden;
 }
 
 .gnb .right_gnb li {
   float: left;
-  height: 50px;
   line-height: 50px;
   font-size: 11px;
-  margin: 0 5px;
-  text-align: center;
+  padding: 0 5px;
 }
 
 .gnb .right_gnb li::after {
   content: '';
   width: 1px;
   height: 1px;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   margin-left: 5px;
 }
 
 .gnb .right_gnb li:last-child::after {
-  display: none;
+  border: none;
 }
 
 
@@ -210,12 +211,13 @@ img {
   padding: 5px 15px;
 }
 
-.center_box{
+.center_box {
   width: 100%;
   height: 200px;
   margin: 0 auto;
 }
-.center_box .box{
+
+.center_box .box {
   width: 20%;
   height: 200px;
   background-color: #fff;
