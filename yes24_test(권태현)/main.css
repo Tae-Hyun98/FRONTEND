@@ -19,12 +19,6 @@ a {
   font-weight: bold;
 }
 
-.yellow {
-  background-color: yellow;
-  border-radius: 30%;
-  color: black;
-}
-
 .red {
   color: red;
 }
@@ -94,16 +88,17 @@ img {
 .content_bg {
   width: 100%;
   height: 120px;
-  background-color: skyblue;
+  background-color: steelblue;
 }
 
 .content_main {
-  width: 1027px;
+  width: 1024px;
   margin: 0 auto;
   height: 120px;
 }
 
 .content_main .logo img {
+  width: 100%;
   height: 120px;
 }
 
@@ -111,29 +106,39 @@ img {
   width: 90px;
   height: 120px;
   float: left;
-  margin-right: 20px;
+  margin-right: 12px;
 }
 
 .content_right {
   float: right;
-  width: 914px;
+  width: 90%;
   height: 120px;
+  overflow: hidden;
+}
+
+.content_right a {
   color: #fff;
-  font-weight: bold;
 }
 
 .content_right .content_right_top {
   width: 100%;
-  height: 60px;
+  overflow: hidden;
 }
 
-.content_right .content_right_top div {
+.content_right .content_right_top li {
   float: left;
+  width: 20%;
   height: 60px;
   text-align: center;
   line-height: 60px;
-  margin: 0 10px;
-  font-size: 14px;
+  font-size: 15px;
+}
+
+.content_right .content_right_top .yellow {
+  background-color: yellow;
+  color: black;
+  border-radius: 20px;
+  padding: 10px 15px;
 }
 
 .content_right .content_right_bottom {
@@ -141,20 +146,20 @@ img {
   height: 60px;
 }
 
-.content_right .content_right_bottom div {
+.content_right .content_right_bottom li{
   float: left;
+  width: 20%;
   height: 60px;
   text-align: center;
   line-height: 60px;
-  margin: 0 10px;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 /****************main_banner**************/
 .first_banner {
   width: 100%;
   height: 200px;
-  background-color: aquamarine;
+  background-color: paleturquoise;
 }
 
 .f_banner {
@@ -167,6 +172,7 @@ img {
 .f_banner p {
   text-align: right;
   color: gray;
+  font-size: 16px;
 }
 
 .f_banner p,
@@ -174,10 +180,6 @@ img {
 .f_banner h1 {
   padding-top: 10px;
 }
-
-
-
-
 
 
 .second_banner {
