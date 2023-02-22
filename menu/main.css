@@ -190,6 +190,7 @@ a {
 .lnb_05 li ul {
   position: relative;
   overflow: hidden;
+  width: 0;
   height: 0;
   transition: height 0.2s;
 }
@@ -220,7 +221,7 @@ a {
 
 .lnb_05 li:hover .sub5 {
   position: absolute;
-  left: 40%;
+  left: 35%;
 }
 
 /***************** popup *****************/
@@ -247,14 +248,20 @@ a {
   left: 100px;
 }
 
-.popup p {
+.popup p img {
   width: 300px;
   height: 250px;
   border: 1px solid black;
+  box-sizing: border-box;
 }
 
 .popup .popup_close {
   display: block;
   margin-left: 280px;
   margin-top: 10px;
+}
+
+.popup .popup_close .close{
+  background: rgba(0, 0, 0, 0.5);
+
 }
