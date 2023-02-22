@@ -37,7 +37,6 @@ img {
 
 .gnb {
   height: 50px;
-
 }
 
 .gnb .left_gnb {
@@ -191,30 +190,55 @@ img {
 
 .s_banner {
   width: 1024px;
-  height: 570px;
+  height: 600px;
   margin: 0 auto;
   text-align: center;
 }
 
 .s_banner .s_banner_font {
   text-align: center;
-  padding-bottom: 30px;
+  height: 150px;
+  margin-bottom: 20px;
 }
 
-.s_banner .s_banner_font h2 {
+.s_banner .s_banner_font h2.red {
   padding-top: 20px;
-}
-
-.s_banner .s_banner_font a {
-  font-size: 14px;
-  color: #fff;
-  background-color: #333;
-  padding: 5px 15px;
 }
 
 .s_banner .s_banner_font .q {
   font-size: 30px;
 }
+
+.s_banner .now {
+  width: 100%;
+  height: 100px;
+  float: left;
+}
+
+.s_banner .now h2 {
+  width: 80%;
+  height: 100px;
+  line-height: 100px;
+  float: left;
+  text-align: right;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+.s_banner .now p {
+  float: right;
+  width: 15%;
+  height: 100px;
+  line-height: 100px;
+}
+
+.s_banner .now p a {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 11px;
+}
+
 
 .center_box {
   width: 100%;
@@ -260,7 +284,7 @@ img {
   width: 100%;
   background: rgba(0, 0, 0, 0.8);
   border-radius: 40px;
-  padding: 20px 30px;
+  padding: 15px 30px;
 }
 
 .btn .vote_btn h4 {
@@ -284,33 +308,534 @@ img {
 }
 
 
+
 /****************third_banner**************/
 .third_banner {
   width: 100%;
-  height: 500px;
 }
 
 .t_banner {
   width: 1024px;
-  height: 500px;
+  height: 400px;
   margin: 0 auto;
   text-align: center;
+  overflow: hidden;
 }
 
 .t_banner .now {
-  width: 80%;
+  width: 85%;
+  height: 100px;
 }
 
 .t_banner .now h1 {
-  width: 80%;
+  width: 85%;
+  height: 100px;
+  line-height: 100px;
+  float: left;
+  text-align: right;
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.t_banner .now p {
+  float: right;
+  width: 15%;
+  height: 100px;
+  line-height: 100px;
+}
+
+.t_banner .now p a {
+  background-color: #333;
+  color: #fff;
+  padding: 5px 15px;
+  font-size: 11px;
+}
+
+.t_banner_box {
+  width: 100%;
+  height: 300px;
+}
+
+.t_banner_box .t_leftbox {
+  float: left;
+  width: 48%;
+  height: 210px;
+  border: 1px solid #333;
+  margin-right: 20px;
+  padding-top: 100px;
+}
+
+.t_banner_box .t_rightbox {
+  width: 50%;
+  height: 150px;
+  float: right;
+}
+
+.t_banner_box .t_rightbox .t_rightbox_top div,
+.t_banner_box .t_rightbox .t_rightbox_bottom div {
+  width: 240px;
+  height: 100px;
+  float: left;
+  border: 1px solid black;
+  margin-right: 10px;
+}
+
+.t_banner_box .t_rightbox .t_rightbox_top div {
+  margin-bottom: 10px;
+}
+
+/****************four_banner**************/
+.four_banner_outer {
+  width: 100%;
+  background-color: skyblue;
+}
+
+.four_banner_outer .four_banner {
+  width: 1024px;
+  height: 1020px;
+  margin: 0 auto;
+}
+
+.all_btn {
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+.all_btn a {
+  text-align: center;
+  color: #333;
+}
+
+.first {
+  width: 100%;
+  height: 150px;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.first .f_left {
+  float: left;
+  width: 50%;
+  height: 150px;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.first .f_left p {
+  padding-bottom: 5px;
+}
+
+.first .f_left a {
+  color: blue;
+  border: 1px solid blue;
+  padding: 5px 20px;
+
+}
+
+.first .f_right {
+  float: left;
+  width: 50%;
+  height: 150px;
+}
+
+.first .f_right img {
+  width: 100%;
+  height: 100%;
+}
+
+.second {
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  margin-bottom: 15px;
+}
+
+.second h1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.second .s_box {
+  width: 100%;
+  margin: 0 40px;
+}
+
+.second .s_box div {
+  height: 220px;
+}
+
+.second .s_box .s_left {
+  float: left;
+  width: 40%;
+  line-height: 50px;
+  padding-top: 30px;
+  border: 1px solid black;
+}
+
+.second .s_box .s_left i {
+  color: rgba(0, 0, 0, 0.3);
+  font-size: 25px;
+}
+
+.second .s_box .s_middle {
+  float: left;
+  width: 10%;
+  line-height: 200px;
+  font-size: 60px;
+  color: red;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.second .s_box .s_right {
+  float: left;
+  width: 40%;
+  border: 1px solid black;
+  text-align: right;
+  font-size: 30px;
+}
+
+.third {
+  width: 100%;
+  height: 400px;
+}
+
+.third .third_box {
+  width: 100%;
+  height: 400px;
+}
+
+.third .third_box .third_box_top {
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.third .third_box .third_box_top div {
+  width: 334px;
+  height: 200px;
+  float: left;
+  background-color: #fff;
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+.t_box1 {
+  padding-top: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.t_box1 .box_btn a {
+  color: violet;
+  border: 1px solid violet;
+  font-size: 14px;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+.t_box1 .box_middle h3 {
+  padding-top: 15px;
+}
+
+.t_box1 .img_box {
+  display: block;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.t_box1 .box_bottom p {
+  font-size: 12px;
+  color: gray;
+  font-weight: bold;
+  margin-left: 70px;
+  text-align: left;
+}
+
+.t_box2 {
+  padding-top: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.t_box2 .box_btn a {
+  color: skyblue;
+  border: 1px solid skyblue;
+  font-size: 14px;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+.t_box2 .box_middle h3 {
+  padding-top: 15px;
+}
+
+.t_box2 .img_box {
+  display: block;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.t_box2 .box_bottom p {
+  font-size: 12px;
+  color: gray;
+  font-weight: bold;
+  margin-left: 70px;
+  text-align: left;
+}
+
+.t_box3 {
+  padding-top: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.t_box3 .box_btn a {
+  color: tomato;
+  border: 1px solid tomato;
+  font-size: 14px;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+.t_box3 .box_middle h3 {
+  padding-top: 15px;
+}
+
+.t_box3 .img_box {
+  display: block;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.t_box3 .box_bottom p {
+  font-size: 12px;
+  color: gray;
+  font-weight: bold;
+  margin-left: 70px;
+  text-align: left;
+}
+
+.t_box4 {
+  padding-top: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.t_box4 .box_btn a {
+  color: blue;
+  border: 1px solid blue;
+  font-size: 14px;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+.t_box4 .box_middle h3 {
+  padding-top: 15px;
+}
+
+.t_box4 .img_box {
+  display: block;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.t_box4 .box_bottom p {
+  font-size: 12px;
+  color: gray;
+  font-weight: bold;
+  margin-left: 70px;
+  text-align: left;
+}
+
+.t_box5 {
+  padding-top: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.t_box5 .box_btn a {
+  color: orange;
+  border: 1px solid orange;
+  font-size: 14px;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+.t_box5 .box_middle h3 {
+  padding-top: 15px;
+}
+
+.t_box5 .img_box {
+  display: block;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.t_box5 .box_bottom p {
+  font-size: 12px;
+  color: gray;
+  font-weight: bold;
+  margin-left: 70px;
+  text-align: left;
+}
+
+.t_box6 {
+  padding-top: 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.t_box6 .box_btn a {
+  color: blueviolet;
+  border: 1px solid blueviolet;
+  font-size: 14px;
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+.t_box6 .box_middle h3 {
+  padding-top: 15px;
+}
+
+.t_box6 .img_box {
+  display: block;
+  height: 40px;
+  margin-top: 15px;
+}
+
+.t_box6 .box_bottom p {
+  font-size: 12px;
+  color: gray;
+  font-weight: bold;
+  margin-left: 70px;
+  text-align: left;
+}
+
+.third .third_box .third_box_top div:last-child {
+  margin-right: 0;
+}
+
+.third .third_box .third_box_bottom div {
+  width: 334px;
+  height: 200px;
+  float: left;
+  background-color: #fff;
+  margin-right: 10px;
+}
+
+.third .third_box .third_box_bottom div:last-child {
+  margin-right: 0;
+}
+
+/****************give_banner**************/
+.give_outer {
+  background-color: #ccc;
+  width: 100%;
+}
+
+.give_banner {
+  width: 1024px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.give_banner .givebox_left {
+  width: 50%;
+  height: 200px;
+  float: left;
+  padding-top: 30px;
+  padding-left: 20px;
+  border: 1px solid black;
+}
+
+.give_banner .givebox_left_top {
+  width: 100%;
+  height: 100px;
+}
+
+.give_banner .givebox_left_bottom {
+  width: 100%;
+  height: 100px;
+}
+
+.give_banner .givebox_right {
+  float: left;
+  width: 50%;
+  height: 200px;
+  border: 1px solid black;
+}
+
+.give_banner .givebox_right img {
+  width: 100%;
+  height: 200px;
+  padding: 25px;
+}
+
+
+/****************paycard_banner**************/
+.paycard_outer {
+  width: 100%;
+  height: 530px;
+  background-color: blanchedalmond;
+}
+
+.paycard_banner {
+  width: 1024px;
+  height: 530px;
+  margin: 0 auto;
+}
+
+.paycard_banner .paysub {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.paybox_top div,
+.paybox_middle div,
+.paybox_bottom div {
   float: left;
 }
 
-.t_banner .more {
-  width: 20%;
+.paysub .paywidth {
+  width: 49.5%;
+  height: 150px;
+  margin-top: 20px;
+  margin-right: 10px;
 }
 
-.t_banner .more p {
-  float: right;
-  right: 0;
+.paybox_top .top_left {
+  background-color: green;
+}
+
+.paybox_top .top_right {
+  background-color: red;
+}
+
+.paybox_middle .middle_left {
+  background-color: skyblue;
+}
+
+.paybox_middle .middle_right {
+  background-color: pink;
+}
+
+.paybox_bottom .bottom_left {
+  background-color: pink;
+}
+
+.paybox_bottom .bottom_right {
+  background-color: aquamarine;
+}
+
+.paybox_top div:last-child,
+.paybox_middle div:last-child,
+.paybox_bottom div:last-child {
+  margin-right: 0;
+}
+
+.bottom_img img {
+  width: 100%;
+  height: 300px;
 }
