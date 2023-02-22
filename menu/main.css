@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+body {
+  height: 2000px;
+}
+
 li {
   list-style: none;
 }
@@ -14,8 +18,13 @@ a {
   color: black;
 }
 
+
+/*********************lnb_01***********************/
 .lnb_01,
-.lnb_02 {
+.lnb_02,
+.lnb_03,
+.lnb_04,
+.lnb_05 {
   width: 1000px;
   height: 50px;
   margin: 0 auto;
@@ -38,13 +47,15 @@ a {
   color: black;
 }
 
+
+/*********************lnb_02***********************/
 .lnb_02 li {
   width: 200px;
   height: 50px;
   float: left;
 }
 
-.lnb_02 li a{
+.lnb_02 li a {
   display: block;
   text-align: center;
   line-height: 50px;
@@ -53,7 +64,160 @@ a {
   transition: all 0.3s;
 }
 
-.lnb_02 li a:hover{
+.lnb_02 li a:hover {
   background-color: black;
 }
 
+
+/*********************lnb_03 각 각 드롭다운***********************/
+.lnb_03 li {
+  width: 200px;
+  height: 50px;
+  float: left;
+  transition: all 0.3s;
+}
+
+.lnb_03 li a {
+  display: block;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  transition: all 0.3s;
+}
+
+.lnb_03 li a:hover {
+  background-color: aqua;
+  color: black;
+}
+
+.lnb_03 ul {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.2s 0.3s;
+}
+
+.lnb_03:hover li ul {
+  height: 250px;
+}
+
+.lnb_03 li li a:hover {
+  background-color: yellow;
+  color: black;
+}
+
+
+/* .lnb_03:hover li li {
+  opacity: 1;
+} */
+
+/* display에는 transition을 걸수 없다 그래서 opacity씀 */
+
+
+/*********************lnb_04 풀다운메뉴***********************/
+.lnb_04 {
+  margin-top: 200px;
+}
+
+.lnb_04 li {
+  width: 200px;
+  height: 50px;
+  float: left;
+  transition: all 0.3s;
+}
+
+.lnb_04 li a {
+  display: block;
+  background-color: black;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  transition: all 0.3s;
+}
+
+.lnb_04 li a:hover {
+  background-color: aqua;
+  color: black;
+}
+
+
+
+.lnb_04 li li a:hover {
+  background-color: yellow;
+  color: black;
+}
+
+/* 아래 코드는 천천히 높이 늘려가면서 나오게하는것 */
+.lnb_04 li ul {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.3s;
+}
+
+.lnb_04 li:hover ul {
+  height: 250px;
+}
+
+/*********************lnb_05 li들 가로로나오게***********************/
+.lnb_05 {
+  margin-top: 300px;
+}
+
+.lnb_05 li {
+  width: 200px;
+  height: 50px;
+  float: left;
+}
+
+.lnb_05 li a:hover {
+  background-color: blue;
+}
+
+.lnb_05 li li a:hover {
+  background-color: aqua;
+}
+
+.lnb_05 li a {
+  display: block;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background-color: violet;
+  color: white;
+}
+
+.lnb_05 li ul {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  width: 0;
+  transition: width 0.3s;
+}
+
+.lnb_05 li:hover ul {
+  width: 1000px;
+  height: 50px;
+}
+
+.lnb_05 li:hover li a {}
+
+.lnb_05 li:hover li {
+  float: left;
+  width: 20%;
+}
+
+.lnb_05 li:hover .sub3 {
+  position: absolute;
+  left: 30%;
+}
+
+.lnb_05 li:hover .sub4 {
+  position: absolute;
+  left: 30%;
+}
+
+.lnb_05 li:hover .sub5 {
+  position: absolute;
+  left: 35%;
+}
