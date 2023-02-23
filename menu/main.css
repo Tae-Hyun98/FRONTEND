@@ -284,8 +284,53 @@ a {
   display: none;
 }
 
-.icon{
+.icon {
   position: absolute;
   top: 450px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
+  z-index: 9999;
+  left: 30px;
+  animation-name: popup_icon;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes popup_icon {
+  0% {
+    top: 450px;
+  }
+
+  50% {
+    top: 400px;
+  }
+
+  100% {
+    top: 450px;
+  }
+}
+
+.icon .icon_inner div {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  border-radius: 100px;
+  text-align: center;
+  line-height: 200px;
+  color: #fff;
+}
+
+.icon_inner {
+  position: relative;
+}
+
+.icon label {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  padding: 10px;
 }
