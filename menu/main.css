@@ -229,6 +229,92 @@ a {
   left: 35%;
 }
 
+/***************** lnb_06 *****************/
+#ham_chk {
+  display: none;
+}
+
+#ham_chk:checked~.menu_box .menu_list {
+  height: 300px;
+}
+
+/* #ham_chk:checked~.menu_box .menu_list {
+  display: block;
+}
+ */
+/* #ham_chk~.menu_box .menu_list {
+  display: none;
+} */
+
+#ham_chk:checked~.menu_box .lnb_06 .menu_close {
+  display: block;
+}
+
+#ham_chk:checked~.menu_box .lnb_06 .menu_open {
+  display: none;
+}
+
+#ham_chk~.menu_box .lnb_06 .menu_close {
+  display: none;
+}
+
+#ham_chk~.menu_box .lnb_06 .menu_open {
+  display: block;
+}
+
+.menu_box {
+  width: 1050px;
+  margin: 0 auto;
+}
+
+.menu_box .lnb_06 label {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  box-sizing: border-box;
+  font-size: 40px;
+  text-align: center;
+  line-height: 50px;
+  cursor: pointer;
+  float: left;
+}
+
+.menu_box .lnb_06 {
+  width: 1050px;
+  height: 50px;
+}
+
+.menu_box .lnb_06 ul {
+  width: 1000px;
+  float: left;
+}
+
+.menu_box .lnb_06 ul li a {
+  width: 200px;
+  height: 50px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  float: left;
+  transition: 0.3s;
+}
+
+.menu_box .lnb_06 ul li a:hover {
+  background-color: darkblue;
+}
+
+.menu_box .menu_list {
+  width: 1050px;
+  height: 0;
+  background-color: #ccc;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+
+
 /***************** popup *****************/
 /* ~ : 아이디를 해당하는 태그의 형제(같은레벨)들 중에 아래에 있는(동생) 태그 */
 #popup_chk {
@@ -290,7 +376,7 @@ a {
   width: 200px;
   height: 200px;
   z-index: 9999;
-  left: 30px;
+  left: 200px;
   animation-name: popup_icon;
   animation-duration: 1.5s;
   animation-iteration-count: infinite;
