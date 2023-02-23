@@ -4,3 +4,53 @@
   margin: 0;
   padding: 0;
 }
+
+
+/***************** head_banner*******************/
+#head_chk {
+  display: none;
+}
+
+#head_chk:checked~.head_banner {
+  display: block;
+}
+
+#head_chk:checked~.head_banner .head_close {
+  display: block;
+}
+
+#head_chk~.head_banner {
+  display: none;
+}
+
+
+.head_banner {
+  width: 1080px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.head_banner .head_box {
+  position: relative;
+  width: 1080px;
+  height: 150px;
+  line-height: 150px;
+  box-sizing: border-box;
+}
+
+.head_banner .head_box img {
+  width: 1080px;
+  height: 150px;
+  box-sizing: border-box;
+}
+
+.head_banner .head_box .head_close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  bottom: 40px;
+  right: 0;
+}
+
+/***************** wing_banner*******************/
+.wing_banner{float: right;}
