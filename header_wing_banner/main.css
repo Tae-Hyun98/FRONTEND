@@ -5,6 +5,9 @@
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
 
 /***************** head_banner*******************/
 #head_chk {
@@ -32,25 +35,76 @@
 
 .head_banner .head_box {
   position: relative;
+  width: 100%;
+  height: 150px;
+}
+
+.head_banner .head_box img {
   width: 1080px;
   height: 150px;
   line-height: 150px;
   box-sizing: border-box;
 }
 
-.head_banner .head_box img {
-  width: 1080px;
-  height: 150px;
-  box-sizing: border-box;
-}
-
 .head_banner .head_box .head_close {
+  display: block;
   position: absolute;
   width: 20px;
   height: 20px;
-  bottom: 40px;
-  right: 0;
+  bottom: 0px;
+  right: -14px;
+  border: 1px solid black;
+  text-align: center;
 }
 
 /***************** wing_banner*******************/
-.wing_banner{float: right;}
+#wing_chk {
+  display: none;
+}
+
+#wing_chk:checked~.wing_banner {
+  display: block;
+}
+#wing_chk:checked~.wing_banner .wing_inner{
+  display: block;
+}
+
+
+#wing_chk~.wing_banner .wing_inner {
+  display: none;
+}
+
+#wing_chk~.wing_banner .wing_inner .wing_content {
+  display: none;
+}
+
+.wing_banner {
+  float: right;
+  width: 200px;
+  height: 100vh;
+}
+
+.wing_banner .wing_inner {
+  position: relative;
+  width: 200px;
+  height: 100vh;
+  background-color: aqua;
+}
+
+.wing_banner .wing_open {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid black;
+  font-size: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s;
+  left: 0;
+}
+
+.wing_content {
+  width: 100px;
+  height: 100vh;
+}
