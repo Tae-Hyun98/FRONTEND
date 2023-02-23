@@ -70,6 +70,11 @@ a {
 
 
 /*********************lnb_03 각 각 드롭다운***********************/
+.lnb_03 {
+  position: relative;
+  z-index: 0;
+}
+
 .lnb_03 li {
   width: 200px;
   height: 50px;
@@ -116,7 +121,7 @@ a {
 
 /*********************lnb_04 풀다운메뉴***********************/
 .lnb_04 {
-  margin-top: 200px;
+  z-index: 1;
 }
 
 .lnb_04 li {
@@ -160,7 +165,7 @@ a {
 
 /*********************lnb_05 li들 가로로나오게***********************/
 .lnb_05 {
-  margin-top: 300px;
+  margin-top: 250px;
 }
 
 .lnb_05 li {
@@ -168,6 +173,7 @@ a {
   height: 50px;
   float: left;
 }
+
 
 .lnb_05 li a:hover {
   background-color: blue;
@@ -190,13 +196,11 @@ a {
 .lnb_05 li ul {
   position: relative;
   overflow: hidden;
-  width: 0;
+  width: 800px;
   height: 0;
-  transition: height 0.2s;
 }
 
 .lnb_05 li:hover ul {
-  width: 1000px;
   height: 50px;
 }
 
@@ -205,7 +209,8 @@ a {
 }
 
 .lnb_05 li:hover li {
-  float: left;
+  display: block;
+
   width: 150px;
 }
 
@@ -239,12 +244,13 @@ a {
 }
 
 .popup {
+  z-index: 9999;
   position: absolute;
   width: 300px;
   height: 300px;
   background-color: yellow;
   padding: 10px;
-  top: 100px;
+  top: 50px;
   left: 100px;
 }
 
@@ -261,7 +267,25 @@ a {
   margin-top: 10px;
 }
 
-.popup .popup_close .close{
+.popup .popup_close .close {
   background: rgba(0, 0, 0, 0.5);
+}
 
+/***************** popup_icon *****************/
+#icon_chk {
+  display: none;
+}
+
+#icon_chk:checked~.icon {
+  display: block;
+}
+
+#icon_chk~.icon {
+  display: none;
+}
+
+.icon{
+  position: absolute;
+  top: 450px;
+  height: 100px;
 }
