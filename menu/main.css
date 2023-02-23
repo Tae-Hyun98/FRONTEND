@@ -6,7 +6,7 @@
 }
 
 body {
-  height: 1000px;
+  height: 2000px;
 }
 
 li {
@@ -419,4 +419,81 @@ a {
   right: 0;
   text-align: right;
   padding: 10px;
+}
+
+
+/**********************wing_banner*********************/
+#wing_chk {
+  display: none;
+}
+
+#wing_chk:checked~.wing_banner {
+  right: 0;
+}
+
+#wing_chk:checked~.wing_banner .wing {
+  display: block;
+}
+
+/* #wing_chk~.wing_banner .wing {
+  display: none;
+}
+ */
+#wing_chk:checked~.wing_banner .wing_close {
+  display: block;
+}
+
+#wing_chk:checked~.wing_banner .wing_open {
+  display: none;
+}
+
+#wing_chk~.wing_banner .wing_close {
+  display: none;
+}
+
+#wing_chk~.wing_banner .wing_open {
+  display: block;
+}
+
+.wing_banner {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 330px;
+  height: 100vh;
+  transition: all 0.3s;
+}
+
+.wing_banner label {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  float: left;
+  text-align: center;
+  margin-top: 200px;
+  line-height: 30px;
+}
+
+.wing_banner .wing {
+  width: 300px;
+  height: 100%;
+  background-color: #ccc;
+  float: left;
+}
+
+
+/*****************top_btn*****************/
+.top_btn {
+  position: fixed;
+  display: block;
+  bottom: 10px;
+  right: 100px;
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
 }
