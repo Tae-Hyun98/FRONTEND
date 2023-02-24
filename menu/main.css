@@ -421,6 +421,87 @@ a {
   padding: 10px;
 }
 
+/**********************tab_menu*********************/
+#tab01,
+#tab02,
+#tab03 {
+  display: none;
+}
+
+#tab01:checked~.sheet .sheet_01 {
+  display: block;
+}
+
+#tab01:checked~.label .label_01 {
+  background-color: yellow;
+  width: 250px;
+}
+
+#tab02:checked~.label .label_02 {
+  background-color: yellow;
+  width: 250px;
+}
+
+#tab03:checked~.label .label_03 {
+  background-color: yellow;
+  width: 250px;
+}
+
+/* #tab01:checked~.sheet .sheet_02,
+#tab01:checked~.sheet .sheet_03 {
+  display: none;
+} */
+
+#tab02:checked~.sheet .sheet_02 {
+  display: block;
+}
+
+/* #tab02:checked~.sheet .sheet_01,
+#tab02:checked~.sheet .sheet_03 {
+  display: none;
+} */
+
+#tab03:checked~.sheet .sheet_03 {
+  display: block;
+}
+
+/* #tab03:checked~.sheet .sheet_01,
+#tab03:checked~.sheet .sheet_02 {
+  display: none;
+} */
+
+.tab_menu {
+  width: 1000px;
+  height: 450px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+
+.tab_menu .sheet div {
+  display: none;
+  width: 1000px;
+  height: 400px;
+  background-color: yellow;
+}
+
+.tab_menu .label {
+  overflow: hidden;
+}
+
+.tab_menu .label label {
+  display: block;
+  width: 150px;
+  height: 100px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 100px;
+  float: left;
+  border-radius: 20px 20px 0 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
 
 /**********************wing_banner*********************/
 #wing_chk {
