@@ -534,33 +534,38 @@ h3 {
   display: none;
 }
 
+#wing_chk:checked~.wing_banner {
+  right: 0;
+}
+
 #wing_chk:checked~.wing_banner .wing_content {
   display: block;
 }
 
-#wing_chk~.wing_banner .wing_content {
-  display: none;
-}
+
 
 .wing_banner {
   position: fixed;
-  width: 140px;
-  top: 210px;
-  right: 0px;
+  width: 200px;
+  height: 160px;
+  top: 220px;
+  right: -180px;
+  transition: all 0.3s;
 }
 
 .wing_banner .wing_content {
-  width: 140px;
-  height: 120px;
-  background-color: gray;
+  width: 180px;
+  height: 100%;
+  background-color: #ccc;
+  float: left;
 }
 
 .wing_banner .wing_content div {
   float: left;
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
-
+  cursor: pointer;
 }
 
 .wing_banner label {
@@ -568,9 +573,9 @@ h3 {
   float: left;
   background-color: darkblue;
   color: #fff;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  width: 20px;
+  height: 40px;
+  line-height: 40px;
   cursor: pointer;
   text-align: center;
 }
@@ -583,19 +588,23 @@ h3 {
 }
 
 .wing1 .wing1_left {
-  width: 25px;
+  width: 40px;
+  font-size: 20px;
 }
 
 .wing2 .wing2_left {
-  width: 25px;
+  width: 40px;
+  font-size: 20px;
 }
 
 .wing3 .wing3_left {
-  width: 25px;
+  width: 40px;
+  font-size: 20px;
 }
 
 .wing4 .wing4_left {
-  width: 25px;
+  width: 40px;
+  font-size: 20px;
 }
 
 .wing1 .wing1_right {
@@ -612,4 +621,5 @@ h3 {
 
 .wing4 .wing4_right {
   width: 100px;
+  margin-left: 5px;
 }
