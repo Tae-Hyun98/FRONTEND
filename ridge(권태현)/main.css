@@ -1,8 +1,11 @@
 @charset "UTF-8";
 
+/* 12column-960px
+  gutter-10px */
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 a {
@@ -11,4 +14,65 @@ a {
 
 li {
   list-style: none;
+}
+
+/***********************header********************/
+.header {}
+
+.header .header_inner {
+  width: 1070px;
+  height: 40px;
+  line-height: 40px;
+  margin: 0 auto;
+}
+
+.header_logo {
+  float: left;
+}
+
+.gnb {
+  float: right;
+}
+
+.gnb ul li {
+  float: left;
+}
+
+.gnb ul li a {
+  display: block;
+  color: gray;
+  font-weight: bold;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.gnb ul li:last-child a {
+  margin-right: 0;
+}
+
+.logo {
+  position: relative;
+  width: 1070px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.logo .logo_inner {
+  text-align: center;
+}
+
+.logo .search {
+  position: absolute;
+  right: 0;
+  top: 35px;
+}
+
+.search i {
+  position: absolute;
+  right: 0;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
 }
