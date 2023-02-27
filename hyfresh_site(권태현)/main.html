@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>hyfresh</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
   <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -27,8 +28,10 @@
         <div class="left_side">
           <img class="car" src="./images/car.jpg" alt="car">
           <div class="letter">
-            <p class="green">잇츠온 ONLY</p>
-            <p>주문배송 가능지역</p>
+            <p><span class="green">잇츠온 ONLY</span>
+              <br />
+              주문배송 가능지역
+            </p>
           </div>
         </div>
         <div class="logo">
@@ -67,11 +70,11 @@
         </div>
 
         <ul class="lnb_left">
-          <li>신제품</li>
-          <li>김장김치이벤트</li>
-          <li>하이프레시GO</li>
-          <li>11월 할인</li>
-          <li>이벤트</li>
+          <li><a href="#!">신제품</a></li>
+          <li><a href="#!">김장김치이벤트</a></li>
+          <li><a href="#!">하이프레시GO</a></li>
+          <li><a href="#!">11월 할인</a></li>
+          <li><a href="#!">이벤트</a></li>
         </ul>
 
         <ul class="lnb_right">
@@ -84,8 +87,88 @@
   </header>
 
   <div class="main_banner">
-    1
+    <div class="visual_banner">
+      <div class="your-class">
+        <div>
+          <img src="./images/visual_01.jpg" alt="visual_01">
+        </div>
+        <div>
+          <img src="./images/visual_02.jpg" alt="visual_02">
+        </div>
+        <div>
+          <img src="./images/visual_03.jpg" alt="visual_03">
+        </div>
+        <div>
+          <img src="./images/visual_04.jpg" alt="visual_04">
+        </div>
+      </div>
+    </div>
   </div>
+
+  <div class="content">
+    <div class="cuchon">
+      <h3>추천제품</h3>
+    </div>
+    <div class="content_box">
+      <div class="top_box">
+        <div class="box1">
+          <a href="#">
+            <img src="./images/product01.jpg" alt="product01">
+              <p class="p1">구매 시 보쌈용 한돈 앞다리살 400g을 추가로드</p>
+              <h4 class="h4">종가집 김장김치 7kg(앞다리살 4kg)을 추가</h4>
+              <p class="p2"><span class="gray">62,100원</span> <span class="blue">52,500 원</span></p>
+          </a>
+        </div>
+
+        <div class="box2">
+          <a href="#">
+            <img src="./images/product02.jpg" alt="product02">
+              <h4 class="h4 top">맑은샘 수 500ml*20개</h4>
+              <p class="won blue">7,000 원</p>
+          </a>
+        </div>
+
+        <div class="box3">
+          <a href="#">
+            <img src="./images/product03.jpg" alt="product03">
+            <h4 class="h4 top">맑은샘 수 2L*6개</h4>
+            <p class="won blue">4,500 원</p>
+          </a>
+        </div>
+        <div class="box4">
+          <a href="#">
+            <img src="./images/product04.jpg" alt="product04">
+            <h4 class="h4 top">방탄소년단 7인 A세트(콜드브루아이스아메리카)</h4>
+            <p class="won blue">27,500 원</p>
+          </a>
+        </div>
+      </div>
+      <div class="bottom_box">
+        <div class="box5">5</div>
+        <div class="box6">6</div>
+        <div class="box7">7</div>
+        <div class="box8">8</div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.your-class').slick({
+        autoplay: true
+      });
+    });
+  </script>
 </body>
 
 </html>

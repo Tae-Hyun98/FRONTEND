@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 10000px;
+}
+
 li {
   list-style: none;
 }
@@ -16,6 +20,12 @@ a {
 
 .green {
   color: forestgreen;
+}
+
+.blue {
+  color: cadetblue;
+  font-weight: bold;
+  font-size: 17px;
 }
 
 /*********************gnb********************/
@@ -67,63 +77,113 @@ a {
 }
 
 .logo_inner .left_side {
+  position: relative;
   float: left;
   width: 350px;
   height: 60px;
   line-height: 60px;
+  overflow: hidden;
 }
 
 .logo_inner .left_side img {
   display: block;
-  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
   height: 100%;
-  padding-right: 10px;
-  animation: carani 1.2s 0.3s backwards;
+  animation: carani 3s infinite;
 }
 
 @keyframes carani {
   0% {
-    transform: translateX(0%);
+    top: 0;
+    left: 0;
+  }
+
+  5% {
+    top: 3px;
+    left: 0;
+  }
+
+  10% {
+    top: 0;
+    left: 0;
+  }
+
+  15% {
+    top: 3px;
+    left: 0;
+  }
+
+  20% {
+    top: 0;
+    left: 0;
+  }
+
+  25% {
+    top: 3px;
+    left: 0;
+  }
+
+  30% {
+    top: 0;
+    left: 0;
+  }
+
+  35% {
+    top: 3px;
+    left: 0;
+  }
+
+  40% {
+    top: 0;
+    left: 0;
+  }
+
+  45% {
+    top: 3px;
+    left: 0;
+  }
+
+  50% {
+    top: 0;
+    left: 0;
   }
 
   100% {
-    transform: translateX(180%);
+    top: 0;
+    left: 390px;
   }
 }
 
-.logo_inner .left_side .letter {
-  padding-top: 15px;
-  animation: letterani 1.5s 0.3s both;
+.logo_inner .left_side .letter p {
+  position: absolute;
+  top: 16px;
+  left: 80px;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  opacity: 1;
+  animation: letterani 3s infinite;
 }
 
 @keyframes letterani {
   0% {
     opacity: 1;
-    transform: translateY(0%);
   }
 
-  25% {
-    opacity: 0;
-    transform: translateY(0%);
+  50% {
+    opacity: 1;
   }
 
-  75% {
+  60% {
     opacity: 0;
-    transform: translateY(-100%);
   }
 
   100% {
-    opacity: 1;
-    transform: translateY(0%);
+    opacity: 0;
   }
-}
-
-.logo_inner .left_side .letter p {
-  font-size: 15px;
-  height: 20px;
-  line-height: 20px;
-  font-weight: bold;
-  letter-spacing: -1px;
 }
 
 .logo_inner .logo {
@@ -155,8 +215,9 @@ a {
 
 .search_box i {
   position: absolute;
-  top: 25px;
+  top: 24px;
   right: 15px;
+  color: gray;
 }
 
 /*********************header****************/
@@ -212,8 +273,20 @@ a {
 
 .lnb .lnb_left li {
   display: inline-block;
-  padding: 0 15px;
+
+}
+
+.lnb .lnb_left li a {
+  display: block;
+  color: black;
   font-weight: bold;
+  padding: 0 15px;
+  transition: 0.3s
+}
+
+.lnb .lnb_left li a:hover {
+  background-color: black;
+  color: #fff;
 }
 
 .lnb .lnb_right {
@@ -268,7 +341,102 @@ a {
   color: #fff;
 }
 
-/*******************main_banner*******************/
+/*******************visual_banner*******************/
 .main_banner {
-  height: 300px;
+  width: 100%;
+}
+
+.visual_banner {
+  width: 100%;
+}
+
+.visual_banner .your-class .slick-arrow {
+  width: 0;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+  position: absolute;
+  visibility: hidden;
+}
+
+
+/****************content*******************/
+.content {
+  width: 1070px;
+  margin: 0 auto;
+}
+
+.cuchon {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.content_box {
+  margin-top: 10px;
+}
+
+.content_box img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.content_box .top_box {
+  margin-bottom: 10px;
+  height: 350px;
+}
+
+.content_box .top_box div {
+  float: left;
+  width: 260px;
+  height: 350px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+
+.content_box p,
+.content_box h4 {
+  width: 260px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.content_box .top_box div:last-child {
+  margin-right: 0;
+}
+
+.p1 {
+  padding-top: 15px;
+  font-size: 13px;
+  padding-left: 5px;
+  color: black;
+  font-weight: bold;
+}
+
+.h4 {
+  padding-left: 5px;
+  color: black;
+}
+
+.p2 {
+  padding-left: 5px;
+  font-size: 11px;
+  color: gray;
+}
+
+.gray {
+  text-decoration: line-through;
+}
+
+.won {
+  padding-left: 5px;
+}
+
+.top {
+  padding-top: 15px;
+}
+
+.content_box .bottom_box div {
+  float: left;
 }
