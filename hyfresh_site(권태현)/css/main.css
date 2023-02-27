@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 li {
@@ -11,4 +12,263 @@ li {
 
 a {
   text-decoration: none;
+}
+
+.green {
+  color: forestgreen;
+}
+
+/*********************gnb********************/
+.header_outer {
+  width: 100%;
+}
+
+.gnb {
+  width: 1070px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.gnb ul {
+  float: right;
+  font-size: 0;
+  padding: 5px 0;
+}
+
+.gnb ul li {
+  float: left;
+  width: 90px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: gray;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.gnb ul li span {
+  color: white;
+  background-color: darkturquoise;
+  padding: 0 5px;
+  border-radius: 3px;
+  line-height: 30px;
+}
+
+/****************logo_section********************/
+.logo_section {
+  width: 100%;
+}
+
+.logo_section .logo_inner {
+  width: 1070px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.logo_inner .left_side {
+  float: left;
+  width: 350px;
+  height: 60px;
+  line-height: 60px;
+}
+
+.logo_inner .left_side img {
+  display: block;
+  float: left;
+  height: 100%;
+  padding-right: 10px;
+  animation: carani 1.2s 0.3s backwards;
+}
+
+@keyframes carani {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(180%);
+  }
+}
+
+.logo_inner .left_side .letter {
+  padding-top: 15px;
+  animation: letterani 1.5s 0.3s both;
+}
+
+@keyframes letterani {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+
+  25% {
+    opacity: 0;
+    transform: translateY(0%);
+  }
+
+  75% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+.logo_inner .left_side .letter p {
+  font-size: 15px;
+  height: 20px;
+  line-height: 20px;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+.logo_inner .logo {
+  float: left;
+  text-align: center;
+  width: 350px;
+  height: 60px;
+}
+
+.logo_inner .right_side {
+  float: right;
+  width: 350px;
+  height: 60px;
+  line-height: 60px;
+}
+
+.right_side .search_box {
+  float: right;
+  position: relative;
+}
+
+.search_box input {
+  padding-left: 10px;
+  width: 250px;
+  padding: 3px 0;
+  padding-left: 10px;
+  outline: none;
+}
+
+.search_box i {
+  position: absolute;
+  top: 25px;
+  right: 15px;
+}
+
+/*********************header****************/
+.header {
+  width: 100%;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  margin-top: 30px;
+}
+
+.header_inner {
+  width: 1070px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.lnb {
+  width: 100%;
+  overflow: hidden;
+}
+
+.lnb .category_box {
+  width: 170px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: bold;
+  color: rgba(97, 143, 176, 1);
+  border: 1px solid #ccc;
+  border-top: 0;
+  border-bottom: 0;
+  float: left;
+  cursor: pointer;
+}
+
+.lnb .category label {
+  display: block;
+  cursor: pointer;
+}
+
+.category i {
+  padding-right: 10px;
+  color: rgba(62, 141, 148, 1);
+}
+
+.lnb .lnb_left {
+  width: 630px;
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  text-align: right;
+}
+
+.lnb .lnb_left li {
+  display: inline-block;
+  padding: 0 15px;
+  font-weight: bold;
+}
+
+.lnb .lnb_right {
+  float: right;
+  width: 260px;
+  height: 40px;
+  padding: 15px 0;
+  font-size: 0;
+  text-align: right;
+}
+
+.lnb .lnb_right li {
+  display: inline-block;
+  text-align: center;
+  font-size: 12px;
+  color: gray;
+  padding: 0 10px;
+  border-left: 1px solid #ccc;
+  font-weight: bold;
+  line-height: 12px;
+}
+
+.lnb .lnb_right li:first-child {
+  border: none;
+}
+
+.lnb .lnb_right li:last-child {
+  padding-right: 0;
+}
+
+/***************category_drop***************/
+#category_drop {
+  display: none;
+}
+
+#category_drop:checked~.header .lnb .category_box .category_list {
+  display: block;
+  height: 200px;
+}
+
+.category_box .category_list {
+  position: absolute;
+  width: 1070px;
+  height: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.category_box .category_list a {
+  color: #fff;
+}
+
+/*******************main_banner*******************/
+.main_banner {
+  height: 300px;
 }
