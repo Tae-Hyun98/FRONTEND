@@ -350,6 +350,11 @@ a {
   width: 100%;
 }
 
+.visual_banner .your-class img {
+  width: 100%;
+  height: 370px;
+}
+
 .visual_banner .your-class .slick-arrow {
   width: 0;
   height: 0;
@@ -437,6 +442,110 @@ a {
   padding-top: 15px;
 }
 
+.content_box .bottom_box {
+  height: 350px;
+  margin-bottom: 50px;
+}
+
 .content_box .bottom_box div {
   float: left;
+  width: 260px;
+  height: 350px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+}
+
+.content_box .bottom_box div:last-child {
+  margin-right: 0;
+}
+
+
+/*****************photo_banner**************/
+.photo_img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.photo_img img {
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+.photo_img .img1 {
+  position: absolute;
+  animation: fadeOut 5s infinite both;
+  transition: 1s;
+}
+
+.photo_img .img2 {
+  position: absolute;
+  animation: fadeIn 5s infinite both;
+  transition: 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    position: absolute;
+  }
+
+  50% {
+    position: absolute;
+  }
+
+  75% {
+    position: relative
+  }
+
+  100% {
+    position: relative;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    position: relative;
+  }
+
+  50% {
+    position: relative;
+  }
+
+  75% {
+    position: absolute;
+  }
+
+  100% {
+    position: absolute;
+  }
+}
+
+/*******************new******************/
+.new {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.content_new_box {
+  margin-top: 20px;
+  height: 400px;
+}
+
+.content .content_new_box div {
+  float: left;
+  width: 350px;
+  height: 350px;
+  margin-right: 10px;
+}
+
+.content .content_new_box div:last-child {
+  margin-right: 0;
+}
+
+.content .content_new_box img {
+  float: left;
+  display: block;
+  width: 100%;
+  height: 350px;
 }
