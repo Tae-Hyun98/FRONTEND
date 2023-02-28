@@ -829,8 +829,27 @@ img {
 
 
 /*******************bottom_content*********************/
-.bottom_content_inner{
+.bottom_content_inner {
   width: 1070px;
   margin: 0 auto;
   margin-top: 50px;
+}
+
+.bc_left {}
+
+.bc_left h3 {
+  height: 30px;
+}
+
+.bc_left .bc_left_left {
+  padding-top: 10px;
+}
+
+.bc_left .bc_left_left h1 {
+  font-style: italic;
+  color: cornflowerblue
+}
+
+.bc_left .bc_left_left span {
+  padding-left: 10px;
 }
