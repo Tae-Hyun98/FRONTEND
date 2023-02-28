@@ -5,6 +5,104 @@
   padding: 0;
 }
 
+body {
+  height: 1000px;
+}
+
 img {
   display: block;
+}
+
+li {
+  list-style: none;
+}
+
+#gnb_chk {
+  display: none;
+}
+
+/* gnb display버전 */
+/* #gnb_chk:checked~.gnb {
+  display: block;
+}
+
+#gnb_chk~.gnb {
+  display: none;
+} */
+
+/* gnb position에 트랜지션버전 */
+#gnb_chk:checked~.gnb {
+  right: 0;
+}
+
+#gnb_chk~.gnb {
+  right: -250px;
+}
+
+.header {
+  width: 100%;
+  height: 45px;
+  background: url(./image/header_bg.png);
+  position: relative;
+}
+
+.header .home {
+  width: 62px;
+  height: 32px;
+  background: url(./image/left_btn.png);
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  /* text-indent로 기존 임시텍스트안보이게함 */
+  text-indent: -9999px;
+}
+
+.header h1 {
+  text-align: center;
+  line-height: 45px;
+  color: white;
+}
+
+.header .gnb_btn {
+  width: 32px;
+  height: 32px;
+  background: url(./image/right_btn.png);
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  text-indent: -9999px;
+}
+
+.gnb {
+  position: absolute;
+  right: 0;
+  background-color: darkgray;
+  width: 40%;
+  height: 150px;
+  text-align: center;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+
+.gnb li {
+  height: 30px;
+  line-height: 30px;
+}
+
+.lnb li {
+  float: left;
+  text-align: center;
+  width: 20%;
+  background-color: black;
+  color: white;
+}
+
+.footer {
+  width: 100%;
+  height: 45px;
+  background-color: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
