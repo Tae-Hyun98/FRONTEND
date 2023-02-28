@@ -9,3 +9,5 @@ float할때 넓이 높이주는게 베스트 overflow할지 clear:both할지 생
  저해상도pc - 769px~1024px
 
  고해상도 - 1320px 1440px 1600px~
+
+ break point - 600
