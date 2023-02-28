@@ -181,8 +181,14 @@
 
   <div class="photo_banner">
     <div class="photo_img">
-      <img class="img1" src="./images/banner01.jpg" alt="banner01">
-      <img class="img2" src="./images/banner02.jpg" alt="banner02">
+      <div class="banner_slick">
+        <div>
+          <img src="./images/banner01.jpg" alt="banner01">
+        </div>
+        <div>
+          <img src="./images/banner02.jpg" alt="banner02">
+        </div>
+      </div>
     </div>
   </div>
 
@@ -223,6 +229,12 @@
   <script>
     $(document).ready(function () {
       $('.your-class').slick({
+        autoplay: true
+      });
+    });
+
+    $(document).ready(function () {
+      $('.banner_slick').slick({
         autoplay: true
       });
     });
