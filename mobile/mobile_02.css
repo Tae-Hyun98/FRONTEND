@@ -4,3 +4,19 @@
   margin: 0;
   padding: 0;
 }
+
+img {
+  display: block;
+}
+
+/* .visual_web {
+  width: 100%;
+} */
+
+.visual_web img {
+  width: 100%;
+}
+
+.visual_mobile img {
+  width: 100%;
+}
