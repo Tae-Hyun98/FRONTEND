@@ -850,6 +850,10 @@ img {
   color: cornflowerblue
 }
 
-.bc_left .bc_left_left span {
+.bc_left .bc_left_left .l1 {
+  padding-left: 20px;
+}
+
+.bc_left .bc_left_left .l2 {
   padding-left: 10px;
 }
