@@ -77,15 +77,20 @@ a {
 }
 
 .logo_inner .left_side {
-  position: relative;
   float: left;
   width: 350px;
   height: 60px;
   line-height: 60px;
+}
+
+.car_ani {
+  position: relative;
+  width: 200px;
+  height: 60px;
   overflow: hidden;
 }
 
-.logo_inner .left_side img {
+.logo_inner .left_side .car_ani img {
   display: block;
   position: absolute;
   left: 0;
