@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 10000px;
-}
-
 li {
   list-style: none;
 }
@@ -1008,6 +1004,7 @@ img {
 /*************footer*******************/
 footer {
   background-color: rgba(50, 50, 50, 1);
+  position: relative;
 }
 
 .footer_content ul li.private {
@@ -1025,7 +1022,7 @@ footer {
   overflow: hidden;
 }
 
-.footer ul li {
+.footer .footer_content li {
   color: #fff;
   float: left;
   padding: 0 10px;
@@ -1055,10 +1052,64 @@ footer {
   border-right: 1px solid #ccc;
 }
 
+.footer_family li label {
+  display: block;
+  width: 150px;
+  color: #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+
 .footer_allmenu {
   float: left;
   width: 150px;
   height: 60px;
   line-height: 60px;
   border-right: 1px solid #ccc;
+}
+
+.footer_allmenu li a {
+  color: #ccc;
+  display: block;
+  width: 150px;
+  text-align: center;
+}
+
+.family_list {
+  position: absolute;
+  width: 150px;
+  height: 0;
+  right: 28%;
+  top: 60px;
+  background-color: #ccc;
+  overflow: hidden;
+  transition: all 0.3s;
+  color: black;
+  z-index: 2;
+}
+
+.family_list ul li {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  cursor: pointer;
+  text-align: center;
+}
+
+#family_chk {
+  display: none;
+}
+
+#family_chk:checked~.footer .family_list {
+  height: 80px;
+  transition: all 0.3s;
+}
+
+#family_chk~.footer .footer_inner .footer_family .family_list {}
+
+.abc{
+  height: 100px;
 }
