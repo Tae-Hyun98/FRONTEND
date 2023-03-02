@@ -234,10 +234,14 @@ img {
 
 /*********************header****************/
 .header {
+  position: sticky;
+  top: 0;
   width: 100%;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   margin-top: 30px;
+  background-color: #fff;
+  z-index: 1;
 }
 
 .header_inner {
@@ -831,7 +835,7 @@ img {
 
 /*******************bottom_content*********************/
 .bottom_content {
-  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .bottom_content_inner {
@@ -1005,6 +1009,7 @@ img {
 footer {
   background-color: rgba(50, 50, 50, 1);
   position: relative;
+
 }
 
 .footer ul li.private {
@@ -1013,13 +1018,13 @@ footer {
 
 .footer_inner {
   width: 1070px;
+  height: 60px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .footer ul {
   float: left;
-  overflow: hidden;
 }
 
 .footer .footer_content li {
@@ -1044,6 +1049,10 @@ footer {
   border-right: 1px solid #ccc;
 }
 
+.family {
+  float: left;
+}
+
 .footer_family {
   float: left;
   width: 150px;
@@ -1052,7 +1061,7 @@ footer {
   border-right: 1px solid #ccc;
 }
 
-.footer_family li label {
+.footer_family li {
   display: block;
   width: 150px;
   color: #ccc;
@@ -1060,32 +1069,45 @@ footer {
   cursor: pointer;
 }
 
+.footer_family li label {
+  display: block;
+  color: #ccc;
+  width: 150px;
+  height: 60px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
 .footer_allmenu {
+  position: relative;
   float: left;
   width: 150px;
   height: 60px;
   line-height: 60px;
   border-right: 1px solid #ccc;
+  overflow: hidden;
 }
 
-.footer_allmenu li a {
+.footer_allmenu li label {
   color: #ccc;
   display: block;
   width: 150px;
   text-align: center;
+  cursor: pointer;
 }
 
 .family_list {
   position: absolute;
   width: 150px;
-  height: 0;
-  right: 28%;
-  top: 60px;
+  height: 80px;
+  right: 377px;
+  top: -80px;
   background-color: #ccc;
   overflow: hidden;
   transition: all 0.3s;
   color: black;
-  z-index: 2;
+  border: 1px solid black;
 }
 
 .family_list ul li {
@@ -1093,9 +1115,29 @@ footer {
   height: 40px;
   line-height: 40px;
   border-bottom: 1px solid black;
-  border-left: 1px solid black;
   border-right: 1px solid black;
   cursor: pointer;
+  text-align: center;
+}
+
+.all_menu {
+  float: left;
+}
+
+.allmenu {
+  position: absolute;
+  background-color: rgba(50, 50, 50, 0.8);
+  width: 1070px;
+  height: 200px;
+  line-height: 200px;
+  right: 227px;
+  top: -200px;
+  overflow: hidden;
+}
+
+.allmenu ul li {
+  color: white;
+  width: 1070px;
   text-align: center;
 }
 
@@ -1104,12 +1146,70 @@ footer {
 }
 
 #family_chk:checked~.footer .family_list {
-  height: 80px;
-  transition: all 0.3s;
+  display: block;
 }
 
-#family_chk~.footer .footer_inner .footer_family .family_list {}
+#family_chk~.footer .family_list {
+  display: none;
+}
 
-.abc{
-  height: 100px;
+#all_chk {
+  display: none;
+}
+
+#all_chk:checked~.footer .footer_inner .allmenu {
+  display: block;
+}
+
+#all_chk~.footer .footer_inner .allmenu {
+  display: none;
+}
+
+.footer_bottom {
+  height: 300px;
+  background-color: bisque;
+}
+
+/**********top_btn************/
+.top_btn a {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background-color: red;
+  color: white;
+  bottom: 30px;
+  right: 120px;
+}
+
+/*************wing_banner****************/
+#wing_chk {
+  display: none;
+}
+
+#wing_chk:checked~.wing_banner {
+  right: 0;
+}
+
+#wing_chk:checked~.wing_banner .wing_content {
+  display: block;
+}
+
+#wing_chk~.wing_banner .wing_content {
+  display: none;
+}
+
+.wing_banner {
+  position: fixed;
+  width: 330px;
+  height: 100vh;
+  top: 190px;
+  right: -240px;
+}
+
+.wing_content {
+  width: 300px;
+  height: 100%;
+  background-color: aqua;
+  float: left;
 }

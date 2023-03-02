@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="header_outer">
+  <div class="header_outer" id="top">
     <nav class="gnb">
       <ul>
         <li>로그인</li>
@@ -341,6 +341,7 @@
   </div>
 
   <input type="checkbox" id="family_chk">
+  <input type="checkbox" id="all_chk">
   <footer class="footer">
     <div class="footer_inner">
       <ul class="footer_content">
@@ -353,34 +354,64 @@
         <li>Fresh매니저 모집</li>
       </ul>
 
-      <ul class="footer_family">
-        <li>
-          <label for="family_chk">
-            Family Site <i class="fas fa-angle-up"></i>
-          </label>
-        </li>
-      </ul>
+      <div class="family">
+        <ul class="footer_family">
+          <li>
+            <label for="family_chk">
+              Family_Site <i class="fas fa-angle-up"></i>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="family_list">
+        <ul>
+          <li>naver</li>
+          <li>daum</li>
+        </ul>
+      </div>
 
-      <ul class="footer_allmenu">
-        <li>
-          <a href="#!">
-            메뉴 전체보기 <i class="fas fa-angle-up"></i>
-          </a>
-        </li>
-      </ul>
+      <div class="all_menu">
+        <ul class="footer_allmenu">
+          <li>
+            <label for="all_chk">
+              메뉴 전체보기 <i class="fas fa-angle-up"></i>
+            </label>
+          </li>
+        </ul>
+      </div>
 
+      <div class="allmenu">
+        <ul>
+          <li>메뉴전체보기</li>
+        </ul>
+      </div>
     </div>
-    <div class="family_list">
-      <ul>
-        <li>naver</li>
-        <li>daum</li>
-      </ul>
+
+    <div class="footer_bottom">
+      아래는 푸터글영역
     </div>
   </footer>
-  <div class="abc">1</div>
+
+  <div class="top_btn">
+    <a href="#top">
+      <i class="fas fa-arrow-up"></i> TOP
+    </a>
+  </div>
 
 
-
+  <input type="checkbox" id="wing_chk">
+  <div class="wing_banner">
+    <label for="wing_chk">
+      <img src="./images/cart.png" alt="cart">
+    </label>
+    <div class="wing_content">
+      <ul>
+        <li>신제품</li>
+        <li>김치</li>
+        <li>냉장고</li>
+      </ul>
+    </div>
+  </div>
 
 
 
