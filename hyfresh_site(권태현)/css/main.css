@@ -1007,7 +1007,7 @@ footer {
   position: relative;
 }
 
-.footer_content ul li.private {
+.footer ul li.private {
   color: rgba(25, 139, 173, 1);
 }
 
