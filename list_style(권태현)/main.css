@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 img {
@@ -11,4 +12,184 @@ img {
 
 li {
   list-style: none;
+}
+
+/************header************/
+.header {
+  position: relative;
+  background-color: green;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+}
+
+.header .back {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  font-size: 20px;
+}
+
+.header h3 {
+  text-align: center;
+}
+
+/**************search********************/
+.search_box {
+  background-color: gray;
+  height: 50px;
+  padding: 10px;
+}
+
+.search_input {
+  position: relative;
+}
+
+.search_input i {
+  position: absolute;
+  color: gray;
+}
+
+.search_input .fa-search {
+  left: 5px;
+  top: 8px;
+  font-size: 15px;
+}
+
+.search_input .micro {
+  right: 5px;
+  top: 8px;
+  color: gray;
+}
+
+.search_input input {
+  width: 100%;
+  height: 25px;
+  border-radius: 5px;
+  outline: none;
+  padding: 15px;
+  border: none;
+  padding-left: 25px;
+  color: gray;
+  font-size: 15px;
+}
+
+/*********chat*************/
+.chat_box {
+  height: 1090px;
+}
+
+.chat {
+  overflow: hidden;
+  height: 80px;
+  border-bottom: 1px solid black;
+}
+
+.chat_img {
+  float: left;
+  width: 45px;
+  height: 100%;
+  line-height: 80px;
+  margin: 15px 10px;
+}
+
+.chat_img img {
+  width: 100%;
+}
+
+.content {
+  width: calc(100% - 75px - 40px);
+  height: 80px;
+  float: left;
+  padding-top: 10px;
+}
+
+.content h3 {
+  margin-bottom: 5px;
+}
+
+.content p {
+  color: #777;
+  font-weight: bold;
+}
+
+.time {
+  float: left;
+  width: 30px;
+  margin-top: 10px;
+  margin-left: 10px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.time p:first-child {
+  color: #777;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.time p:last-child {
+  color: white;
+  width: 30px;
+  background-color: yellowgreen;
+  font-size: 10px;
+  line-height: 15px;
+  border-radius: 9px;
+}
+
+.time p.default {
+  color: #777;
+  font-size: 12px;
+  background-color: #fff;
+}
+
+.chat1 {
+  overflow: hidden;
+  height: 80px;
+  border-bottom: 1px solid black;
+}
+
+.chat4 {
+  overflow: hidden;
+  height: 80px;
+  border-bottom: 1px solid black;
+}
+
+.chat4 .content {
+  width: calc(100% - 75px - 60px);
+}
+
+.chat4 .time {
+  width: 60px;
+}
+
+.bottom {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+
+  bottom: 0;
+  background-color: aquamarine;
+}
+
+.bottom ul {
+  overflow: hidden;
+
+}
+
+.bottom ul li {
+  margin-top: 15px;
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+.bottom ul li i {
+  font-size: 20px;
+  color: #777;
+}
+
+.bottom ul li p {
+  color: #777;
+  font-size: 14px;
 }
