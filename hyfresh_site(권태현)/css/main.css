@@ -257,8 +257,8 @@ img {
 
 .lnb .category_box {
   width: 170px;
-  height: 40px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 50px;
   text-align: center;
   font-weight: bold;
   color: rgba(97, 143, 176, 1);
@@ -281,8 +281,8 @@ img {
 
 .lnb .lnb_left {
   width: 630px;
-  height: 40px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 50px;
   float: left;
   text-align: right;
 }
@@ -308,7 +308,7 @@ img {
 .lnb .lnb_right {
   float: right;
   width: 260px;
-  height: 40px;
+  height: 50px;
   padding: 15px 0;
   font-size: 0;
   text-align: right;
@@ -322,7 +322,7 @@ img {
   padding: 0 10px;
   border-left: 1px solid #ccc;
   font-weight: bold;
-  line-height: 12px;
+  line-height: 20px;
   cursor: pointer;
 }
 
@@ -360,6 +360,7 @@ img {
 
 /*******************visual_banner*******************/
 .main_banner {
+  position: relative;
   width: 100%;
 }
 
@@ -1172,6 +1173,7 @@ footer {
 
 /**********top_btn************/
 .top_btn a {
+  display: block;
   position: fixed;
   width: 50px;
   height: 50px;
@@ -1179,7 +1181,7 @@ footer {
   background-color: red;
   color: white;
   bottom: 30px;
-  right: 120px;
+  right: 250px;
 }
 
 /*************wing_banner****************/
@@ -1195,21 +1197,29 @@ footer {
   display: block;
 }
 
-#wing_chk~.wing_banner .wing_content {
+/* #wing_chk~.wing_banner .wing_content {
   display: none;
-}
+} */
 
 .wing_banner {
   position: fixed;
-  width: 330px;
+  width: 309px;
   height: 100vh;
-  top: 190px;
-  right: -240px;
+  top: 0px;
+  right: -255px;
+  z-index: 1;
+  transition: all 0.3s;
+}
+
+.wing_banner label {
+  float: left;
+  margin-top: 270px;
 }
 
 .wing_content {
-  width: 300px;
+  width: 250px;
   height: 100%;
-  background-color: aqua;
+  background-color: rgba(50, 50, 50, 1);
   float: left;
+  color: white;
 }
