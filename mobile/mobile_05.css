@@ -38,7 +38,7 @@ a {
     overflow: hidden;
   }
 
-  .box {
+  .boxA .box {
     float: left;
     width: 50%;
   }
