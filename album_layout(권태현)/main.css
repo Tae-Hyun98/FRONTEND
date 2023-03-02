@@ -72,6 +72,77 @@ li {
   font-size: 15px;
 }
 
+h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/**************picture*************/
+.picture_box {
+  overflow: hidden;
+}
+
+.picture_box ul {
+  overflow: hidden;
+}
+
+.picture_box ul li {
+  float: left;
+  width: 25%;
+  height: 80px;
+}
+
+.picture_box ul li img {
+  width: 100%;
+  height: 100%;
+}
+
+@media all and (min-width:321px) and (orientation:landscape) {
+  .picture_box ul {
+    width: 50%;
+    float: left;
+  }
+
+  .picture_box ul li {
+    float: left;
+    width: 25%;
+  }
+}
+
+.picture_box1 {
+  overflow: hidden;
+  height: 400px;
+}
+
+.picture_box1 ul {
+  overflow: hidden;
+}
+
+.picture_box1 ul li {
+  float: left;
+  width: 25%;
+  height: 80px;
+}
+
+.picture_box1 ul li img {
+  width: 100%;
+  height: 100%;
+}
+
+@media all and (min-width:321px) and (orientation:landscape) {
+  .picture_box1 ul {
+    width: 50%;
+    float: left;
+  }
+
+  .picture_box1 ul li {
+    float: left;
+    width: 25%;
+  }
+}
+
+
+
 /*************bottom*******************/
 .bottom {
   position: fixed;
