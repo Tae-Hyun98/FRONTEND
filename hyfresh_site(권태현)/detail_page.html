@@ -5,11 +5,121 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>detail_page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
+  <link rel="stylesheet" href="./css/detail.css">
 </head>
 
 <body>
+  <!-- TOP버튼 -->
+  <div class="top_btn">
+    <a href="#top">
+      <i class="fas fa-arrow-up"></i> TOP
+    </a>
+  </div>
 
+  <!-- 윙배너 -->
+  <input type="checkbox" id="wing_chk">
+  <div class="wing_banner">
+    <label for="wing_chk">
+      <img src="./images/cart.png" alt="cart">
+    </label>
+    <div class="wing_content">
+      <ul>
+        <li>윙배너</li>
+        <li>신제품</li>
+        <li>김치</li>
+        <li>냉장고</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="header_outer" id="top">
+    <nav class="gnb">
+      <ul>
+        <li>로그인</li>
+        <li>회원가입</li>
+        <li>멤버십몰</li>
+        <li>이벤트</li>
+        <li>장바구니 <span>0</span></li>
+      </ul>
+    </nav>
+
+    <div class="logo_section">
+      <div class="logo_inner">
+        <div class="left_side">
+          <div class="car_ani">
+            <img class="car" src="./images/car.jpg" alt="car">
+
+            <div class="letter">
+              <p><span class="green">잇츠온 ONLY</span>
+                <br />
+                주문배송 가능지역
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="logo">
+          <a href="main.html"><img src="./images/logo.jpg" alt="logo"></a>
+        </div>
+        <div class="right_side">
+          <div class="search_box">
+            <input type="search" placeholder="밀키트를 검색해 보세요">
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <input type="checkbox" id="category_drop">
+  <header class="header">
+    <div class="header_inner">
+      <nav class="lnb">
+        <div class="category_box">
+          <div class="category">
+            <label for="category_drop">
+              <i class="fas fa-bars"></i>
+              전체 카테고리
+            </label>
+          </div>
+          <div class="category_list">
+            <ul>
+              <li><a href="sub_page.html"> 국, 반찬, 김치</a></li>
+              <li><a href="sub_page.html"> 국, 반찬, 김치</a></li>
+              <li><a href="sub_page.html"> 국, 반찬, 김치</a></li>
+              <li><a href="sub_page.html"> 국, 반찬, 김치</a></li>
+              <li><a href="sub_page.html"> 국, 반찬, 김치</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <ul class="lnb_left">
+          <li><a href="#!">신제품</a></li>
+          <li><a href="#!">김장김치이벤트</a></li>
+          <li><a href="#!">하이프레시GO</a></li>
+          <li><a href="#!">11월 할인</a></li>
+          <li><a href="#!">이벤트</a></li>
+        </ul>
+
+        <ul class="lnb_right">
+          <li>라이프</li>
+          <li>내게맞는 제품찾기</li>
+          <li>브랜드</li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="detail_outer">
+    <div class="detail_category">
+      <p>
+        <i class="fas fa-home"></i> <i class="fas fa-angle-right"></i> 국<i class="fas fa-circle"></i>반찬<i
+          class="fas fa-circle"></i>김치 <i class="far fa-caret-square-down"></i> <i class="fas fa-angle-right"></i> 국<i
+          class="fas fa-circle"></i>반찬<i class="fas fa-circle"></i>김치
+      </p>
+    </div>
+  </section>
 </body>
 
 </html>
