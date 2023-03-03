@@ -382,6 +382,27 @@ img {
   visibility: hidden;
 }
 
+/* @keyframes ani {
+  0% {
+    background-image: url(../images/visual_01.jpg);
+  }
+
+  30% {
+    background-image: url(../images/visual_02.jpg);
+  }
+
+  60% {
+    background-image: url(../images/visual_03.jpg);
+  }
+
+  90% {
+    background-image: url(../images/visual_04.jpg);
+  }
+
+  100% {
+    background-image: url(../images/visual_01.jpg);
+  }
+} */
 
 /****************content*******************/
 .content {
