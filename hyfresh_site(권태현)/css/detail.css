@@ -933,3 +933,168 @@ body {
 .tab4 li:nth-child(3) {
   border-bottom: 2px solid black;
 }
+
+/*************footer*******************/
+footer {
+  background-color: rgba(50, 50, 50, 1);
+  position: relative;
+
+}
+
+.footer ul li.private {
+  color: rgba(25, 139, 173, 1);
+}
+
+.footer_inner {
+  width: 1070px;
+  height: 60px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.footer ul {
+  float: left;
+}
+
+.footer .footer_content li {
+  color: #fff;
+  float: left;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  cursor: pointer;
+}
+
+.footer ul li:first-child {
+  padding-left: 0;
+}
+
+.footer_content {
+  float: left;
+  width: 770px;
+  height: 60px;
+  line-height: 60px;
+  border-right: 1px solid #ccc;
+}
+
+.family {
+  float: left;
+}
+
+.footer_family {
+  float: left;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  border-right: 1px solid #ccc;
+}
+
+.footer_family li {
+  display: block;
+  width: 150px;
+  color: #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer_family li label {
+  display: block;
+  color: #ccc;
+  width: 150px;
+  height: 60px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer_allmenu {
+  position: relative;
+  float: left;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.footer_allmenu li label {
+  color: #ccc;
+  display: block;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.family_list {
+  position: absolute;
+  width: 150px;
+  height: 80px;
+  right: 377px;
+  top: -80px;
+  background-color: #ccc;
+  overflow: hidden;
+  transition: all 0.3s;
+  color: black;
+  border: 1px solid black;
+}
+
+.family_list ul li {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  cursor: pointer;
+  text-align: center;
+}
+
+.all_menu {
+  float: left;
+}
+
+.allmenu {
+  position: absolute;
+  background-color: rgba(50, 50, 50, 0.8);
+  width: 1070px;
+  height: 200px;
+  line-height: 200px;
+  right: 227px;
+  top: -200px;
+  overflow: hidden;
+}
+
+.allmenu ul li {
+  color: white;
+  width: 1070px;
+  text-align: center;
+}
+
+#family_chk {
+  display: none;
+}
+
+#family_chk:checked~.footer .family_list {
+  display: block;
+}
+
+#family_chk~.footer .family_list {
+  display: none;
+}
+
+#all_chk {
+  display: none;
+}
+
+#all_chk:checked~.footer .footer_inner .allmenu {
+  display: block;
+}
+
+#all_chk~.footer .footer_inner .allmenu {
+  display: none;
+}
+
+.footer_bottom {
+  height: 300px;
+  background-color: bisque;
+}
