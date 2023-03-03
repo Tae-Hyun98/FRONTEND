@@ -29,10 +29,6 @@ img {
   letter-spacing: -1px;
 }
 
-body {
-  height: 5000px;
-}
-
 /**********top_btn************/
 .top_btn a {
   display: block;
@@ -44,6 +40,7 @@ body {
   color: white;
   bottom: 30px;
   right: 190px;
+  z-index: 1;
 }
 
 /*************wing_banner****************/
@@ -542,7 +539,7 @@ body {
   margin-bottom: 10px;
   overflow: hidden;
   width: 350px;
-  height: 560px;
+  height: 510px;
   margin-right: 10px;
   border: 1px solid #ccc;
   letter-spacing: -1px;

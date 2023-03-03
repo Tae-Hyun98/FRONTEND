@@ -1203,6 +1203,7 @@ footer {
   color: white;
   bottom: 30px;
   right: 250px;
+  z-index: 1;
 }
 
 /*************wing_banner****************/
