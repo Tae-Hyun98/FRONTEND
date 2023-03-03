@@ -23,9 +23,10 @@ img {
 }
 
 .blue {
-  color: cadetblue;
+  color: rgba(0, 158, 219, 1);
   font-weight: bold;
   font-size: 17px;
+  letter-spacing: -1px;
 }
 
 body {
@@ -416,9 +417,13 @@ body {
 }
 
 /*****************detail*********************/
-.detail_outer {
+.outer {
   width: 1070px;
   margin: 0 auto;
+}
+
+.detail_outer {
+  overflow: hidden;
 }
 
 .detail_category {
@@ -442,4 +447,375 @@ body {
 
 .fa-circle {
   font-size: 1px;
+}
+
+.block {
+  width: 160px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 20px;
+  background-color: rgba(0, 158, 219, 1);
+  color: white;
+}
+
+.pop {
+  overflow: hidden;
+  height: 80px;
+  line-height: 80px;
+}
+
+.pop .list_order {
+  float: left;
+}
+
+.list_order ul {
+  overflow: hidden;
+  font-size: 0;
+}
+
+.list_order ul li {
+  float: left;
+  font-size: 14px;
+  color: #777;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.list_order ul li::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 10px;
+  background-color: #777;
+  color: #777;
+  margin: 0 10px;
+}
+
+.list_order ul li:last-child::after {
+  display: none;
+}
+
+.list_gird {
+  float: right;
+}
+
+.list_gird ul {
+  overflow: hidden;
+}
+
+.list_gird ul li {
+  float: left;
+  cursor: pointer;
+}
+
+.list_gird ul li img {
+  display: inline-block;
+}
+
+.list_gird ul li::after {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 18px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.list_gird ul li:last-child::after {
+  display: none;
+}
+
+
+/**************content***************/
+.content_box {
+  overflow: hidden;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.box .box_img img {
+  width: 100%;
+}
+
+.content_box .box {
+  float: left;
+  margin-bottom: 10px;
+  overflow: hidden;
+  width: 350px;
+  height: 560px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  letter-spacing: -1px;
+  cursor: pointer;
+}
+
+.content_box .box:nth-child(3),
+.content_box .box:nth-child(6),
+.content_box .box:nth-child(9),
+.content_box .box:nth-child(12),
+.content_box .box:nth-child(15) {
+  margin-right: 0;
+}
+
+.content_box .box .box_img {
+  width: 350px;
+  height: 350px;
+}
+
+.delivery {
+  overflow: hidden;
+  margin: 15px 0;
+  padding-left: 15px;
+}
+
+.delivery p {
+  float: left;
+  border: 1px solid #ccc;
+  color: #777;
+  border-radius: 6px;
+  padding: 0 10px;
+  margin-right: 5px;
+  font-size: 14px;
+}
+
+.delivery p:last-child {
+  margin-right: 0;
+}
+
+.box h4 {
+  padding-left: 15px;
+  color: black;
+  font-size: 18px;
+}
+
+.content_box p,
+.content_box h4 {
+  overflow: hidden;
+}
+
+.p1 {
+  padding-top: 15px;
+  font-size: 13px;
+  padding-left: 5px;
+  color: black;
+  font-weight: bold;
+}
+
+.p2 {
+  padding-left: 15px;
+  padding-bottom: 10px;
+  font-size: 11px;
+  color: gray;
+}
+
+.gray {
+  text-decoration: line-through;
+}
+
+.won {
+  padding-left: 15px;
+}
+
+
+/**************page****************/
+.page {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.page p {
+  display: inline-block;
+  background-color: #ccc;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.page p:nth-child(2),
+.page p:nth-child(4) {
+  width: 30px;
+}
+
+.page p:nth-child(1),
+.page p:nth-child(5) {
+  width: 40px;
+}
+
+.page p:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid rgba(0, 158, 219, 1);
+  background-color: #fff;
+  color: rgba(0, 158, 219, 1);
+  cursor: default;
+  margin: 0 5px;
+}
+
+/*************footer*******************/
+footer {
+  background-color: rgba(50, 50, 50, 1);
+  position: relative;
+
+}
+
+.footer ul li.private {
+  color: rgba(25, 139, 173, 1);
+}
+
+.footer_inner {
+  width: 1070px;
+  height: 60px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.footer ul {
+  float: left;
+}
+
+.footer .footer_content li {
+  color: #fff;
+  float: left;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  cursor: pointer;
+}
+
+.footer ul li:first-child {
+  padding-left: 0;
+}
+
+.footer_content {
+  float: left;
+  width: 770px;
+  height: 60px;
+  line-height: 60px;
+  border-right: 1px solid #ccc;
+}
+
+.family {
+  float: left;
+}
+
+.footer_family {
+  float: left;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  border-right: 1px solid #ccc;
+}
+
+.footer_family li {
+  display: block;
+  width: 150px;
+  color: #ccc;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer_family li label {
+  display: block;
+  color: #ccc;
+  width: 150px;
+  height: 60px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer_allmenu {
+  position: relative;
+  float: left;
+  width: 150px;
+  height: 60px;
+  line-height: 60px;
+  border-right: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.footer_allmenu li label {
+  color: #ccc;
+  display: block;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.family_list {
+  position: absolute;
+  width: 150px;
+  height: 80px;
+  right: 377px;
+  top: -80px;
+  background-color: #ccc;
+  overflow: hidden;
+  transition: all 0.3s;
+  color: black;
+  border: 1px solid black;
+}
+
+.family_list ul li {
+  width: 150px;
+  height: 40px;
+  line-height: 40px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  cursor: pointer;
+  text-align: center;
+}
+
+.all_menu {
+  float: left;
+}
+
+.allmenu {
+  position: absolute;
+  background-color: rgba(50, 50, 50, 0.8);
+  width: 1070px;
+  height: 200px;
+  line-height: 200px;
+  right: 227px;
+  top: -200px;
+  overflow: hidden;
+}
+
+.allmenu ul li {
+  color: white;
+  width: 1070px;
+  text-align: center;
+}
+
+#family_chk {
+  display: none;
+}
+
+#family_chk:checked~.footer .family_list {
+  display: block;
+}
+
+#family_chk~.footer .family_list {
+  display: none;
+}
+
+#all_chk {
+  display: none;
+}
+
+#all_chk:checked~.footer .footer_inner .allmenu {
+  display: block;
+}
+
+#all_chk~.footer .footer_inner .allmenu {
+  display: none;
+}
+
+.footer_bottom {
+  height: 300px;
+  background-color: bisque;
 }
