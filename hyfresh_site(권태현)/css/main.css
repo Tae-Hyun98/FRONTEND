@@ -662,6 +662,10 @@ img {
   right: 0;
 }
 
+.recipe_img .recipe_img_left .r_lleft:hover .recipe_hover button {
+  cursor: pointer;
+}
+
 .recipe_img .recipe_img_left .r_lrighr {
   width: 180px;
   height: 230px;
@@ -683,6 +687,10 @@ img {
 
 .recipe_img .recipe_img_right .r_rleft:hover .recipe_hover {
   right: 0;
+}
+
+.recipe_img .recipe_img_right .r_rleft:hover .recipe_hover button {
+  cursor: pointer;
 }
 
 .recipe_img .recipe_img_right .r_rright {
