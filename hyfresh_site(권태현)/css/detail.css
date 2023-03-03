@@ -28,6 +28,10 @@ img {
   font-size: 17px;
 }
 
+body {
+  height: 5000px;
+}
+
 /**********top_btn************/
 .top_btn a {
   display: block;
@@ -38,7 +42,7 @@ img {
   background-color: red;
   color: white;
   bottom: 30px;
-  right: 250px;
+  right: 190px;
 }
 
 /*************wing_banner****************/
@@ -427,6 +431,10 @@ img {
   color: #777;
 }
 
+.detail_category p a {
+  color: #777;
+}
+
 .fa-angle-right {
   margin: 0 10px;
   font-size: 14px;
@@ -449,6 +457,7 @@ img {
 .day_select {
   position: relative;
   margin: 35px 0;
+  margin-bottom: 50px;
   height: 60px;
   line-height: 60px;
   background-color: #ccc;
@@ -511,6 +520,11 @@ img {
 }
 
 /*************left_content****************/
+.content {
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+
 .left_content {
   width: 440px;
   float: left;
@@ -670,8 +684,8 @@ img {
 }
 
 .border {
-  border: 1px solid rgba(146, 217, 251, 1);
-  color: rgba(146, 217, 251, 1);
+  border: 1px solid rgba(0, 158, 219, 1);
+  color: rgba(0, 158, 219, 1);
   font-size: 12px;
   padding: 2px 5px;
 }
@@ -679,6 +693,7 @@ img {
 .login {
   height: 100px;
   border: 1px solid #ccc;
+  margin-bottom: 10px;
 }
 
 .login_padding {
@@ -704,7 +719,217 @@ img {
   margin-right: 0;
 }
 
-.log_box h4{
-  color: rgba(146, 217, 251, 1);
+.log_box h4 {
+  color: rgba(0, 158, 219, 1);
 }
-.log_box button{}
+
+.log_box button,
+.log_box h4 {
+  display: inline-block;
+}
+
+.log_box button {
+  background-color: rgba(0, 158, 219, 1);
+  color: white;
+  margin-left: 60px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.order {
+  height: 160px;
+  border: 4px solid #ccc;
+  overflow: hidden;
+}
+
+.order_top {
+  height: 60px;
+  line-height: 12px;
+  padding-top: 30px;
+  padding-left: 20px;
+}
+
+.order_num {
+  float: left;
+  margin-right: 10px;
+  letter-spacing: -1px;
+}
+
+.order_num1 {
+  float: left;
+  letter-spacing: -1px;
+}
+
+.order hr {
+  color: #ccc;
+}
+
+.order_bottom {
+  padding-top: 20px;
+  padding-left: 20px;
+  letter-spacing: -1px;
+}
+
+.order_bottom p {
+  padding-top: 15px;
+  font-weight: bold;
+  color: rgba(0, 158, 219, 1);
+}
+
+.sum {
+  text-align: right;
+  letter-spacing: -1px;
+  margin-top: 15px;
+  margin-right: 10px;
+}
+
+.sum p {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.sum h2 {
+  color: rgba(0, 158, 219, 1);
+}
+
+.sum p,
+.sum h2 {
+  display: inline-block;
+}
+
+.que {
+  display: inline-block;
+  width: 15px;
+  height: 20px;
+  text-align: center;
+  font-size: 15px;
+  background-color: bisque;
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+.cart {
+  margin-top: 25px;
+}
+
+.cart button {
+  display: inline-block;
+  text-align: center;
+  width: 270px;
+  height: 50px;
+  color: #777;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cart button:last-child {
+  background-color: rgba(0, 158, 219, 1);
+  color: white;
+  border: none;
+}
+
+.with {
+  height: 270px;
+  line-height: 270px;
+  background-color: #ccc;
+  margin-bottom: 40px;
+}
+
+.with_inner {
+  width: 1070px;
+  margin: 0 auto;
+}
+
+
+/******************tab****************/
+.tab {
+  width: 1070px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.tab_menu ul {
+  overflow: hidden;
+}
+
+.tab_menu ul li {
+  float: left;
+  text-align: center;
+  width: 25%;
+  height: 45px;
+  line-height: 45px;
+  background-color: rgba(242, 242, 242, 1);
+  border: 1px solid #ccc;
+}
+
+.tab_menu ul li a {
+  color: black;
+  display: block;
+}
+
+.product_detail img {
+  width: 100%;
+}
+
+.tab1 li:first-child {
+  font-weight: bold;
+  background-color: #fff;
+  border-bottom: 0;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.tab1 li:nth-child(2),
+.tab1 li:nth-child(3),
+.tab1 li:nth-child(4) {
+  border-bottom: 2px solid black;
+}
+
+.tab2 li:nth-child(2) {
+  font-weight: bold;
+  background-color: #fff;
+  border-bottom: 0;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.tab2 li:nth-child(1),
+.tab2 li:nth-child(3),
+.tab2 li:nth-child(4) {
+  border-bottom: 2px solid black;
+}
+
+.tab3 li:nth-child(3) {
+  font-weight: bold;
+  background-color: #fff;
+  border-bottom: 0;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.tab3 li:nth-child(1),
+.tab3 li:nth-child(2),
+.tab3 li:nth-child(4) {
+  border-bottom: 2px solid black;
+}
+
+.tab4 li:nth-child(4) {
+  font-weight: bold;
+  background-color: #fff;
+  border-bottom: 0;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.tab4 li:nth-child(1),
+.tab4 li:nth-child(2),
+.tab4 li:nth-child(3) {
+  border-bottom: 2px solid black;
+}
