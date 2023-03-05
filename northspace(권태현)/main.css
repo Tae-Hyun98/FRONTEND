@@ -302,13 +302,13 @@ input::placeholder {
 
 .left_img {
   position: absolute;
-  left: 16%;
+  left: 15%;
   top: 135%;
 }
 
 .right_img {
   position: absolute;
-  right: 16%;
+  right: 15%;
   top: 135%;
 }
 
@@ -374,13 +374,13 @@ input::placeholder {
 
 .left_img1 {
   position: absolute;
-  left: 16%;
+  left: 15%;
   bottom: -135%;
 }
 
 .right_img1 {
   position: absolute;
-  right: 16%;
+  right: 15%;
   bottom: -135%;
 }
 
