@@ -385,10 +385,121 @@ input::placeholder {
 }
 
 /***********arrival*************/
-.arrival {}
+.arrival {
+  overflow: hidden;
+  margin-bottom: 30px;
+}
 
 .arrival .item i {
   float: right;
   margin-right: 15px;
-  margin-top: 5px;
+  margin-top: 7px;
+  cursor: pointer;
+}
+
+.arrival .item_list {
+  overflow: hidden;
+}
+
+.arrival .item_list div {
+  float: left;
+  width: 267.5px;
+}
+
+.arrival .item_list1 {
+  overflow: hidden;
+  height: 0;
+  transition: all 0.3s;
+}
+
+.arrival .item_list1 div {
+  float: left;
+  width: 267.5px;
+}
+
+.arrival .item_list1 div img {
+  width: 100%;
+}
+
+.arrival .item_list div img {
+  width: 100%;
+}
+
+.more {
+  text-align: center;
+  border: 1px solid #777;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.more label {
+  display: block;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+}
+
+#item_chk {
+  display: none;
+}
+
+#item_chk:checked~.arrival .item_list1 {
+  height: 590px;
+}
+
+#item_chk:checked~.arrival .more {
+  display: none;
+}
+
+
+/***************footer*******************/
+.footer {
+  height: 300px;
+  padding-top: 30px;
+  background-color: black;
+  overflow: hidden;
+}
+
+.footer_inner {
+  width: 1070px;
+  margin: 0 auto;
+}
+
+.footer_inner h2 {
+  color: #fff;
+  padding-bottom: 30px;
+}
+
+.footer_inner ul {
+  overflow: hidden;
+}
+
+.footer_inner ul li {
+  color: #ccc;
+  height: 30px;
+}
+
+.footer_inner div {
+  float: left;
+  width: 20%;
+}
+
+
+/*************top_btn*************/
+.top_btn {
+  position: fixed;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  text-align: center;
+  bottom: 20px;
+  right: 100px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.top_btn a {
+  display: block;
+  background-color: red;
+  color: white;
 }
