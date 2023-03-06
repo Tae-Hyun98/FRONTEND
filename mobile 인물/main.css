@@ -99,10 +99,22 @@ a {
 
 .profile {
   width: 100%;
-  height: 500px;
+  height: 350px;
 }
 
 .profile img {
   width: 100%;
-  height: 500px;
+  height: 350px;
+}
+
+.profile_etc {
+
+}
+
+.profile_etc h3 {
+  text-align: center;
+  background-color: #ccc;
+}
+.profile_etc p{
+  padding-left: 30px;
 }
