@@ -311,6 +311,6 @@ a {
 }
 
 #joke_chk:checked~.joke_list {
-  height: 120px;
+  height: auto;
   opacity: 1;
 }
