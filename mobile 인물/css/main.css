@@ -6,9 +6,6 @@
   box-sizing: border-box;
 }
 
-body,
-html {}
-
 img {
   display: block;
 }
@@ -90,6 +87,7 @@ a {
 
 #gnb_chk:checked~.gnb {
   width: 60%;
+  z-index: 1;
 }
 
 #gnb_chk:checked~.gnb li a {
@@ -97,10 +95,10 @@ a {
 }
 
 #gnb_chk:checked~.main {
-  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0.5;
 }
 
-
+/* profile 가로 gnb부분 */
 @media (min-width:321px) and (orientation:landscape) {
   .header {
     border-bottom: 1px solid #ccc;
@@ -113,6 +111,7 @@ a {
   .gnb {
     position: relative;
     width: 100%;
+    height: auto;
     top: 0;
     transition: none;
   }
@@ -124,10 +123,10 @@ a {
 
   .gnb li a {
     opacity: 1;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     border-bottom: none;
-    border-right: 1px solid #ccc;
+    border-right: 2px solid #ccc;
     transition: none;
   }
 
@@ -166,28 +165,6 @@ a {
   overflow: hidden;
 }
 
-.profile_etc .born {
-  width: 50%;
-  float: left;
-}
-
-
-.profile_etc h3 {
-  height: 40px;
-  line-height: 40px;
-  text-align: center;
-  background-color: #ccc;
-}
-
-.born h3 {
-  border-right: 1px solid white;
-}
-
-.born .tit {
-  border-right: 1px solid #999;
-}
-
-
 .tit {
   font-size: 14px;
   height: 80px;
@@ -210,17 +187,30 @@ a {
   margin-right: 5px;
 }
 
+.profile_etc h3 {
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #ccc;
+}
+
+.born {
+  width: 100%;
+}
+
 .born .born_ko p {
   float: left;
 }
 
 .body_profile {
-  float: left;
-  width: 50%;
+  width: 100%;
+}
+
+.body_profile .tit {
+  height: 60px;
 }
 
 .ability {
-  float: left;
   width: 100%;
 }
 
@@ -229,16 +219,12 @@ a {
 }
 
 .company {
-  float: left;
-  width: 50%;
-}
-
-.company h3 {
-  border-right: 1px solid white;
+  width: 100%;
+  overflow: hidden;
 }
 
 .company .tit {
-  padding-top: 5px;
+  padding-top: 10px;
   height: 60px;
   border-right: 1px solid #999;
 }
@@ -258,8 +244,7 @@ a {
 }
 
 .debut {
-  width: 50%;
-  float: left;
+  width: 100%;
 }
 
 .debut .tit {
@@ -267,32 +252,26 @@ a {
 }
 
 .mbti {
-  float: left;
-  width: 50%;
-}
-
-.mbti h3 {
-  border-right: 1px solid white;
+  width: 100%;
 }
 
 .mbti .tit {
-  border-right: 1px solid #999;
+  margin-left: 0;
+  height: 60px;
 }
 
 .mbti .tit p {
   font-size: 25px;
   font-weight: bold;
   text-align: center;
-  line-height: 80px;
+  line-height: 60px;
 }
 
 .hobby {
-  float: left;
-  width: 50%;
+  width: 100%;
 }
 
 .sns {
-  float: left;
   width: 100%;
 }
 
@@ -300,13 +279,12 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 70px;
+  height: 65px;
   overflow: hidden;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 .sns .tit div {
-  float: left;
   width: 30%;
 }
 
@@ -322,4 +300,85 @@ a {
 .sns .tit div a img {
   width: 50%;
   height: 40px;
+}
+
+/* profile부분 가로회전 */
+@media (min-width:321px) and (orientation:landscape) {
+  .tit {
+    margin-left: 30px;
+  }
+
+  .profile img {
+    width: 45%;
+  }
+
+  .born {
+    width: 50%;
+    float: left;
+  }
+
+  .born h3 {
+    border-right: 1px solid white;
+  }
+
+  .born .tit {
+    border-right: 1px solid #999;
+  }
+
+  .body_profile {
+    float: left;
+    width: 50%;
+  }
+
+  .ability {
+    float: left;
+    width: 100%;
+  }
+
+  .ability .tit {
+    height: 100px;
+  }
+
+  .company {
+    float: left;
+    width: 50%;
+  }
+
+  .company h3 {
+    border-right: 1px solid white;
+  }
+
+  .hobby {
+    float: left;
+    width: 50%;
+  }
+
+  .sns {
+    float: left;
+    width: 100%;
+  }
+
+  .debut {
+    width: 50%;
+    float: left;
+  }
+
+  .mbti {
+    float: left;
+    width: 50%;
+  }
+
+  .mbti h3 {
+    border-right: 1px solid white;
+  }
+
+  .mbti .tit {
+    height: 80px;
+    border-right: 1px solid #999;
+  }
+
+  .mbti .tit p {
+    height: 80px;
+    line-height: 80px;
+  }
 }

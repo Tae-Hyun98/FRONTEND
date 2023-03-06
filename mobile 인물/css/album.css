@@ -6,9 +6,6 @@
   box-sizing: border-box;
 }
 
-body,
-html {}
-
 img {
   display: block;
 }
@@ -91,6 +88,7 @@ a {
 
 #gnb_chk:checked~.gnb {
   width: 60%;
+  z-index: 1;
 }
 
 #gnb_chk:checked~.gnb li a {
@@ -98,7 +96,7 @@ a {
 }
 
 #gnb_chk:checked~.main {
-  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0.5;
 }
 
 
@@ -114,6 +112,7 @@ a {
   .gnb {
     position: relative;
     width: 100%;
+    height: auto;
     top: 0;
     transition: none;
   }
@@ -125,8 +124,8 @@ a {
 
   .gnb li a {
     opacity: 1;
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     border-bottom: none;
     border-right: 1px solid #ccc;
     transition: none;
