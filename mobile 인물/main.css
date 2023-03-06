@@ -107,14 +107,33 @@ a {
   height: 350px;
 }
 
-.profile_etc {
-
-}
+.profile_etc {}
 
 .profile_etc h3 {
   text-align: center;
   background-color: #ccc;
 }
-.profile_etc p{
-  padding-left: 30px;
+
+.profile_etc .born {
+  margin-left: 40px;
+}
+
+.profile_etc .born p {
+  height: 25px;
+  line-height: 25px;
+}
+
+.profile_etc .born_ko {
+  overflow: hidden;
+}
+
+.profile_etc .born_ko img {
+  float: left;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+}
+
+.profile_etc .born_ko p {
+  float: left;
 }
