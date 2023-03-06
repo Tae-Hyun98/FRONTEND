@@ -63,6 +63,18 @@ a {
   display: none;
 }
 
+.lnb_web_menu {
+  overflow: hidden;
+}
+
+.lnb_web_menu li {
+  float: left;
+  width: 20%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+
 .label {
   position: absolute;
   left: 15px;
@@ -109,6 +121,8 @@ a {
   height: 100px;
 }
 
+
+
 /*********************footer*******************/
 .footer {
   height: 100px;
@@ -116,4 +130,66 @@ a {
   text-align: center;
   background-color: black;
   color: white;
+}
+
+
+/*****************media_query**************/
+/* tablet */
+@media (min-width:601px) {
+  .notice_box {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .notice_box .notice {
+    width: 50%;
+    height: 250px;
+  }
+}
+
+/* 저해상도 WEB */
+@media (min-width:769px) {
+
+  .header .label,
+  .header .lnb_ham_menu {
+    display: none;
+  }
+
+  .lnb_web_outer {
+    display: block;
+  }
+
+  .visual_main {
+    height: 200px;
+    line-height: 200px;
+  }
+
+  .notice_box .notice {
+    width: 25%;
+  }
+
+}
+
+/* 고해상도 WEB */
+@media (min-width:1025px) {
+
+  .header,
+  .wrap,
+  .lnb_web_menu,
+  .footer {
+    width: 1024px;
+    margin: 0 auto;
+  }
+
+  .header_ex {
+    background-color: #ccc;
+  }
+
+  .lnb_web_outer {
+    background-color: #777;
+  }
+
+  .footer_outer {
+    background-color: #ccc;
+  }
 }
