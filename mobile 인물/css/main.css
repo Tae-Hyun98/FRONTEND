@@ -43,6 +43,14 @@ a {
   color: white;
 }
 
+.header a {
+  display: block;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: white;
+}
+
 .gnb {
   position: absolute;
   left: 0;
