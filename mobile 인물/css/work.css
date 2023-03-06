@@ -44,6 +44,23 @@ a {
   color: white;
 }
 
+.header a {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  right: 15px;
+  top: 10px;
+  color: white;
+  text-align: center;
+}
+
+.header a i {
+  width: 100%;
+  font-size: 20px;
+}
+
 .gnb {
   position: absolute;
   left: 0;
