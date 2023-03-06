@@ -109,9 +109,13 @@ a {
 }
 
 .profile_etc {
+  width: 100%;
+  overflow: hidden;
+}
+
+.profile_etc div {
   width: 50%;
   float: left;
-  box-sizing: border-box;
 }
 
 .profile_etc h3 {
@@ -119,13 +123,7 @@ a {
   background-color: #ccc;
 }
 
-.profile_etc .born {
-  margin-left: 5px;
-}
-
 .profile_etc .born p {
-  height: 25px;
-  line-height: 25px;
 }
 
 .profile_etc .born_ko {

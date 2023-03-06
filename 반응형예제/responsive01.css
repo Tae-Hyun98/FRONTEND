@@ -79,12 +79,12 @@ a {
   position: absolute;
   left: 15px;
   top: 30px;
-  display: block;
   width: 40px;
   height: 40px;
 }
 
 .label label {
+  display: block;
   color: white;
   line-height: 40px;
   text-align: center;
