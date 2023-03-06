@@ -17,6 +17,18 @@ a {
   text-decoration: none;
 }
 
+.header {
+  position: relative;
+  height: 100px;
+  background-color: black;
+}
+
+.header h1 {
+  color: white;
+  line-height: 100px;
+  text-align: center;
+}
+
 /********************lnb_menu*******************/
 #lnb_chk {
   display: none;
@@ -51,6 +63,57 @@ a {
   display: none;
 }
 
-.header{
-  width: 100%;
+.label {
+  position: absolute;
+  left: 15px;
+  top: 30px;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.label label {
+  color: white;
+  line-height: 40px;
+  text-align: center;
+}
+
+.lnb_ham_menu {
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+
+.lnb_ham_menu li {
+  width: 150px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+/********************wrap*******************/
+.visual_main {
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+  background-color: yellow;
+}
+
+.notice_box {}
+
+.notice_box .notice {
+  border: 1px solid black;
+  box-sizing: border-box;
+  height: 100px;
+}
+
+/*********************footer*******************/
+.footer {
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background-color: black;
+  color: white;
 }
