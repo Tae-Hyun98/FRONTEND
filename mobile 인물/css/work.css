@@ -120,26 +120,197 @@ a {
   }
 }
 
-/*************profile************/
+/*************award/work************/
+.padding {
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
 .main {
   width: 100%;
   transition: all 0.3s;
   overflow: hidden;
 }
 
-.main h1 {
-  text-align: center;
-  padding: 10px 0;
-}
-
 .profile {
   width: 100%;
-  height: 300px;
+  height: 290px;
+  margin: 20px 0;
 }
 
 .profile img {
-  width: 75%;
-  height: 300px;
+  width: 80%;
+  height: 250px;
   margin: 0 auto;
-  padding-bottom: 20px;
+}
+
+.profile .movie1 {
+  float: left;
+  width: 50%;
+}
+
+.profile .movie1 p {
+  text-align: center;
+}
+
+.profile .movie2 {
+  float: left;
+  width: 50%;
+}
+
+.profile .movie2 p {
+  text-align: center;
+}
+
+.content h2 {
+  height: 35px;
+  padding: 0;
+  padding-left: 25px;
+  text-align: left;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: black;
+  color: white;
+}
+
+.content h2 i {
+  float: right;
+  padding-right: 10px;
+  padding-top: 5px;
+}
+
+.awards_list {
+  margin-left: 10px;
+  margin-top: 5px;
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.awards_list span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.awards_list p {
+  padding-bottom: 5px;
+}
+
+.awards_list p:nth-child(1) {
+  border-bottom: 1px solid black;
+}
+
+.awards_list p:nth-child(2) {
+  padding-top: 5px;
+}
+
+#awards_chk {
+  display: none;
+}
+
+#awards_chk:checked~.awards_list {
+  height: 60px;
+  opacity: 1;
+}
+
+
+.drama_list {
+  margin-left: 10px;
+  margin-top: 5px;
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.drama_list span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.drama_list p {
+  padding-top: 5px;
+}
+
+.drama_list ul {
+  padding-left: 59px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+#dra_chk {
+  display: none;
+}
+
+#dra_chk:checked~.drama_list {
+  height: 320px;
+  opacity: 1;
+}
+
+.movie_list {
+  margin-left: 10px;
+  margin-top: 5px;
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.movie_list span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.movie_list p {
+  padding-bottom: 5px;
+}
+
+.movie_list p:nth-child(1) {
+  border-bottom: 1px solid black;
+}
+
+.movie_list p:nth-child(2) {
+  padding-top: 5px;
+}
+
+.movie_list p:last-child {
+  padding-top: 5px;
+}
+
+.movie_list ul {
+  padding-left: 59px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+#movie_chk {
+  display: none;
+}
+
+#movie_chk:checked~.movie_list {
+  height: 120px;
+  opacity: 1;
+}
+
+.joke_list {
+  margin-left: 10px;
+  margin-top: 5px;
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.joke_list p {
+  padding-bottom: 5px;
+}
+
+.joke_list p:last-child {
+  padding-top: 5px;
+}
+
+#joke_chk {
+  display: none;
+}
+
+#joke_chk:checked~.joke_list {
+  height: 120px;
+  opacity: 1;
 }
