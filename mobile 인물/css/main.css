@@ -138,8 +138,10 @@ a {
 }
 
 .profile img {
-  width: 100%;
+  width: 75%;
   height: 350px;
+  margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .profile_etc {
@@ -154,8 +156,8 @@ a {
 
 
 .profile_etc h3 {
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   text-align: center;
   background-color: #ccc;
 }
@@ -281,14 +283,13 @@ a {
   display: flex;
   justify-content: center;
   width: 100%;
-  height: auto;
+  height: 70px;
   overflow: hidden;
   margin: 10px 0;
 }
 
 .sns .tit div {
   float: left;
-  flex-direction: column;
   width: 30%;
 }
 
