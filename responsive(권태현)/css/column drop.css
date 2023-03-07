@@ -39,7 +39,7 @@ img {
 
 @media (min-width:601px) {
   .top {
-    height: 600px;
+    height: 700px;
   }
 
   .middle,
@@ -55,15 +55,14 @@ img {
   }
 
   .top {
-    width: 80%;
+    width: calc(100% - 30%);
   }
 
   .middle {
-    /* width: calc(100% - 80% - 10px); */
-    flex-grow: 1;
+    width: calc(100% - 70% - 20px);
     order: -1;
     margin-right: 20px;
-    height: 600px;
+    height: 700px;
   }
 
   .bottom {
@@ -73,12 +72,17 @@ img {
 
 @media (min-width:1025px) {
   .bottom {
-    width: 20%;
-    height: 600px;
+    width: calc(100% - 80%);
+    height: 700px;
   }
 
   .top {
-    width: 60%;
-    margin-right: 20px;
+    width: calc(100% - 40% - 40px);
+    margin: 0 20px;
+  }
+
+  .middle {
+    width: calc(100% - 80%);
+    margin-right: 0;
   }
 }
