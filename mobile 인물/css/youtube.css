@@ -184,7 +184,7 @@ a {
   .cont p {
     float: left;
     margin-left: 15px;
-    margin-top: 20px;
+    margin-top: 25px;
     width: calc(100% - 70% - 15px);
   }
 }
