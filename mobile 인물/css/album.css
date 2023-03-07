@@ -191,6 +191,8 @@ a {
   width: 100%;
 }
 
-@media (min-width:321px) and (orientation:landscape){
-  .album_list div{width: 25%;}
+@media (min-width:321px) and (orientation:landscape) {
+  .album_list div {
+    width: 25%;
+  }
 }

@@ -86,7 +86,7 @@ a {
 }
 
 #gnb_chk:checked~.gnb {
-  width: 60%;
+  width: calc(100% - 30%);
   z-index: 1;
 }
 
