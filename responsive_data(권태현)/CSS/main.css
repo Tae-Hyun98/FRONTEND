@@ -138,6 +138,10 @@ a {
     display: none;
   }
 
+  .menu {
+    display: none;
+  }
+
   .menu_gnb {
     display: block;
     float: right;
