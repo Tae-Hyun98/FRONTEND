@@ -7,27 +7,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>반응형</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
-  <link rel="stylesheet" href="./CSS/main.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
   <input type="checkbox" id="menu_chk">
   <header class="header">
-    <div class="header_left">
-      <i class="far fa-clock"></i>
-      <p>TimeSwitch</p>
+    <div class="header_inner">
+      <div class="header_left">
+        <i class="far fa-clock"></i>
+        <p>TimeSwitch</p>
+      </div>
+      <div class="menu_gnb">
+        <ul class="menu_list_gnb">
+          <li><a href="#!">메인</a></li>
+          <li><a href="#!">연혁</a></li>
+          <li><a href="company.html">사업 소개</a></li>
+          <li><a href="#!">채용 정보</a></li>
+          <li><a href="#!">문의</a></li>
+        </ul>
+      </div>
+      <label for="menu_chk">
+        <i class="fas fa-bars"></i>
+      </label>
     </div>
-
-    <label for="menu_chk">
-      <i class="fas fa-bars"></i>
-    </label>
   </header>
   <hr class="under">
   <div class="menu">
     <ul class="menu_list">
       <li><a href="#!">메인</a></li>
       <li><a href="#!">연혁</a></li>
-      <li><a href="#!">사업 소개</a></li>
+      <li><a href="company.html">사업 소개</a></li>
       <li><a href="#!">채용 정보</a></li>
       <li><a href="#!">문의</a></li>
     </ul>
@@ -121,8 +131,11 @@
       </aside>
     </div>
   </div>
+
   <footer class="footer">
-    <p>Copyright ® TimeSwitch</p>
+    <div class="footer_inner">
+      <p>Copyright ® TimeSwitch</p>
+    </div>
   </footer>
 </body>
 
