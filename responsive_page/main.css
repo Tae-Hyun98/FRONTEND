@@ -123,6 +123,7 @@ img {
     line-height: 40px;
     font-weight: bold;
     color: black;
+    font-size: 16px;
     border: none;
     transition: all 0.3s;
   }
@@ -354,6 +355,7 @@ img {
 
 .issue i {
   color: #777;
+  margin-right: 5px;
 }
 
 .recommand {
@@ -418,6 +420,8 @@ img {
   float: left;
   width: 25%;
   height: 80px;
+  transition: all 0.3s;
+  overflow: hidden;
 }
 
 .letter {
@@ -518,6 +522,10 @@ img {
     height: 70px;
   }
 
+  .best_box img:hover {
+    transform: scale(1.2);
+  }
+
 
 }
 
@@ -541,4 +549,22 @@ img {
     width: 1280px;
     margin: 0 auto;
   }
+}
+
+/***TOP***/
+.top_btn {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  right: 5%;
+  bottom: 20px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.top_btn a {
+  display: block;
+  color: white;
+  font-weight: bold;
 }
