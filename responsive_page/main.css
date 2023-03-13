@@ -14,10 +14,23 @@ a {
 }
 
 /***************header****************/
-.tit {
-  height: 35px;
-  line-height: 25px;
+.header {
+  position: relative;
+  height: 40px;
+  line-height: 30px;
   padding: 5px;
+  box-sizing: border-box;
+}
+
+.header label {
+  position: absolute;
+  font-size: 20px;
+  right: 15px;
+  top: 5px;
+}
+
+.tit {
+  padding-left: 10px;
   box-sizing: border-box;
 }
 
@@ -26,23 +39,54 @@ a {
 }
 
 .lnb {
-  height: 35px;
-  line-height: 25px;
-  padding: 5px;
-  background-color: rgba(124, 186, 193, 1);
-  box-sizing: border-box;
+  float: right;
+  width: 120px;
 }
 
 .lnb ul {
-  overflow: hidden;
+  background-color: rgba(124, 186, 193, 1);
+  height: 0;
+  opacity: 0;
+  transition: all 0.3s;
 }
 
 .lnb ul li {
-  float: left;
-  margin-left: 10px;
-  font-size: 14px;
+  opacity: 0;
+  height: 0;
+  line-height: 35px;
+  transition: all 0.3s;
+  box-sizing: border-box;
 }
 
+.lnb ul li a {
+  display: none;
+  text-align: center;
+  color: white;
+  font-size: 14px;
+  border-bottom: 1px solid white;
+}
+
+#ham_chk {
+  display: none;
+}
+
+#ham_chk:checked~.lnb {
+  opacity: 1;
+}
+
+#ham_chk:checked~.lnb ul {
+  height: 210px;
+  opacity: 1;
+}
+
+#ham_chk:checked~.lnb ul li {
+  height: 35px;
+  opacity: 1;
+}
+
+#ham_chk:checked~.lnb ul li a {
+  display: block;
+}
 
 /****************tag_btn****************/
 .tag_btn {
