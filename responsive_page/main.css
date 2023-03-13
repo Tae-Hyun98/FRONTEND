@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/***************header****************/
+.tit {
+  height: 35px;
+  line-height: 25px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.tit h2 {
+  color: rgba(131, 164, 168, 1);
+}
+
+.lnb {
+  height: 35px;
+  line-height: 25px;
+  padding: 5px;
+  background-color: rgba(124, 186, 193, 1);
+  box-sizing: border-box;
+}
+
+.lnb ul {
+  overflow: hidden;
+}
+
+.lnb ul li {
+  float: left;
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+
+/****************tag_btn****************/
+.tag_btn {
+  height: 80px;
+  line-height: 80px;
+  padding-left: 10px;
+}
+
+.tag_btn>div {
+  float: left;
+}
