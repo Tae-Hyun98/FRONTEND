@@ -39,7 +39,7 @@ a {
 
 .lnb ul li {
   float: left;
-  margin-left: 5px;
+  margin-left: 10px;
   font-size: 14px;
 }
 
@@ -49,8 +49,20 @@ a {
   height: 80px;
   line-height: 80px;
   padding-left: 10px;
+  overflow: hidden;
 }
 
 .tag_btn>div {
   float: left;
+}
+
+.tag_btn>div p {
+  height: 80px;
+  line-height: 80px;
+}
+
+.tag_btn>div a {
+  display: block;
+  background-color: rgba(117, 219, 231, 1);
+  color: white;
 }
