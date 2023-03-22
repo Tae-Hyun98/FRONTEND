@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript</title>
+
+  <script>
+    /* let sum = 0;
+    let input = parseInt(prompt('첫번째 숫자'));
+    sum += input;
+    document.write('첫번째 입력한 숫자:' + input + '  ' + '첫번째 누적합:' + sum + '<br/>');
+    input = parseInt(prompt('두번째 숫자'));
+    sum += input;
+    document.write('두번째 입력한 숫자:' + input + '  ' + '두번째 누적합:' + sum + '<br/>');
+    input = parseInt(prompt('세번째 숫자'));
+    sum += input;
+    document.write('세번째 입력한 숫자:' + input + '  ' + '세번째 누적합:' + sum + '<br/>');
+    document.write('총합:' + sum + '<br/>'); */
+
+    //복합대입연산자를 이용한 테이블 만들기
+    /* let table = '<table border="1" width="300px">';
+    table += '<tr>';
+    table += '<td>1</td>';
+    table += '<td>2</td>';
+    table += '<td>3</td>';
+    table += '</tr>';
+
+    table += '<tr>';
+    table += '<td>4</td>';
+    table += '<td>5</td>';
+    table += '<td>6</td>';
+    table += '</tr>';
+    table += '</table>'
+
+    document.write(table); */
+
+    //초기값 10 할당, 1씩증가하면서 사칙연산 복합대입연산자를 이용하여 계산
+    let a = 10;
+    let b = a;
+    document.write('a : ', a, ' b :', b, '<br/>');
+      b+=1;
+    document.write('더하기는: ', a + b, '<br/>');
+    a += 1;
+    b = a;
+    document.write('빼기는: ', a - b, '<br/>');
+    a += 1;
+    b = a;
+    document.write('곱하기는: ', a * b, '<br/>');
+    a += 1;
+    b = a;
+    document.write('나누기는: ', a / b, '<br/>');
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
