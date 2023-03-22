@@ -1,0 +1,299 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR:wght@100;400;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+  font-family: '노토산스', 'Noto Sans KR', '나눔고딕', 'Nanum Gothic', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  display: block;
+}
+
+/***********header**************/
+.header {
+  position: relative;
+  height: 60px;
+}
+
+.header .logo h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 60px;
+}
+
+.header .logo h1 a {
+  color: #173C86;
+}
+
+.header .menu {
+  position: absolute;
+  left: 25px;
+  line-height: 60px;
+  top: 0;
+}
+
+.header .menu label {
+  display: block;
+  text-align: center;
+  font-size: 1.8rem;
+}
+
+.header .menu label i {
+  font-size: 28px;
+}
+
+
+.menu_list {
+  position: absolute;
+  left: -300px;
+  top: 0;
+  width: 50%;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #173C86;
+  transition: all 0.5s;
+  overflow: hidden;
+}
+
+.menu_list ul li a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  color: white;
+  font-size: 1.4rem;
+  border-bottom: 1px solid white;
+  padding-left: 10%;
+}
+
+.menu_list ul li i {
+  position: absolute;
+  right: 10px;
+  line-height: 50px;
+}
+
+.menu_list ul li label {
+  display: block;
+  line-height: 50px;
+}
+
+.menu_list .login {
+  position: relative;
+  font-size: 0;
+  padding-left: 10%;
+}
+
+.menu_list .login i {
+  position: absolute;
+  font-weight: bold;
+  font-size: 2rem;
+  right: 10px;
+  top: 15px;
+}
+
+.menu_list .login p {
+  display: inline-block;
+}
+
+.menu_list .login p:first-child a {
+  margin-right: 5px;
+}
+
+.menu_list .login p a {
+  border: 1px solid white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  color: white;
+  height: 60px;
+  line-height: 60px;
+}
+
+
+.list {
+  height: 0px;
+  transition: all 0.3s;
+  overflow: hidden;
+  border-bottom: 1px solid white;
+}
+
+.list ul {
+  padding-left: 5%;
+}
+
+.list ul li a {
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  font-size: 1rem;
+  opacity: 0;
+  transition: all 0.3s;
+  border-bottom: none;
+}
+
+#menu_chk,
+#drop_chk,
+#stick_chk,
+#tea_chk,
+#gift_chk,
+#comu_chk {
+  display: none;
+}
+
+#menu_chk:checked~.header .menu_list {
+  left: 0;
+}
+
+#drop_chk:checked~.header .menu_list .lnb .drop .coffee_list {
+  height: 140px;
+}
+
+#drop_chk:checked~.header .menu_list .lnb .drop .coffee_list ul li a {
+  opacity: 1;
+}
+
+#drop_chk:checked~.header .menu_list .lnb .coffee .drop_open {
+  display: none;
+}
+
+#drop_chk:checked~.header .menu_list .lnb .coffee .drop_close {
+  display: block;
+}
+
+#drop_chk~.header .menu_list .lnb .coffee .drop_close {
+  display: none;
+}
+
+/* 스틱 */
+#stick_chk:checked~.header .menu_list .lnb .drop .stick_list {
+  height: 105px;
+}
+
+#stick_chk:checked~.header .menu_list .lnb .drop .stick_list ul li a {
+  opacity: 1;
+}
+
+#stick_chk:checked~.header .menu_list .lnb .stick .drop_open {
+  display: none;
+}
+
+#stick_chk:checked~.header .menu_list .lnb .stick .drop_close {
+  display: block;
+}
+
+#stick_chk~.header .menu_list .lnb .stick .drop_close {
+  display: none;
+}
+
+/* 음료티 */
+#tea_chk:checked~.header .menu_list .lnb .drop .tea_list {
+  height: 175px;
+}
+
+#tea_chk:checked~.header .menu_list .lnb .drop .tea_list ul li a {
+  opacity: 1;
+}
+
+#tea_chk:checked~.header .menu_list .lnb .tea .drop_open {
+  display: none;
+}
+
+#tea_chk:checked~.header .menu_list .lnb .tea .drop_close {
+  display: block;
+}
+
+#tea_chk~.header .menu_list .lnb .tea .drop_close {
+  display: none;
+}
+
+/* 선물세트 */
+#gift_chk:checked~.header .menu_list .lnb .drop .gift_list {
+  height: 105px;
+}
+
+#gift_chk:checked~.header .menu_list .lnb .drop .gift_list ul li a {
+  opacity: 1;
+}
+
+#gift_chk:checked~.header .menu_list .lnb .gift .drop_open {
+  display: none;
+}
+
+#gift_chk:checked~.header .menu_list .lnb .gift .drop_close {
+  display: block;
+}
+
+#gift_chk~.header .menu_list .lnb .gift .drop_close {
+  display: none;
+}
+
+/* 커뮤니티 */
+#comu_chk:checked~.header .menu_list .lnb .drop .comu_list {
+  height: 105px;
+}
+
+#comu_chk:checked~.header .menu_list .lnb .drop .comu_list ul li a {
+  opacity: 1;
+}
+
+#comu_chk:checked~.header .menu_list .lnb .comu .drop_open {
+  display: none;
+}
+
+#comu_chk:checked~.header .menu_list .lnb .comu .drop_close {
+  display: block;
+}
+
+#comu_chk~.header .menu_list .lnb .comu .drop_close {
+  display: none;
+}
+
+
+.search_box {
+  position: relative;
+  padding: 0 30px;
+  height: 50px;
+  line-height: 50px;
+  background-color: #173C86;
+}
+
+.search_box i {
+  position: absolute;
+  left: 40px;
+  top: 18px;
+  font-size: 1.1rem;
+}
+
+.search_box input {
+  width: 100%;
+  height: 25px;
+  border: 1px solid black;
+  outline: none;
+  padding-left: 35px;
+}
+
+@media (min-width:601px) {
+  .menu_list {
+    left: -500px;
+  }
+
+  .menu_list .login p a {
+    font-size: 1rem;
+  }
+}
