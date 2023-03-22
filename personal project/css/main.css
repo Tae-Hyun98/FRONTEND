@@ -29,7 +29,6 @@ img {
 /***********header**************/
 .header {
   position: relative;
-  height: 60px;
 }
 
 .header .logo h1 {
@@ -160,111 +159,111 @@ img {
   display: none;
 }
 
-#menu_chk:checked~.header .menu_list {
+#menu_chk:checked~.menu_list {
   left: 0;
 }
 
-#drop_chk:checked~.header .menu_list .lnb .drop .coffee_list {
+#drop_chk:checked~.menu_list .lnb .drop .coffee_list {
   height: 140px;
 }
 
-#drop_chk:checked~.header .menu_list .lnb .drop .coffee_list ul li a {
+#drop_chk:checked~.menu_list .lnb .drop .coffee_list ul li a {
   opacity: 1;
 }
 
-#drop_chk:checked~.header .menu_list .lnb .coffee .drop_open {
+#drop_chk:checked~.menu_list .lnb .coffee .drop_open {
   display: none;
 }
 
-#drop_chk:checked~.header .menu_list .lnb .coffee .drop_close {
+#drop_chk:checked~.menu_list .lnb .coffee .drop_close {
   display: block;
 }
 
-#drop_chk~.header .menu_list .lnb .coffee .drop_close {
+#drop_chk~.menu_list .lnb .coffee .drop_close {
   display: none;
 }
 
 /* 스틱 */
-#stick_chk:checked~.header .menu_list .lnb .drop .stick_list {
+#stick_chk:checked~.menu_list .lnb .drop .stick_list {
   height: 105px;
 }
 
-#stick_chk:checked~.header .menu_list .lnb .drop .stick_list ul li a {
+#stick_chk:checked~.menu_list .lnb .drop .stick_list ul li a {
   opacity: 1;
 }
 
-#stick_chk:checked~.header .menu_list .lnb .stick .drop_open {
+#stick_chk:checked~.menu_list .lnb .stick .drop_open {
   display: none;
 }
 
-#stick_chk:checked~.header .menu_list .lnb .stick .drop_close {
+#stick_chk:checked~.menu_list .lnb .stick .drop_close {
   display: block;
 }
 
-#stick_chk~.header .menu_list .lnb .stick .drop_close {
+#stick_chk~.menu_list .lnb .stick .drop_close {
   display: none;
 }
 
 /* 음료티 */
-#tea_chk:checked~.header .menu_list .lnb .drop .tea_list {
+#tea_chk:checked~.menu_list .lnb .drop .tea_list {
   height: 175px;
 }
 
-#tea_chk:checked~.header .menu_list .lnb .drop .tea_list ul li a {
+#tea_chk:checked~.menu_list .lnb .drop .tea_list ul li a {
   opacity: 1;
 }
 
-#tea_chk:checked~.header .menu_list .lnb .tea .drop_open {
+#tea_chk:checked~.menu_list .lnb .tea .drop_open {
   display: none;
 }
 
-#tea_chk:checked~.header .menu_list .lnb .tea .drop_close {
+#tea_chk:checked~.menu_list .lnb .tea .drop_close {
   display: block;
 }
 
-#tea_chk~.header .menu_list .lnb .tea .drop_close {
+#tea_chk~.menu_list .lnb .tea .drop_close {
   display: none;
 }
 
 /* 선물세트 */
-#gift_chk:checked~.header .menu_list .lnb .drop .gift_list {
+#gift_chk:checked~.menu_list .lnb .drop .gift_list {
   height: 105px;
 }
 
-#gift_chk:checked~.header .menu_list .lnb .drop .gift_list ul li a {
+#gift_chk:checked~.menu_list .lnb .drop .gift_list ul li a {
   opacity: 1;
 }
 
-#gift_chk:checked~.header .menu_list .lnb .gift .drop_open {
+#gift_chk:checked~.menu_list .lnb .gift .drop_open {
   display: none;
 }
 
-#gift_chk:checked~.header .menu_list .lnb .gift .drop_close {
+#gift_chk:checked~.menu_list .lnb .gift .drop_close {
   display: block;
 }
 
-#gift_chk~.header .menu_list .lnb .gift .drop_close {
+#gift_chk~.menu_list .lnb .gift .drop_close {
   display: none;
 }
 
 /* 커뮤니티 */
-#comu_chk:checked~.header .menu_list .lnb .drop .comu_list {
+#comu_chk:checked~.menu_list .lnb .drop .comu_list {
   height: 105px;
 }
 
-#comu_chk:checked~.header .menu_list .lnb .drop .comu_list ul li a {
+#comu_chk:checked~.menu_list .lnb .drop .comu_list ul li a {
   opacity: 1;
 }
 
-#comu_chk:checked~.header .menu_list .lnb .comu .drop_open {
+#comu_chk:checked~.menu_list .lnb .comu .drop_open {
   display: none;
 }
 
-#comu_chk:checked~.header .menu_list .lnb .comu .drop_close {
+#comu_chk:checked~.menu_list .lnb .comu .drop_close {
   display: block;
 }
 
-#comu_chk~.header .menu_list .lnb .comu .drop_close {
+#comu_chk~.menu_list .lnb .comu .drop_close {
   display: none;
 }
 
@@ -307,10 +306,9 @@ img {
     height: 160px;
   }
 
-  .menu_list {
-    display: block;
-    width: 100%;
-    height: 60px;
+  .header .header_inner {
+    width: 1274px;
+    margin: 0 auto;
   }
 
   .header .logo h1 {
@@ -318,35 +316,132 @@ img {
     font-size: 3rem;
   }
 
-  .login {
-    float: right;
+  .header .menu label {
+    display: none;
+  }
+
+  .menu_list {
+    position: unset;
+    display: block;
+    width: 100%;
+    height: 60px;
+  }
+
+  .menu_list .menu_list_inner {
+    width: 1274px;
+    margin: 0 auto;
+  }
+
+  .menu_list .login {
+    position: absolute;
+    width: 1274px;
+    text-align: right;
+    padding: 0;
+    top: 0;
+  }
+
+  .menu_list .login p:first-child a {
+    margin: 0;
   }
 
   .menu_list .login p a {
-    font-size: 0.5rem;
+    display: block;
+    font-size: 0.7rem;
     border: none;
-    color: #ccc;
+    color: #999;
+    padding: 20px 10px;
+    height: auto;
+    line-height: 0;
   }
 
-  .wide {
-    display: block;
+  .menu_list .login .wide {
+    display: inline-block;
+  }
+
+  .menu_list .login label {
+    display: none;
   }
 
   .search_box {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
     padding: 0;
     background-color: white;
   }
 
-  .search_box {
-    width: 200px;
+  .search_box input {
+    padding: 0;
   }
 }
 
 /***********visual***************/
 .visual {
+  position: relative;
   width: 100%;
 }
 
 .visual img {
   width: 100%;
+}
+
+.visual .visual_banner .slick-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 41%;
+}
+
+.visual .visual_banner .slick-dots li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.visual .visual_banner .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  border: none;
+  width: 8px;
+  height: 8px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.visual .visual_banner .slick-dots li.slick-active button {
+  background-color: #173C86;
+}
+
+.visual_banner .slick-arrow {
+  position: absolute;
+  left: 2%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  font-size: 0;
+  visibility: hidden;
+}
+
+.visual_banner .slick-prev::before {
+  content: "\f053";
+  font-family: "Font Awesome 5 Free";
+  visibility: visible;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+}
+
+.visual_banner .slick-next {
+  left: auto;
+  right: 2%;
+}
+
+.visual_banner .slick-next::before {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  visibility: visible;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
 }

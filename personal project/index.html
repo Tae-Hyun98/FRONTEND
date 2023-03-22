@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>이디야스토어</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
   <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -18,28 +19,36 @@
   <input type="checkbox" id="gift_chk">
   <input type="checkbox" id="comu_chk">
   <header class="header">
-    <div class="menu">
-      <label for="menu_chk">
-        <i class="fas fa-bars"></i>
-      </label>
-    </div>
+    <div class="header_inner">
+      <div class="menu">
+        <label for="menu_chk">
+          <i class="fas fa-bars"></i>
+        </label>
+      </div>
 
-    <div class="logo">
-      <h1><a href="./index.html">EDIYA COFFEE</a></h1>
+      <div class="logo">
+        <h1><a href="./index.html">EDIYA COFFEE</a></h1>
+      </div>
+
+      <div class="search_box">
+        <i class="fas fa-search"></i>
+        <input type="search">
+      </div>
     </div>
-    
-    <div class="menu_list">
+  </header>
+  <div class="menu_list">
+    <div class="menu_list_inner">
       <ul class="lnb">
         <div class="login">
           <p><a href="#">로그인</a></p>
           <p><a href="#">회원가입</a></p>
           <p class="wide"><a href="#">장바구니</a></p>
           <p class="wide"><a href="#">최근본상품</a></p>
-          
           <label for="menu_chk">
             <i class="fas fa-times"></i>
           </label>
         </div>
+        
         <li><a href="#">ALL</a></li>
         <li><a href="#">베스트</a></li>
         <li class="coffee drop">
@@ -113,15 +122,38 @@
         </li>
       </ul>
     </div>
-  </header>
-  <div class="search_box">
-    <i class="fas fa-search"></i>
-    <input type="search">
   </div>
+ 
 
   <div class="visual">
-    <img src="./img/visual_banner2_mobile.jpg" alt="">
+    <div class="visual_banner">
+      <div>
+        <img src="./img/visual_banner2_mobile.jpg" alt="visual_banner">
+      </div>
+      <div>
+        <img src="./img/visual_banner2_mobile.jpg" alt="visual_banner1">
+      </div>
+      <div>
+        <img src="./img/visual_banner2_mobile.jpg" alt="visual_banner2">
+      </div>
+      <div>
+        <img src="./img/visual_banner2_mobile.jpg" alt="visual_banner3">
+      </div>
+    </div>
   </div>
+
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('.visual_banner').slick({
+        dots: true
+        //autoplay: true
+      });
+    });
+  </script>
 </body>
 
 </html>
