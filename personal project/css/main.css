@@ -93,6 +93,10 @@ img {
   line-height: 50px;
 }
 
+.menu_list .login .wide {
+  display: none;
+}
+
 .menu_list .login {
   position: relative;
   font-size: 0;
@@ -295,5 +299,45 @@ img {
 
   .menu_list .login p a {
     font-size: 1rem;
+  }
+}
+
+@media(min-width:1274px) {
+  .header {
+    height: 160px;
+  }
+
+  .menu_list {
+    display: block;
+    width: 100%;
+    height: 60px;
+  }
+
+  .header .logo h1 {
+    line-height: 160px;
+    font-size: 3rem;
+  }
+
+  .login {
+    float: right;
+  }
+
+  .menu_list .login p a {
+    font-size: 0.5rem;
+    border: none;
+    color: #ccc;
+  }
+
+  .wide {
+    display: block;
+  }
+
+  .search_box {
+    padding: 0;
+    background-color: white;
+  }
+
+  .search_box {
+    width: 200px;
   }
 }
