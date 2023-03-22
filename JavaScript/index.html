@@ -27,11 +27,58 @@
     document.write('num1 + num2 = ', result1, '<br/>');
     document.write(num1, '+', num2, '=', result1); */
 
-   //alert('hello, javascript');
-    let userId = prompt('아이디를 입력하세요 : ');
-    alert(userId);
+    //alert('hello, javascript');
 
-    let input = confirm('계속 진행하시겠습니까?');
+    /* let a='맞습니다.';
+    let userId = prompt('아이디를 입력하세요 : ');
+    alert(a);
+
+    let input = confirm('계속 진행하시겠습니까?'); */
+
+
+    //사칙연산과 나머지연산
+    let num1 = 50;
+    let num2 = 10;
+    let add = num1 + num2;
+    let sub = num1 - num2;
+    let div = num1 / num2;
+    let mod = num1 % num2;
+
+    document.write('첫번째 수 : ', num1, '<br/>');
+    document.write('두번째 수 : ', num2, '<br/>')
+    document.write('합 : ' + add + '<br/>');
+    document.write('차 : ' + sub + '<br/>');
+    document.write('몫 : ' + div + '<br/>');
+    document.write('나머지 : ' + mod + '<br/>', '<br/>');
+
+    //국영수 입력받아 총점, 평균출력
+    //parseInt는 정수형 int
+    let kor = parseInt(prompt('국어점수 입력 : '));
+    let eng = parseInt(prompt('영어점수 입력 : '));
+    let mat = parseInt(prompt('수학점수 입력 : '));
+    let sum = kor + eng + mat;
+    let avg = sum / 3;
+
+    document.write('국어점수 : ', kor, '<br/>');
+    document.write('영어점수 : ', eng, '<br/>');
+    document.write('수학점수 : ', mat, '<br/>');
+    document.write('총점 : ', sum, '<br/>');
+    document.write('평균 : ', avg, '<br/>', '<br/>');
+
+    //id pw입력받아 하나의 변수로 출력
+    let userId = prompt("아이디를 입력해주세요 : ");
+    let userPw = prompt("비밀번호를 입력해주세요 : ");
+    alert('아이디는 : ' + userId + ' ' + '비밀번호는 : ' + userPw + '입니다.');
+
+
+    //반지름을 입력받아 원의 둘레와 넓이 출력
+    const PI = 3.14;
+    let radius = parseInt(prompt('반지름을 입력해주세요 : '));
+    let cir = 2 * PI * radius;
+    let area = PI * radius * radius;
+    document.write('반지름은 ', radius, '<br/>');
+    document.write('원의 둘레는 ', cir, '입니다.', '<br/>');
+    document.write('원의 넓이는 ', area, '입니다.', '<br/>');
   </script>
 </head>
 
