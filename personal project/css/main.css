@@ -341,3 +341,12 @@ img {
     width: 200px;
   }
 }
+
+/***********visual***************/
+.visual {
+  width: 100%;
+}
+
+.visual img {
+  width: 100%;
+}
