@@ -70,7 +70,7 @@ img {
 
 .menu_list {
   position: absolute;
-  left: -300px;
+  left: -600px;
   top: 0;
   width: 55%;
   height: 150vh;
@@ -372,6 +372,162 @@ img {
   color: #fff;
 }
 
+/**************best******************/
+.content h2 {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.best_box {
+  width: 100%;
+  padding: 5px;
+}
+
+.best_box:nth-child(2) {
+  padding-right: 0;
+}
+
+.best_box .product_img {
+  overflow: hidden;
+}
+
+.product_img img {
+  width: 100%;
+  height: 160px;
+}
+
+.best_box .pa {
+  padding-top: 5px;
+}
+
+.best_box p {
+  font-size: 0.8rem;
+}
+
+.won {
+  color: #008BCC;
+}
+
+.best_slide .slick-arrow {
+  position: absolute;
+  left: 5%;
+  top: 0;
+  transform: translateY(-155%);
+  z-index: 10;
+  font-size: 0;
+  visibility: hidden;
+  color: black;
+}
+
+.best_slide .slick-prev::before {
+  content: "\f053";
+  font-family: "Font Awesome 5 Free";
+  visibility: visible;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.best_slide .slick-next {
+  left: auto;
+  right: 5%;
+}
+
+.best_slide .slick-next::before {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  visibility: visible;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+/********rec************/
+
+
+.label {
+  overflow: hidden;
+}
+
+.label label {
+  display: block;
+  float: left;
+  width: 25%;
+  text-align: center;
+  background-color: #173C86;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.sheet {
+  overflow: hidden;
+}
+
+.happy {
+  overflow: hidden;
+}
+
+.rec_box {
+  width: calc(100% - 66.6667% - 4px);
+  float: left;
+  margin-right: 5px;
+}
+
+.sheet .happy div:nth-child(3) {
+  margin-right: 0;
+}
+
+.rec_box .product_img {
+  width: 100%;
+}
+
+.more {
+  float: left;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.more a {
+  display: inline;
+  width: 100%;
+}
+
+#tab1,
+#tab2,
+#tab3,
+#tab4 {
+  display: none;
+}
+
+#tab1~.rec .sheet .happy,
+#tab2~.rec .sheet .sad {
+  display: none;
+}
+
+#tab1:checked~.rec .label .hap {
+  background-color: black;
+  color: white;
+}
+
+#tab2:checked~.rec .label .sa {
+  background-color: black;
+  color: white;
+}
+
+#tab1:checked~.rec .sheet .happy {
+  display: block;
+}
+
+#tab2:checked~.rec .sheet .sad {
+  display: block;
+}
+
 @media (min-width:601px) {
   .menu_list {
     left: -500px;
@@ -486,6 +642,8 @@ img {
     font-weight: bold;
     transition: all 0.3s;
     font-size: 1.2rem;
+    background-color: #fff;
+    z-index: 1;
   }
 
   .lnb_pc ul li a:hover {
@@ -673,6 +831,10 @@ img {
   .header .logo h1 {
     line-height: 120px;
     font-size: 2.8rem;
+  }
+
+  .lnb_pc {
+    background-color: #fff;
   }
 
   .lnb_inner {

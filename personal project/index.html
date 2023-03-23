@@ -231,7 +231,135 @@
     </div>
   </div>
 
-  
+  <div class="content">
+    <h2>베스트 상품</h2>
+    <div class="best">
+      <div class="best_slide">
+        <div>
+          <div class="best_box">
+            <a href="#!">
+              <div class="product_img">
+                <img src="./img/best.jpg" alt="best">
+              </div>
+              <p class="pa">[이디야] 콤부차 애플베리 20T+보틀</p>
+              <p><span class="won">12,900원</span></p>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="best_box">
+            <a href="#!">
+              <div class="product_img">
+                <img src="./img/all2-360px.jpg" alt="product2">
+              </div>
+              <p class="pa">[이디야] 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+              <p><span class="won">12,900원</span></p>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="best_box">
+            <a href="#!">
+              <div class="product_img">
+                <img src="./img/all3-360px.jpg" alt="product1">
+              </div>
+              <p class="pa">[이디야] 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+              <p><span class="won">12,900원</span></p>
+            </a>
+          </div>
+        </div>
+        <div>
+          <div class="best_box">
+            <a href="#!">
+              <div class="product_img">
+                <img src="./img/all4-360px.jpg" alt="product1">
+              </div>
+              <p class="pa">[이디야] 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+              <p><span class="won">12,900원</span></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <input type="radio" name="tab" id="tab1" checked>
+    <input type="radio" name="tab" id="tab2">
+    <input type="radio" name="tab" id="tab3">
+    <input type="radio" name="tab" id="tab4">
+    <div class="rec">
+      <h2>추천 상품</h2>
+      <div class="label">
+        <label for="tab1" class="hap">기분좋을때</label>
+        <label for="tab2" class="sa">우울할때</label>
+        <label for="tab3" class="sp">무기력할때</label>
+        <label for="tab4" class="ang">화가날때</label>
+      </div>
+      <div class="sheet">
+        <div class="happy">
+          <div class="rec_box">
+            <a href="#!">
+              <div class="product_img">
+                <img src="./img/all10.jpg" alt="product1">
+              </div>
+              <p class="pa">[이디야] 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+              <p><span class="won">12,900원</span></p>
+            </a>
+          </div>
+          <div class="rec_box">
+            <a href="#!">
+              <div class="product_img">
+                <img src="./img/all12.jpg" alt="product1">
+              </div>
+              <p class="pa">[이디야] 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+              <p><span class="won">12,900원</span></p>
+            </a>
+          </div>
+          <div class="rec_box">
+            <a href="#!">
+              <div class="product_img">
+                <img src="./img/all16.jpg" alt="product1">
+              </div>
+              <p class="pa">[이디야] 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+              <p><span class="won">12,900원</span></p>
+            </a>
+          </div>
+          <div class="more">
+           <a href="#!"><p>더보기 <i class="fas fa-plus"></i></p></a>
+          </div>
+        </div>
+
+        <div class="sad">
+          <div class="rec_box">
+            <a href="#!">
+              <div class="product_img">
+                <img src="./img/all3-360px.jpg" alt="product1">
+              </div>
+              <p class="pa">[이디야] 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+              <p><span class="won">12,900원</span></p>
+            </a>
+          </div>
+          <div class="rec_box">
+            <a href="#!">
+              <div class="product_img">
+                <img src="./img/all11.jpg" alt="product1">
+              </div>
+              <p class="pa">[이디야] 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+              <p><span class="won">12,900원</span></p>
+            </a>
+          </div>
+          <div class="rec_box">
+            <a href="#!">
+              <div class="product_img">
+                <img src="./img/all4.jpg" alt="product1">
+              </div>
+              <p class="pa">[이디야] 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+              <p><span class="won">12,900원</span></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
 
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -241,6 +369,13 @@
       $('.visual_banner').slick({
         dots: true
         //autoplay: true
+      });
+    });
+
+    $(document).ready(function () {
+      $('.best_slide').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1
       });
     });
   </script>
