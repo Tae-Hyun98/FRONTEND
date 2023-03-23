@@ -525,12 +525,19 @@ img {
   .lnb_pc ul li:hover .stick_pc {
     height: 120px;
   }
+
   .lnb_pc ul li:hover .tea_pc {
     height: 200px;
   }
+
   .lnb_pc ul li:hover .gift_pc {
     height: 120px;
   }
+
+  .lnb_pc ul li:hover .comu_pc {
+    height: 120px;
+  }
+
   .lnb_pc .down li a:hover {
     background-color: cornflowerblue;
   }
@@ -538,37 +545,6 @@ img {
   .menu_list {
     display: none;
   }
-
-  /*  .menu_list .login {
-    position: absolute;
-    width: 100%;
-    text-align: right;
-    padding: 0;
-    padding-right: 10px;
-    top: 0;
-  }
-
-  .menu_list .login p:first-child a {
-    margin: 0;
-  }
-
-  .menu_list .login p a {
-    display: block;
-    font-size: 0.7rem;
-    border: none;
-    color: #999;
-    padding: 15px 10px;
-    height: auto;
-    line-height: 0;
-  }
-
-  .menu_list .login .wide {
-    display: inline-block;
-  }
-
-  .menu_list .login label {
-    display: none;
-  } */
 
   .search_box {
     position: absolute;
@@ -607,7 +583,15 @@ img {
     color: black;
   }
 
-  .menu_list .lnb {
+  .visual_banner .slick-next {
+    right: 5%;
+  }
+
+  .visual_banner .slick-prev {
+    left: 5%;
+  }
+
+  /* .menu_list .lnb {
     overflow: hidden;
     height: 50px;
   }
@@ -635,7 +619,7 @@ img {
     line-height: 50px;
     cursor: pointer;
 
-  }
+  } */
 
   /* .menu_list ul li a label i {
     display: none;
@@ -680,8 +664,6 @@ img {
 
 
 @media(min-width:1274px) {
-
-
   .header .header_inner {
     position: relative;
     width: 1274px;
@@ -693,52 +675,28 @@ img {
     font-size: 2.8rem;
   }
 
-  /*   .menu_list {
-    position: unset;
-    width: 100%;
-    height: 60px;
-    transition: none;
-  }
-
-  .menu_list .menu_list_inner {
+  .lnb_inner {
     width: 1274px;
     margin: 0 auto;
   }
 
-  .menu_list .login {
-    position: absolute;
-    width: 1274px;
-    text-align: right;
+  .lnb_pc ul li {
+    width: 182px;
+  }
+
+  .down {
+    width: 182px;
+  }
+
+  .gnb {
+    right: 20px;
     padding: 0;
-    top: 0;
   }
-
-  .menu_list .login p:first-child a {
-    margin: 0;
-  }
-
-  .menu_list .login p a {
-    display: block;
-    font-size: 0.7rem;
-    border: none;
-    color: #999;
-    padding: 15px 10px;
-    height: auto;
-    line-height: 0;
-  }
-
-  .menu_list .login .wide {
-    display: inline-block;
-  }
-
-  .menu_list .login label {
-    display: none;
-  } */
 
   .search_box {
     position: absolute;
     width: 250px;
-    right: 0;
+    right: 22px;
     top: 45px;
     padding: 0;
     background-color: white;
@@ -771,100 +729,4 @@ img {
     font-size: 35px;
     color: black;
   }
-
-  /* .menu_list .lnb {
-    overflow: hidden;
-    height: 60px;
-  }
-
-  .menu_list ul li {
-    float: left;
-    width: 14%;
-  }
-
-  .menu_list .lnb .all {
-    display: none;
-  }
-
-  .menu_list ul li a {
-    border: none;
-    height: 60px;
-    line-height: 60px;
-    padding: 0;
-    text-align: center;
-    opacity: 1;
-  }
-
-  .menu_list ul li label {
-    line-height: 60px;
-    cursor: pointer;
-  }
-
-  .menu_list ul li a label i {
-    display: none;
-  }
-
-  .list {
-    position: absolute;
-    padding: 0;
-    z-index: 1;
-    border: none;
-    height: 0;
-    overflow: hidden;
-    transition: all 0.3s;
-  }
-
-  .menu_list .list li {
-    float: none;
-    width: auto;
-  }
-
-  .menu_list .list li a {
-    width: 178px;
-    height: 40px;
-    line-height: 40px;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-
-  .menu_list .list li:hover a {
-    background-color: #537FE7;
-    color: white;
-  }
-
-  .coffee:hover .coffee_list {
-    height: 160px;
-  }
-
-  .stick:hover .stick_list {
-    height: 120px;
-  }
-
-  .tea:hover .tea_list {
-    height: 200px;
-  }
-
-  .gift:hover .gift_list {
-    height: 120px;
-  }
-
-  .comu:hover .comu_list {
-    height: 120px;
-  }
-
-  .menu_list .login .sns {
-    margin-left: 10px;
-  }
-
-  .menu_list .login .sns a {
-    border: 1px solid black;
-    border-radius: 50%;
-    padding: 5px;
-  }
-
-  .menu_list .login p a i {
-    position: unset;
-    font-size: 0.9rem;
-    color: black;
-  } */
 }
