@@ -12,132 +12,156 @@
 </head>
 
 <body>
-  <input type="checkbox" id="menu_chk">
+  
+  <div class="fix">
+    <input type="checkbox" id="menu_chk">
   <input type="checkbox" id="drop_chk">
   <input type="checkbox" id="stick_chk">
   <input type="checkbox" id="tea_chk">
   <input type="checkbox" id="gift_chk">
   <input type="checkbox" id="comu_chk">
-  <header class="header">
-    <div class="header_inner">
-      <div class="menu">
-        <label for="menu_chk">
-          <i class="fas fa-bars"></i>
-        </label>
-      </div>
-
-      <div class="logo">
-        <h1><a href="./index.html">EDIYA COFFEE</a></h1>
-      </div>
-
-      <div class="search_box">
-        <i class="fas fa-search"></i>
-        <input type="search">
-      </div>
-    </div>
-  </header>
-  <div class="menu_list">
-    <div class="menu_list_inner">
-      <ul class="lnb">
-        <div class="login">
-          <p><a href="#">로그인</a></p>
-          <p><a href="#">회원가입</a></p>
-          <p class="wide"><a href="#">장바구니</a></p>
-          <p class="wide"><a href="#">최근본상품</a></p>
+    <header class="header">
+      <div class="header_inner">
+        <div class="menu">
           <label for="menu_chk">
-            <i class="fas fa-times"></i>
+            <i class="fas fa-bars"></i>
           </label>
         </div>
-        
-        <li><a href="#">ALL</a></li>
-        <li><a href="#">베스트</a></li>
-        <li class="coffee drop">
-          <a href="#">
-            <label for="drop_chk" class="drop_open"> 커피<i class="fas fa-plus"></i></label>
-            <label for="drop_chk" class="drop_close"> 커피<i class="fas fa-minus"></i></label>
-          </a>
-          <div class="coffee_list list">
-            <ul>
+
+        <div class="logo">
+          <h1><a href="./index.html">EDIYA COFFEE</a></h1>
+        </div>
+
+        <div class="search_box">
+          <i class="fas fa-search"></i>
+          <input type="search">
+        </div>
+      </div>
+    </header>
+    <div class="menu_list">
+      <div class="menu_list_inner">
+        <ul class="lnb">
+          <div class="login">
+            <p><a href="#">로그인</a></p>
+            <p><a href="#">회원가입</a></p>
+            <p class="wide"><a href="#">장바구니</a></p>
+            <p class="wide"><a href="#">최근본상품</a></p>
+            <p class="sns wide"><a href="#"><i class="fas fa-blog"></i></a></p>
+            <p class="sns wide"><a href="#"><i class="fab fa-instagram"></i></a></p>
+            <p class="sns wide"><a href="#"><i class="fab fa-facebook-f"></i></a></p>
+            <p class="sns wide"><a href="#"><i class="fab fa-youtube"></i></a></p>
+            <label for="menu_chk">
+              <i class="fas fa-times"></i>
+            </label>
+          </div>
+
+          <li class="all"><a href="#">ALL</a></li>
+          <li><a href="#">베스트</a></li>
+          <li class="coffee drop">
+            <a href="#">
+              <label for="drop_chk" class="drop_open">커피<i class="fas fa-plus"></i></label>
+              <label for="drop_chk" class="drop_close">커피<i class="fas fa-minus"></i></label>
+            </a>
+            <ul class="coffee_list list">
               <li><a href="#">- 홀빈원두</a></li>
               <li><a href="#">- 핸드드립</a></li>
               <li><a href="#">- 캡슐커피</a></li>
               <li><a href="#">- 커피머신</a></li>
             </ul>
-          </div>
-        </li>
-        <li class="stick drop">
-          <a href="#">
-            <label for="stick_chk" class="drop_open"> 스틱커피<i class="fas fa-plus"></i></label>
-            <label for="stick_chk" class="drop_close"> 스틱커피<i class="fas fa-minus"></i></label>
-          </a>
-          <div class="stick_list list">
-            <ul>
+          </li>
+          <li class="stick drop">
+            <a href="#">
+              <label for="stick_chk" class="drop_open"> 스틱커피<i class="fas fa-plus"></i></label>
+              <label for="stick_chk" class="drop_close"> 스틱커피<i class="fas fa-minus"></i></label>
+            </a>
+            <ul class="stick_list list">
               <li><a href="#">- 아메리카노</a></li>
               <li><a href="#">- 라떼</a></li>
               <li><a href="#">- 커피믹스</a></li>
             </ul>
-          </div>
-        </li>
-        <li class="tea drop">
-          <a href="#">
-            <label for="tea_chk" class="drop_open">음료·티<i class="fas fa-plus"></i></label>
-            <label for="tea_chk" class="drop_close">음료·티<i class="fas fa-minus"></i></label>
-          </a>
-          <div class="tea_list list">
-            <ul>
+          </li>
+          <li class="tea drop">
+            <a href="#">
+              <label for="tea_chk" class="drop_open">음료·티<i class="fas fa-plus"></i></label>
+              <label for="tea_chk" class="drop_close">음료·티<i class="fas fa-minus"></i></label>
+            </a>
+            <ul class="tea_list list">
               <li><a href="#">- 아이스음료</a></li>
               <li><a href="#">- 콤부차</a></li>
               <li><a href="#">- 전통차</a></li>
               <li><a href="#">- 블렌딩티</a></li>
-              <li><a href="#">- 컴커피</a></li>
+              <li><a href="#">- 컵커피</a></li>
             </ul>
-          </div>
-        </li>
-        <li><a href="#">케이크</a></li>
-        <li class="gift drop">
-          <a href="#">
-            <label for="gift_chk" class="drop_open">선물세트<i class="fas fa-plus"></i></label>
-            <label for="gift_chk" class="drop_close">선물세트<i class="fas fa-minus"></i></label>
-          </a>
-          <div class="gift_list list">
-            <ul>
+          </li>
+          <li><a href="#">케이크</a></li>
+          <li class="gift drop">
+            <a href="#">
+              <label for="gift_chk" class="drop_open">선물세트<i class="fas fa-plus"></i></label>
+              <label for="gift_chk" class="drop_close">선물세트<i class="fas fa-minus"></i></label>
+            </a>
+            <ul class="gift_list list">
               <li><a href="#">- 커피</a></li>
               <li><a href="#">- 음료 · 티</a></li>
               <li><a href="#">- 커피믹스</a></li>
             </ul>
-          </div>
-        </li>
-        <li class="comu drop">
-          <a href="#">
-            <label for="comu_chk" class="drop_open">커뮤니티<i class="fas fa-plus"></i></label>
-            <label for="comu_chk" class="drop_close">커뮤니티<i class="fas fa-minus"></i></label>
-          </a>
-          <div class="comu_list list">
-            <ul>
+          </li>
+          <li class="comu drop">
+            <a href="#">
+              <label for="comu_chk" class="drop_open">커뮤니티<i class="fas fa-plus"></i></label>
+              <label for="comu_chk" class="drop_close">커뮤니티<i class="fas fa-minus"></i></label>
+            </a>
+            <ul class="comu_list list">
               <li><a href="#">- 공지사항</a></li>
               <li><a href="#">- EVENT</a></li>
               <li><a href="#">- Q & A</a></li>
             </ul>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
- 
 
   <div class="visual">
     <div class="visual_banner">
       <div>
-        <img src="./img/visual_banner2_mobile.jpg" alt="visual_banner">
+        <picture>
+          <source media="(min-width:1170px)" srcset="./img/visual_banner.jpg">
+          <source media="(min-width:601px)" srcset="./img/visual_banner.jpg">
+          <source media="(min-width:321px)" srcset="./img/visual_banner-mobile.jpg">
+          <img src="./img/visual_banner-mobile.jpg" alt="이미지" style="width:100%">
+        </picture>
       </div>
       <div>
-        <img src="./img/visual_banner2_mobile.jpg" alt="visual_banner1">
+        <picture>
+          <source media="(min-width:1170px)" srcset="./img/visual_banner1.jpg">
+          <source media="(min-width:601px)" srcset="./img/visual_banner1.jpg">
+          <source media="(min-width:321px)" srcset="./img/visual_banner1-mobile.jpg">
+          <img src="./img/visual_banner2-mobile.jpg" alt="이미지" style="width:100%">
+        </picture>
       </div>
       <div>
-        <img src="./img/visual_banner2_mobile.jpg" alt="visual_banner2">
+        <picture>
+          <source media="(min-width:1170px)" srcset="./img/visual_banner2.jpg">
+          <source media="(min-width:601px)" srcset="./img/visual_banner2.jpg">
+          <source media="(min-width:321px)" srcset="./img/visual_banner2-mobile.jpg">
+          <img src="./img/visual_banner2-mobile.jpg" alt="이미지" style="width:100%">
+        </picture>
       </div>
       <div>
-        <img src="./img/visual_banner2_mobile.jpg" alt="visual_banner3">
+        <picture>
+          <source media="(min-width:1170px)" srcset="./img/visual_banner3.jpg">
+          <source media="(min-width:601px)" srcset="./img/visual_banner3.jpg">
+          <source media="(min-width:321px)" srcset="./img/visual_banner3-mobile.jpg">
+          <img src="./img/visual_banner2-mobile.jpg" alt="이미지" style="width:100%">
+        </picture>
+      </div>
+      <div>
+        <picture>
+          <source media="(min-width:1170px)" srcset="./img/visual_banner4.jpg">
+          <source media="(min-width:601px)" srcset="./img/visual_banner4.jpg">
+          <source media="(min-width:321px)" srcset="./img/visual_banner4-mobile.jpg">
+          <img src="./img/visual_banner2-mobile.jpg" alt="이미지" style="width:100%">
+        </picture>
       </div>
     </div>
   </div>
