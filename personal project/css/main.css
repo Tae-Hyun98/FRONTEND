@@ -373,7 +373,7 @@ img {
 }
 
 /**************best******************/
-.content h2 {
+.content h1 {
   position: relative;
   margin-top: 20px;
   margin-bottom: 15px;
@@ -395,11 +395,13 @@ img {
 
 .product_img img {
   width: 100%;
-  height: 160px;
+  height: 150px;
 }
 
 .best_box .pa {
   padding-top: 5px;
+  letter-spacing: 0;
+  line-height: 16px;
 }
 
 .best_box p {
@@ -412,8 +414,8 @@ img {
 
 .best_slide .slick-arrow {
   position: absolute;
-  left: 5%;
-  top: 0;
+  left: 10%;
+  top: -5px;
   transform: translateY(-155%);
   z-index: 10;
   font-size: 0;
@@ -431,7 +433,7 @@ img {
 
 .best_slide .slick-next {
   left: auto;
-  right: 5%;
+  right: 10%;
 }
 
 .best_slide .slick-next::before {
@@ -444,8 +446,6 @@ img {
 
 
 /********rec************/
-
-
 .label {
   overflow: hidden;
 }
@@ -464,38 +464,78 @@ img {
 }
 
 .sheet {
-  overflow: hidden;
+  background-color: #f2f4f7;
+  padding: 5px;
 }
 
-.happy {
+.rec_happy {
+  height: 230px;
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 0.3s;
   overflow: hidden;
 }
 
 .rec_box {
-  width: calc(100% - 66.6667% - 4px);
-  float: left;
-  margin-right: 5px;
+  width: calc(100% - 66.6667% - 2.7px);
+  height: 230px;
+  margin-right: 4px;
 }
 
-.sheet .happy div:nth-child(3) {
+.sheet div:nth-child(3),
+.sheet div:nth-child(6),
+.sheet div:nth-child(9) {
   margin-right: 0;
 }
 
 .rec_box .product_img {
   width: 100%;
+  height: 150px;
+  overflow: hidden;
+  border: rgba(0, 0, 0, 0.3);
 }
 
+/* .rec_box:hover .product_img img {
+  scale: 1.1;
+} */
+
 .more {
-  float: left;
   width: 100%;
-  height: 30px;
   text-align: center;
-  margin: 0 auto;
+}
+
+.more label {
+  display: block;
 }
 
 .more a {
-  display: inline;
-  width: 100%;
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  background-color: #173C86;
+  color: white;
+}
+
+.more .cl {
+  display: none;
+}
+
+.pa {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  padding-top: 5px;
+  height: 45px;
+  line-height: 12px;
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  letter-spacing: -0.5px;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 #tab1,
@@ -527,6 +567,25 @@ img {
 #tab2:checked~.rec .sheet .sad {
   display: block;
 }
+
+#more_chk,
+#more_chk1 {
+  display: none;
+}
+
+#more_chk:checked~.sheet .rec_happy {
+  height: 690px;
+}
+
+#more_chk:checked~.sheet .more .cl {
+  display: inline-block;
+}
+
+#more_chk:checked~.sheet .more .op {
+  display: none;
+}
+
+
 
 @media (min-width:601px) {
   .menu_list {
