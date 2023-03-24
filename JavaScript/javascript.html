@@ -39,19 +39,21 @@
 
     //초기값 10 할당, 1씩증가하면서 사칙연산 복합대입연산자를 이용하여 계산
     let a = 10;
-    let b = a;
+    let b = 0;
     document.write('a : ', a, ' b :', b, '<br/>');
-      b+=1;
-    document.write('더하기는: ', a + b, '<br/>');
-    a += 1;
-    b = a;
-    document.write('빼기는: ', a - b, '<br/>');
-    a += 1;
-    b = a;
-    document.write('곱하기는: ', a * b, '<br/>');
-    a += 1;
-    b = a;
+    b = a++;
+    document.write(a, b);
+    document.write('더하기는: ', b += a, '<br/>');
+
+    a++;
+    document.write(a, b);
+    document.write('빼기는: ', b -= a, '<br/>');
+
+    a++;
+    document.write('곱하기는: ', b *= a, '<br/>');
+    a++
     document.write('나누기는: ', a / b, '<br/>');
+    //괄호 단항 산술 비교 논리 대입 연산자
   </script>
 </head>
 
