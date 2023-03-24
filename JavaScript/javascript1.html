@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    //하나의 정수를 입력받아 짝수와 홀수구분
+    /* let number = parseInt(prompt("숫자를 입력하세요 : "));
+    let result = number % 2;
+    result = result == 0 ? '짝수' : '홀수';
+    document.write(result); */
+
+    //본인의 신장과 체중을 입력받아 적정체중판단 적정체중(신장-100)*0.9/과체중인지 아닌지
+    /* let cm = parseInt(prompt("신장을 입력하세요 : "));
+    let kg = parseInt(prompt("체중을 입력하세요 : "));
+    let fat = (cm - 100) * 0.9;
+    let result = 0;
+
+    result = kg > fat ? "과체중입니다" : "과체중이아닙니다.";
+    document.write(result); */
+
+    //학생의 하루 지출 내역은 교통비(3000원),식비(6000원),음료비(3000원)
+    //하루 용돈 10000원으로 지출비용 계산
+    //초과일 경우 '00원 초과'로 출력
+    let bus = 3000;
+    let food = 6000;
+    let drink = 3000;
+    let total = bus + food + drink;
+    let result = 0;
+
+    result = total > 10000 ? (total - 10000 + '원 초과') : "적당";
+    document.write(result);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
