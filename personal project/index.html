@@ -19,7 +19,6 @@
   <input type="checkbox" id="gift_chk">
   <input type="checkbox" id="comu_chk">
   <div class="fix">
-
     <header class="header">
       <div class="header_inner">
         <div class="gnb">
@@ -192,16 +191,16 @@
         <picture>
           <source media="(min-width:1170px)" srcset="./img/visual_banner.jpg">
           <source media="(min-width:601px)" srcset="./img/visual_banner.jpg">
-          <source media="(min-width:321px)" srcset="./img/visual_banner-mobile.jpg">
-          <img src="./img/visual_banner-mobile.jpg" alt="이미지" style="width:100%">
+          <source media="(min-width:321px)" srcset="./img/visual_banner_m.jpg">
+          <img src="./img/visual_banner_m.jpg" alt="이미지" style="width:100%">
         </picture>
       </div>
       <div>
         <picture>
           <source media="(min-width:1170px)" srcset="./img/visual_banner1.jpg">
           <source media="(min-width:601px)" srcset="./img/visual_banner1.jpg">
-          <source media="(min-width:321px)" srcset="./img/visual_banner1-mobile.jpg">
-          <img src="./img/visual_banner2-mobile.jpg" alt="이미지" style="width:100%">
+          <source media="(min-width:321px)" srcset="./img/visual_banner1_m.jpg">
+          <img src="./img/visual_banner1_m.jpg" alt="이미지" style="width:100%">
         </picture>
       </div>
       <div>
@@ -242,7 +241,7 @@
                 <div class="product_img">
                   <img src="./img/best.jpg" alt="best">
                 </div>
-                <p class="pa">[이디야] 콤부차 애플베리 20T+보틀</p>
+                <p class="pa"><span class="bold">[이디야]</span> 콤부차 애플베리 20T+보틀</p>
                 <p><span class="won">12,900원</span></p>
               </a>
             </div>
@@ -251,9 +250,9 @@
             <div class="best_box">
               <a href="#!">
                 <div class="product_img">
-                  <img src="./img/all2-360px.jpg" alt="product2">
+                  <img src="./img/all2.jpg" alt="product2">
                 </div>
-                <p class="pa">[이디야] 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+                <p class="pa"><span class="bold">[이디야]</span> 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
                 <p><span class="won">12,900원</span></p>
               </a>
             </div>
@@ -262,10 +261,10 @@
             <div class="best_box">
               <a href="#!">
                 <div class="product_img">
-                  <img src="./img/all3-360px.jpg" alt="product1">
+                  <img src="./img/all3.jpg" alt="product1">
                 </div>
-                <p class="pa">[이디야] 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
-                <p><span class="won">12,900원</span></p>
+                <p class="pa"><span class="bold">[이디야]</span> 스무디 1,000ml 딸기&바나나 x 6개입</p>
+                <p><span class="won">31,500원</span></p>
               </a>
             </div>
           </div>
@@ -273,20 +272,48 @@
             <div class="best_box">
               <a href="#!">
                 <div class="product_img">
-                  <img src="./img/all4-360px.jpg" alt="product1">
+                  <img src="./img/all8.jpg" alt="product1">
                 </div>
-                <p class="pa">[이디야] 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
-                <p><span class="won">12,900원</span></p>
+                <p class="pa"><span class="bold">[이디야]</span> 전통차 2종(쌍화차/율무차) 택 1 + 핸드드립 7T 증정</p>
+                <p><span class="won">15,900원</span></p>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="best_box">
+              <a href="#!">
+                <div class="product_img">
+                  <picture>
+                    <source media="(min-width:1070px)" srcset="./img/all4.jpg">
+                    <source media="(min-width:601px)" srcset="./img/all4-768px.jpg">
+                    <source media="(min-width:321px)" srcset="./img/all4-360px.jpg">
+                    <img src="./img/all4.jpg" alt="이미지" style="width:100%">
+                  </picture>
+                </div>
+                <p class="pa"><span class="bold">[이디야]</span> '대용량' 이디야 커피랩 캡슐커피 에티오피아 리무 8T x 10개</p>
+                <p><span class="won">51,500원</span></p>
+              </a>
+            </div>
+          </div>
+          <div>
+            <div class="best_box">
+              <a href="#!">
+                <div class="product_img">
+                  <img src="./img/best1.jpg" alt="product1">
+                </div>
+                <p class="pa"><span class="bold">[이디야]</span> 비니스트 토피넛라떼 30T</p>
+                <p><span class="won">21,500원</span></p>
               </a>
             </div>
           </div>
         </div>
       </div>
+
       <input type="radio" name="tab" id="tab1" checked>
       <input type="radio" name="tab" id="tab2">
       <input type="radio" name="tab" id="tab3">
       <input type="radio" name="tab" id="tab4">
-      <div class="rec">
+      <div class="recommand">
         <h1>추천 상품</h1>
         <div class="label">
           <label for="tab1" class="hap">기분좋을때</label>
@@ -296,10 +323,19 @@
         </div>
         <input type="checkbox" id="more_chk">
         <input type="checkbox" id="more_chk1">
-
+        <input type="checkbox" id="more_chk2">
+        <input type="checkbox" id="more_chk3">
+        <input type="checkbox" id="more_chk4">
+        <input type="checkbox" id="more_chk5">
+        <input type="checkbox" id="more_chk6">
+        <input type="checkbox" id="more_chk7">
+        <input type="checkbox" id="more_chk8">
+        <input type="checkbox" id="more_chk9">
+        <input type="checkbox" id="more_chk10">
+        <input type="checkbox" id="more_chk11">
         <div class="sheet">
           <div class="happy">
-            <div class="rec_happy">
+            <div class="rec_happy rec">
               <div class="rec_box">
                 <a href="#!">
                   <div class="product_img">
@@ -327,72 +363,179 @@
                   <p><span class="won">21,900원</span></p>
                 </a>
               </div>
-                <div class="rec_box">
-                  <a href="#!">
-                    <div class="product_img">
-                      <img src="./img/img7.jpg" alt="product1">
-                    </div>
-                    <p class="pa"><span class="bold">[이디야]</span> 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
-                    <p><span class="won">12,900원</span></p>
-                  </a>
-                </div>
-                <div class="rec_box">
-                  <a href="#!">
-                    <div class="product_img">
-                      <img src="./img/all12.jpg" alt="product1">
-                    </div>
-                    <p class="pa"><span class="bold">[이디야]</span> 콤부차 자몽오렌지 20T + 보틀</p>
-                    <p><span class="won">14,900원</span></p>
-                  </a>
-                </div>
-                <div class="rec_box">
-                  <a href="#!">
-                    <div class="product_img">
-                      <img src="./img/img5.jpg" alt="product1">
-                    </div>
-                    <p class="pa"><span class="bold">[이디야]</span> 홀빈커피 콜롬비아 슈프리모</p>
-                    <p><span class="won">24,000원</span></p>
-                  </a>
-                </div>
-                <div class="rec_box">
-                  <a href="#!">
-                    <div class="product_img">
-                      <img src="./img/img4.jpg" alt="product1">
-                    </div>
-                    <p class="pa"><span class="bold">[이디야]</span> 홀빈커피 페르소나 블렌드 200g X 2개</p>
-                    <p><span class="won">12,900원</span></p>
-                  </a>
-                </div>
-                <div class="rec_box">
-                  <a href="#!">
-                    <div class="product_img">
-                      <img src="./img/all11.jpg" alt="product1">
-                    </div>
-                    <p class="pa"><span class="bold">[이디야]</span> 딸기 듬뿍 라떼 ICED (R)</p>
-                    <p><span class="won">6,900원</span></p>
-                  </a>
-                </div>
-                <div class="rec_box">
-                  <a href="#!">
-                    <div class="product_img">
-                      <img src="./img/all2.jpg" alt="product1">
-                    </div>
-                    <p class="pa"><span class="bold">[이디야]</span> 스페셜 골드블렌드</p>
-                    <p><span class="won">7,500원</span></p>
-                  </a>
-                </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/img7.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+                  <p><span class="won">12,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all12.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 콤부차 자몽 오렌지 20T + 보틀</p>
+                  <p><span class="won">14,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/img5.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 홀빈커피 콜롬비아 슈프리모</p>
+                  <p><span class="won">24,000원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/img4.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 홀빈커피 페르소나 블렌드 200g X 2개</p>
+                  <p><span class="won">12,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all11.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 딸기 듬뿍 라떼 ICED (R)</p>
+                  <p><span class="won">6,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all2.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 스페셜 골드블렌드</p>
+                  <p><span class="won">7,500원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all13.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 콤부차 유자파인 20T + 보틀</p>
+                  <p><span class="won">14,500원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all14.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 비니스트 디카페인 아메리카노 130T</p>
+                  <p><span class="won">23,900원</span></p>
+                </a>
+              </div>
             </div>
-            <div class="open more">
+            <div class="more">
               <a href="#!" class="op"><label for="more_chk">더보기 <i class="fas fa-plus"></i></label></a>
-            </div>
-            <div class="close more">
-              <a href="#!" class="cl"><label for="more_chk">접기 <i class="fas fa-minus"></i></label></a>
+              <a href="#!" class="plus"><label for="more_chk1">더보기 <i class="fas fa-plus"></i></label></a>
+              <a href="#!" class="plus1"><label for="more_chk2">더보기 <i class="fas fa-plus"></i></label></a>
             </div>
           </div>
-
 
           <div class="sad">
-            <div class="rec_happy">
+            <div class="rec_sad rec">
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all14.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 비니스트 디카페인 아메리카노 130T</p>
+                  <p><span class="won">23,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/recommand1.jpg" alt="recommand1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 블렌딩티 루이보스 옐로우 플라워 10T x 4개</p>
+                  <p><span class="won">21,500원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/new.jpg" alt="recommand2">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 아이스 레몬자두 190ml X 30개</p>
+                  <p><span class="won">21,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/img7.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+                  <p><span class="won">12,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all12.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 콤부차 자몽오렌지 20T + 보틀</p>
+                  <p><span class="won">14,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/img5.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 홀빈커피 콜롬비아 슈프리모</p>
+                  <p><span class="won">24,000원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/img4.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 홀빈커피 페르소나 블렌드 200g X 2개</p>
+                  <p><span class="won">12,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all11.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 딸기 듬뿍 라떼 ICED (R)</p>
+                  <p><span class="won">6,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all2.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 스페셜 골드블렌드</p>
+                  <p><span class="won">7,500원</span></p>
+                </a>
+              </div>
+            </div>
+            <div class="more">
+              <a href="#!" class="op1 op"><label for="more_chk3">더보기 <i class="fas fa-plus"></i></label></a>
+              <a href="#!" class="plus2 plus"><label for="more_chk4">더보기 <i class="fas fa-plus"></i></label></a>
+              <a href="#!" class="plus11 plus1"><label for="more_chk5">더보기 <i class="fas fa-plus"></i></label></a>
+            </div>
+          </div>
+
+          <div class="spirit">
+            <div class="rec_spirit rec">
               <div class="rec_box">
                 <a href="#!">
                   <div class="product_img">
@@ -420,68 +563,195 @@
                   <p><span class="won">21,900원</span></p>
                 </a>
               </div>
-                <div class="rec_box">
-                  <a href="#!">
-                    <div class="product_img">
-                      <img src="./img/img7.jpg" alt="product1">
-                    </div>
-                    <p class="pa"><span class="bold">[이디야]</span> 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
-                    <p><span class="won">12,900원</span></p>
-                  </a>
-                </div>
-                <div class="rec_box">
-                  <a href="#!">
-                    <div class="product_img">
-                      <img src="./img/all12.jpg" alt="product1">
-                    </div>
-                    <p class="pa"><span class="bold">[이디야]</span> 콤부차 자몽오렌지 20T + 보틀</p>
-                    <p><span class="won">14,900원</span></p>
-                  </a>
-                </div>
-                <div class="rec_box">
-                  <a href="#!">
-                    <div class="product_img">
-                      <img src="./img/img5.jpg" alt="product1">
-                    </div>
-                    <p class="pa"><span class="bold">[이디야]</span> 홀빈커피 콜롬비아 슈프리모</p>
-                    <p><span class="won">24,000원</span></p>
-                  </a>
-                </div>
-                <div class="rec_box">
-                  <a href="#!">
-                    <div class="product_img">
-                      <img src="./img/img4.jpg" alt="product1">
-                    </div>
-                    <p class="pa"><span class="bold">[이디야]</span> 홀빈커피 페르소나 블렌드 200g X 2개</p>
-                    <p><span class="won">12,900원</span></p>
-                  </a>
-                </div>
-                <div class="rec_box">
-                  <a href="#!">
-                    <div class="product_img">
-                      <img src="./img/all11.jpg" alt="product1">
-                    </div>
-                    <p class="pa"><span class="bold">[이디야]</span> 딸기 듬뿍 라떼 ICED (R)</p>
-                    <p><span class="won">6,900원</span></p>
-                  </a>
-                </div>
-                <div class="rec_box">
-                  <a href="#!">
-                    <div class="product_img">
-                      <img src="./img/all2.jpg" alt="product1">
-                    </div>
-                    <p class="pa"><span class="bold">[이디야]</span> 스페셜 골드블렌드</p>
-                    <p><span class="won">7,500원</span></p>
-                  </a>
-                </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/img7.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+                  <p><span class="won">12,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all12.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 콤부차 자몽 오렌지 20T + 보틀</p>
+                  <p><span class="won">14,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/img5.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 홀빈커피 콜롬비아 슈프리모</p>
+                  <p><span class="won">24,000원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/img4.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 홀빈커피 페르소나 블렌드 200g X 2개</p>
+                  <p><span class="won">12,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all11.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 딸기 듬뿍 라떼 ICED (R)</p>
+                  <p><span class="won">6,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all2.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 스페셜 골드블렌드</p>
+                  <p><span class="won">7,500원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all13.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 콤부차 유자파인 20T + 보틀</p>
+                  <p><span class="won">14,500원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all14.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 비니스트 디카페인 아메리카노 130T</p>
+                  <p><span class="won">23,900원</span></p>
+                </a>
+              </div>
             </div>
-            <div class="open more">
-              <a href="#!" class="op"><label for="more_chk">더보기 <i class="fas fa-plus"></i></label></a>
-            </div>
-            <div class="close more">
-              <a href="#!" class="cl"><label for="more_chk">접기 <i class="fas fa-minus"></i></label></a>
+            <div class="more">
+              <a href="#!" class="op2 op"><label for="more_chk6">더보기 <i class="fas fa-plus"></i></label></a>
+              <a href="#!" class="plus3 plus"><label for="more_chk7">더보기 <i class="fas fa-plus"></i></label></a>
+              <a href="#!" class="plus111 plus1"><label for="more_chk8">더보기 <i class="fas fa-plus"></i></label></a>
             </div>
           </div>
+
+          <div class="angry">
+            <div class="rec_angry rec">
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all10.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 생딸기 블루밍 그린티 ICED (EX)</p>
+                  <p><span class="won">4,600원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/recommand1.jpg" alt="recommand1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 블렌딩티 루이보스 옐로우 플라워 10T x 4개</p>
+                  <p><span class="won">21,500원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/new.jpg" alt="recommand2">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 아이스 레몬자두 190ml X 30개</p>
+                  <p><span class="won">21,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/img7.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 비니스트 아메리카노 세트 3호(아메리카노 10T x 6개)</p>
+                  <p><span class="won">12,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all12.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 콤부차 자몽 오렌지 20T + 보틀</p>
+                  <p><span class="won">14,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/img5.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 홀빈커피 콜롬비아 슈프리모</p>
+                  <p><span class="won">24,000원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/img4.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 홀빈커피 페르소나 블렌드 200g X 2개</p>
+                  <p><span class="won">12,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all11.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 딸기 듬뿍 라떼 ICED (R)</p>
+                  <p><span class="won">6,900원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all2.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 스페셜 골드블렌드</p>
+                  <p><span class="won">7,500원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all13.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 콤부차 유자파인 20T + 보틀</p>
+                  <p><span class="won">14,500원</span></p>
+                </a>
+              </div>
+              <div class="rec_box">
+                <a href="#!">
+                  <div class="product_img">
+                    <img src="./img/all14.jpg" alt="product1">
+                  </div>
+                  <p class="pa"><span class="bold">[이디야]</span> 비니스트 디카페인 아메리카노 130T</p>
+                  <p><span class="won">23,900원</span></p>
+                </a>
+              </div>
+            </div>
+            <div class="more">
+              <a href="#!" class="op3 op"><label for="more_chk9">더보기 <i class="fas fa-plus"></i></label></a>
+              <a href="#!" class="plus4 plus"><label for="more_chk10">더보기 <i class="fas fa-plus"></i></label></a>
+              <a href="#!" class="plus1111 plus1"><label for="more_chk11">더보기 <i class="fas fa-plus"></i></label></a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -500,9 +770,23 @@
 
     $(document).ready(function () {
       $('.best_slide').slick({
-        slidesToShow: 2,
-        slidesToScroll: 1
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 601,
+            settings: {
+              slidesToShow: 2
+            }
+          },
+          {
+            breakpoint: 1069,
+            settings: {
+              slidesToShow: 3
+            }
+          }
+        ]
       });
+
     });
   </script>
 </body>
