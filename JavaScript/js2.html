@@ -52,7 +52,81 @@
     } else {
       alert('주민등록번호가 올바르지않습니다.');
     } */
-    
+    //현재 월과 계절 출력, 국어, 영어, 수학 점수 입력받아, 총점과 평균구하고 학점 출력
+    /* let kor, eng, math, total, avg, score;
+    kor = parseInt(prompt('국어 점수입력 : '));
+    eng = parseInt(prompt('영어 점수입력 : '));
+    math = parseInt(prompt('수학 점수입력 : '));
+
+    total = kor + eng + math;
+    avg = parseInt(total / 3);
+    score = '';
+
+    if (avg >= 90) {
+      score = 'A';
+    } else if (avg >= 80) {
+      score = "B";
+    } else if (avg >= 70) {
+      score = "C";
+    } else if (avg >= 60) {
+      score = "D";
+    } else {
+      score = "F";
+    }
+
+    document.write('국어점수: ', kor, '<br/>');
+    document.write('영어점수: ', eng, '<br/>');
+    document.write('수학점수: ', math, '<br/>');
+    document.write('총   점: ', total, '<br/>');
+    document.write('평   균: ', avg, '<br/>');
+    document.write('학   점: ', score, '<br/>'); */
+
+    /* let date = new Date();
+    let month = date.getMonth() + 1; */
+    /* let month = prompt('월을 입력해주세요 : ');
+    let season = ''
+    if (month == 12 || month == 1 || month == 2) {
+      season = '겨울';
+      document.write(month, '월은 ', season, '입니다.');
+    } else if (month == 3 || month == 4 || month == 5) {
+      season = '봄';
+      document.write(month, '월은 ', season, '입니다.');
+    } else if (month == 6 || month == 7 || month == 8) {
+      season = '여름';
+      document.write(month, '월은 ', season, '입니다.');
+    } else if (month == 9 || month == 10 || month == 11) {
+      season = '가을';
+      document.write(month, '월은 ', season, '입니다.');
+    } else {
+      alert('잘못입력하셧습니다.')
+    } */
+
+
+    //구입가 그냥 입력하기
+    let inputprice = parseInt(prompt('가격입력 : '));
+    let sale = parseInt(inputprice);
+    let saleprice = parseInt(inputprice);
+
+    if (inputprice >= 10000) {
+      sale *= 0.1;
+      saleprice -= sale;
+      document.write('원가 : ', inputprice, '<br/>', '할인가 : ', parseInt(sale), '<br/>', '구입가 : ', parseInt(saleprice));
+    } else if (inputprice >= 5000) {
+      sale *= 0.05;
+      saleprice -= sale;
+      document.write('원가 : ', inputprice, '<br/>', '할인가 : ', parseInt(sale), '<br/>', '구입가 : ', parseInt(saleprice));
+    } else if (inputprice >= 3000) {
+      sale *= 0.03;
+      saleprice -= sale;
+      document.write('원가 : ', inputprice, '<br/>', '할인가 : ', parseInt(sale), '<br/>', '구입가 : ', parseInt(saleprice));
+    } else if (inputprice >= 1000) {
+      sale *= 0.01;
+      saleprice -= sale;
+      document.write('원가 : ', inputprice, '<br/>', '할인가 : ', parseInt(sale), '<br/>', '구입가 : ', parseInt(saleprice));
+    } else {
+      document.write('원가 : ', inputprice, '<br/>', '할인은 없습니다.');
+    }
+
   </script>
 </head>
 
