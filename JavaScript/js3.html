@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>javascript</title>
+
+  <script>
+    /* const id = 'green';
+    const pw = 1234;
+    let userId = prompt('아이디를 입력하세요 : ');
+    let userPw = parseInt(prompt('비밀번호를 입력하세요 : ')); */
+
+    /* if (userId === id && userPw == pw) {
+      alert('환영합니다!');
+    } else if (userId === id && userPw != pw) {
+      alert('비밀번호가 틀렸습니다.');
+    } else if (userId != id && userPw == pw) {
+      alert('아이디가 틀렸습니다.');
+    } else {
+      alert('로그인 실패입니다.');
+    } */
+    /* if (userId === id) {
+      if (userPw == pw) {
+        alert('환영합니다!');
+      } else {
+        alert('비밀번호가 틀렸습니다.');
+      }
+    } else {
+      alert('아이디가 틀렸습니다.');
+    } */
+
+    /* let num1 = parseInt(prompt('숫자입력1'));
+    let num2 = parseInt(prompt('숫자입력2'));
+    let num3 = parseInt(prompt('숫자입력3'));
+    let big = 0;
+    let middle = 0;
+    let small = 0;
+
+    if (num1 > num2) {
+      if (num1 > num3) {
+        big = num1;
+        if (num2 > num3) {
+          middle = num2;
+          small = num3;
+        } else {
+          middle = num3;
+          small = num2;
+        }
+      }
+    }
+    if (num2 > num1) {
+      if (num2 > num3) {
+        big = num2;
+        if (num1 > num3) {
+          middle = num1;
+          small = num3;
+        } else {
+          middle = num3;
+          small = num1;
+        }
+      }
+    }
+    if (num3 > num1) {
+      if (num3 > num2) {
+        big = num3;
+        if (num1 > num2) {
+          middle = num1;
+          small = num2;
+        } else {
+          middle = num2;
+          small = num1;
+        }
+      }
+    }
+    document.write('큰값은 ', big, ' 중간값은 ', middle, ' 작은값은 ', small, '입니다.'); */
+
+    /* let menu = prompt('메뉴선택 : pizza(p), spaghtii(s), risotto(r),drink(d)');
+    switch (menu) {
+      case 'P':
+      case 'p':
+        document.write('Pizza 주문');
+        break;
+      case 'S':
+      case 's':
+        document.write('Spaghtii 주문');
+        break;
+      case 'R':
+      case 'r':
+        document.write('Risotto 주문');
+        break;
+      case 'D':
+      case 'd':
+        document.write('Drink 주문');
+        break;
+      default:
+        alert('다시 입력하세요:');
+    } */
+
+    /* let total = parseInt(prompt('총점을 입력 : '));
+    let result = Math.floor(total / 10);
+    switch (result) {
+      case 10:
+      case 9:
+        document.write('A학점');
+        break;
+      case 8:
+        document.write('B학점');
+        break;
+      case 7:
+        document.write('C학점');
+        break;
+      case 6:
+        document.write('D학점');
+        break;
+      default:
+        document.write('F학점');
+    } */
+
+    /* let num1 = parseInt(prompt('정수 입력1'));
+    let num2 = parseInt(prompt('정수 입력2'));
+    let a = prompt('연산입력');
+    let result = 0;
+    switch (a) {
+      case '+':
+        result = num1 + num2;
+        document.write(num1, '+', num2, '는 ', result, '입니다.');
+        break;
+      case '-':
+        result = num1 - num2;
+        document.write(num1, '-', num2, '는 ', result, '입니다.');
+        break;
+      case '*':
+      case 'x':
+        result = num1 * num2;
+        document.write(num1, 'x', num2, '는 ', result, '입니다.');
+        break;
+      case '/':
+        result = num1 / num2;
+        document.write(num1, '/', num2, '는 ', result, '입니다.');
+        break;
+      default:
+        alert('다시 입력해주세요');
+    } */
+
+
+    /* let site = prompt('이동할 포털사이트명 입력 : naver, daum, kakao, google, nate 중 선택');
+    let url;
+    switch (site) {
+      case 'naver':
+        url = 'http://www.naver.com'
+        break;
+      case 'daum':
+        url = 'http://www.daum.net'
+        break;
+      case 'kakao':
+        url = 'http://www.kakao.com'
+        break;
+      case 'google':
+        url = 'http://www.google.com'
+        break;
+      case 'nate':
+        url = 'http://www.nate.com'
+        break;
+      default:
+        alert('다시입력해주세요.');
+    }
+    if (url) {
+      location.href = url;
+    } */
+
+    /* let lo = prompt('지역명을 입력하세요 : ');
+    switch (lo) {
+      case '서울':
+        document.write(lo, '의 지역번호는 02입니다.');
+        break;
+      case '경기':
+        document.write(lo, '의 지역번호는 031입니다.');
+        break;
+      case '부산':
+        document.write(lo, '의 지역번호는 051입니다.');
+        break;
+      case '대구':
+        document.write(lo, '의 지역번호는 053입니다.');
+        break;
+      case '인천':
+        document.write(lo, '의 지역번호는 032입니다.');
+        break;
+      case '강원':
+        document.write(lo, '의 지역번호는 033입니다.');
+        break;
+      case '광주':
+        document.write(lo, '의 지역번호는 062입니다.');
+        break;
+      case '대전':
+        document.write(lo, '의 지역번호는 042입니다.');
+        break;
+      case '울산':
+        document.write(lo, '의 지역번호는 052입니다.');
+        break;
+      case '전북':
+        document.write(lo, '의 지역번호는 063입니다.');
+        break;
+      case '전남':
+        document.write(lo, '의 지역번호는 061입니다.');
+        break;
+      case '제주':
+        document.write(lo, '의 지역번호는 064입니다.');
+        break;
+      case '경북':
+        document.write(lo, '의 지역번호는 054입니다.');
+        break;
+      default:
+        alert('아직 등록되지 않은 지역입니다.');
+    } */
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
