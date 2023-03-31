@@ -119,11 +119,13 @@
         document.write('F학점');
     } */
 
-    /* let num1 = parseInt(prompt('정수 입력1'));
+    /* //swich case
+    let num1 = parseInt(prompt('정수 입력1'));
     let num2 = parseInt(prompt('정수 입력2'));
-    let a = prompt('연산입력');
+    let op = prompt('연산입력');
     let result = 0;
-    switch (a) {
+
+    switch (op) {
       case '+':
         result = num1 + num2;
         document.write(num1, '+', num2, '는 ', result, '입니다.');
@@ -142,8 +144,29 @@
         document.write(num1, '/', num2, '는 ', result, '입니다.');
         break;
       default:
-        alert('다시 입력해주세요');
-    } */
+        alert('연산자를 다시입력해주세요');
+    }
+    //swich case -> if문
+     let num1 = parseInt(prompt('정수 입력1'));
+     let num2 = parseInt(prompt('정수 입력2'));
+     let op = prompt('연산입력');
+     let result = 0;
+
+     if (op == '+') {
+       result = num1 + num2;
+       document.write(num1, '', op, '', num2, '는 ', result, '입니다');
+     } else if (op == '-') {
+       result = num1 - num2;
+       document.write(num1, '', op, '', num2, '는 ', result, '입니다');
+     } else if (op == '*' || op == 'x') {
+       result = num1 * num2;
+       document.write(num1, '', op, '', num2, '는 ', result, '입니다');
+     } else if (op == '/') {
+       result = num1 / num2;
+       document.write(num1, '', op, '', num2, '는 ', result, '입니다');
+     } else {
+       alert('연산자를 다시입력해주세요');
+     } */
 
 
     /* let site = prompt('이동할 포털사이트명 입력 : naver, daum, kakao, google, nate 중 선택');
