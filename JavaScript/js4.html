@@ -65,7 +65,67 @@
          document.write(result, '<br/>');
        }
      } */
-   
+
+    //데이터를 입력받아 합을 구하는것
+    /* let i = 0;
+    let sum = 0;
+
+    for (let a = 1;; a++) {
+      i = parseInt(prompt(a + '번째수 입력(종료:0)'));
+      if (i == 0) {
+        break;
+      }
+      sum += i;
+    }
+    document.write('입력받은 수를 더한 값은 ', sum); */
+
+
+    // 1에서 100까지 합을 계산하는 프로그램 실행중 합이 100보다 커지는 첫번째 수와 값을 출력
+    /* let sum = 0;
+    let i = 1;
+    for (i; i <= 100; i++) {
+      sum += i;
+      if (sum >= 100) {
+        break;
+      }
+    }
+    document.write('100보다 커지는 첫번째 수 ', i, ' 합 ', sum); */
+
+    /* let sum = 0;
+    let cnt = 0;
+    for (let i = 1; i <= 100; i++) {
+      sum += i;
+      if (sum >= 100) {
+        cnt = i;
+        break;
+      }
+    }
+    document.write('100보다 커지는 첫번째 수 ', cnt, ' 합 ', sum); */
+
+    let id = 'green';
+    let pw = '1234';
+    let cnt = 0;
+    let userId = prompt('아이디를 입력하세요');
+    if (userId == id) {
+      let userPw = parseInt(prompt('비밀번호를 입력하세요'));
+      if (userPw == pw) {
+        alert('로그인 성공');
+      } else {
+        for (cnt = 2;; cnt++) {
+          userPw = parseInt(prompt(cnt + '회 비밀번호입력중'));
+          if (cnt > 4) {
+            alert('비밀번호 ' + cnt + '회입력 계정잠김');
+            break;
+          } else if (userPw == pw) {
+            alert('로그인 성공');
+            break;
+          }
+        }
+      }
+    } else {
+      alert('아이디가 틀렸습니다.');
+      userId = prompt('아이디를 다시입력하세요');
+    }
   </script>
 </head>
 
