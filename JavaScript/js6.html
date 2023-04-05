@@ -8,9 +8,44 @@
   <title>Document</title>
 
   <script>
-    let arr = [30, '홍길동', true];
-    for (let i in arr) {
-      document.write(arr[i], '<br/>');
+    /* let arr = new Array();
+    arr[0] = 'Front_End';
+    arr[1] = 'JavaScript';
+    arr[2] = '20221230';
+    arr[3] = '960시간';
+    
+    for (let i = 0; i < arr.length; i++) {
+      document.write(arr[i], '<br />');
+    } */
+
+    /* let arr=new Array('Front_end','JavaScript','20221230','960시간')
+    for(let i=0;i<arr.length;i++){
+      document.write(arr[i],'<br />');
+    } */
+
+    /* let arr = ['Front_end', 'JavaScript', 'HTML5 & CSS3'];
+     for(let i in arr){
+      document.write(arr[i],'<br />');
+    } 
+
+    for (let i of arr) {
+      document.write(i, '<br />');
+    } */
+
+    //배열 함수
+    let arr = [2, 7, 4, 1, 3];
+    //document.write(arr.join('-'));
+    //arr.sort().reverse();
+    //let arr1 = arr.slice(2, 4); //substr(2,4)랑 다름 substr은 2번째 글자부터 4글자 slick는 2부터-3
+    //arr.splice(2,1,10); //2번째부터, 2개삭제, 삭제된자리에 삽입
+    /* let arr1 = [12, 13, 14, 15, 11];
+    let arr2=arr.concat(arr1); */
+    //arr.pop();
+    //arr.push(9);
+    //arr.shift();
+    //arr.unshift(100);
+    for (let item of arr) {
+      document.write(item, '<br />');
     }
   </script>
 </head>
