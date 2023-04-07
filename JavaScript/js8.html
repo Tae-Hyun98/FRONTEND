@@ -8,12 +8,84 @@
   <title>Document</title>
 
   <script>
+    /* let num = 200;
 
+    function myFnc() {
+      let num = 500;
+      document.write(num);
+    }
+    myFnc();
+    document.write(num); */
+
+
+    /* function calc(x, y, z) {
+      switch (y) {
+        case '+':
+          return (x + z);
+        case '-':
+          return (x - z);
+        case '*':
+          return (x * z);
+        case '/':
+          return (x / z);
+        default:
+          break;
+      }
+    }*/
+
+    /* let num = 0;
+
+    function myfun() {
+      num++;
+      document.write('num', '<br />');
+      if (num == 5) return;
+      myfun();
+    }
+    myfun(); */
+
+    /* for (let i = 5; i > 0; i--) {
+      document.write('<br/>');
+      for (let j = i; j > 0; j--) {
+        document.write('  ');
+        document.write('*');
+      }
+    }
+    for (let i = 1; i < 6; i++) {
+      document.write('<br/>');
+      for (let j = i; j > 0; j--) {
+        document.write('  ');
+        document.write('*');
+      }
+    } */
+
+    function printAll(...args) {
+      for (let i = 0; i < args.length; i++) {
+        //console.log(args[i]);
+      }
+      for (const arg of args) {
+        //console.log(arg);
+      }
+      args.forEach(function (number) {
+        console.log(number);
+      });
+    }
+    printAll('a', 'b', 'c', 'd');
   </script>
 </head>
 
 <body>
+  <script>
+    /* for (;;) {
+      let num1 = parseInt(prompt('수1를 입력하세요'));
+      let num2 = prompt('연산자를 입력하세요');
+      let num3 = parseInt(prompt('수2를 입력하세요'));
+      let result = calc(num1, num2, num3);
+      document.write(num1, ' ', num2, ' ', num3, ' = ', result, '<br />');
 
+      if (num1 === 0 || num3 === 0) break;
+
+    } */
+  </script>
 </body>
 
 </html>

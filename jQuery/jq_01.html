@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery</title>
+  <script src="./js/jquery-3.6.4.min.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+
+
+  <script>
+    $(function () {
+      $('*').css('text-decoration', 'none').css('box-sizing', 'border-box').css(
+        'list-style', 'none').css('padding', '0').css('margin', '0');
+      $('ul>li').css('fontSize', '39px').css('display', 'inline-block');
+      $('ul').children().css('fontSize', '50px');
+      $('h1').parent().css('fontSize', '35px');
+      $('body').css('cursor', 'default');
+      $('.ch').show();
+      //$('.ch').hide();
+     
+    });
+    if (($('input:checkbox[name=complete_yn]').is(':checked')) == true) {
+        $('ul>li').hide();
+      };
+  </script>
+</head>
+
+<body>
+  <div class="box">Test</div>
+  <div class="box"><span>Test</span></div>
+  <div><a href="#!">Test</a></div>
+  <div class="box">Test</div>
+  <ul>
+    <li>1</li>
+    <li>12</li>
+    <li>123</li>
+    <li>1234</li>
+    <li>12345</li>
+    <li class="ch">12345</li>
+    <li class="ch">123456</li>
+    <li class="ch">123457</li>
+  </ul>
+  <div class="tag">
+    <h1>홍길동</h1>
+    <h2>김나박</h2>
+  </div>
+
+  <input type="checkbox" name="complete_yn" id="chk">
+  <label for="chk">버튼</label>
+</body>
+
+</html>
