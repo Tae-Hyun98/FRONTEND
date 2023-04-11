@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/jquery-3.6.4.min.js"></script>
+  <script>
+    $(function () {
+      /* $("h2").html("<a href='#'>HTML 메서드</a>");
+      alert($("h1").html()); */
+      /* $('h2').text('텍스트 메서드');
+      alert($('h1').text()); */
+      /* $('p').text($('h1').css('color'));
+      $('h2').css('color', 'red'); */
+
+      /* $('#txt').text($('#wrap img').attr('src'));
+      $('#wrap img').attr('width', '200');
+      $('#box img').removeAttr('border'); */
+
+      /* $('#p1').addClass('aqua');
+      $('#p2').removeClass('red');
+      $('#p3').toggleClass('green');
+      $('#p4').toggleClass('green');
+      $('#p6').text($('#p5').hasClass('yellow')); */
+
+      //$('#my_name').val($('#user_name').val());
+
+      $('#st_1').prop('title', '단락태그');
+      $('#txt1').text($('#st_1').prop('title'));
+      $('#txt2').text($('#st_1').prop('tagName'));
+      $('#txt3').text($('#sel').prop('select'));
+    });
+  </script>
+</head>
+<style type="text/css">
+  .aqua {
+    background-color: aqua;
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  .green {
+    background-color: green;
+  }
+
+  .yellow {
+    background-color: yellow;
+  }
+</style>
+
+<body>
+  <!-- <h1 style="color:green"><strong>객체 조작 및 생성</strong></h1>
+  <p></p>
+  <h2>CSS 메서드</h2> -->
+
+  <!-- <h1>객체 조작 및 생성</h1>
+  <p id="wrap">
+    <img src="./디테일이미지7.jpg" alt="img" width="100">
+  </p>
+  <p id="txt"></p>
+  <p id="box">
+    <img src="./디테일이미지4.jpg" alt="img" width="100" border="2">
+  </p> -->
+
+  <!-- <p id="p1">내용1</p>
+  <p id="p2" class="red">내용2</p>
+  <p id="p3">내용3</p>
+  <p id="p4" class="green">내용4</p>
+  <p id="p5" class="yellow">내용5</p>
+  <p id="p6"></p> -->
+
+  <!-- <p>
+    <input type="text" name="user_name" id="user_name" value="ㅇㅇ">
+  </p>
+  <p>
+    <input type="text" name="my_name" id="my_name">
+  </p> -->
+
+  <p id="st_1">내용1</p>
+  <p id="txt1"></p>
+  <p id="txt2"></p>
+  <select name="" id="sel">
+    <option value="naver" >네이버</option>
+    <option value="nate">네이트</option>
+    <option value="daum">다음</option>
+  </select>
+  <p id="txt3"></p>
+</body>
+
+</html>

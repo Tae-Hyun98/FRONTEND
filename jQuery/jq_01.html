@@ -12,7 +12,7 @@
 
 
   <script>
-    $(function () {
+    /*  $(function () {
       $('*').css('text-decoration', 'none').css('box-sizing', 'border-box').css(
         'list-style', 'none').css('padding', '0').css('margin', '0');
       $('ul>li').css('fontSize', '39px').css('display', 'inline-block');
@@ -21,36 +21,67 @@
       $('body').css('cursor', 'default');
       $('.ch').show();
       //$('.ch').hide();
-     
-    });
-    if (($('input:checkbox[name=complete_yn]').is(':checked')) == true) {
-        $('ul>li').hide();
-      };
+
+    }); */
+    /* if (($('input:checkbox[name=complete_yn]').is(':checked')) == true) {
+      $('ul>li').hide();
+    }; */
+
+    $(function () {
+      /* $('#menu li').first().css('background-color', 'yellow');
+      $('#menu li').last().css('background-color', 'green');
+      $('#menu li:nth-child(2)').css('background-color', 'red'); */
+      /* $('#menu li:even').css('background-color', 'blue');
+      $('#menu li:odd').css('background-color', 'red'); */
+      /* $('li:first-of-type').css('background-color','blue');
+      $('li:last-of-type').css('background-color','green'); */
+      /*  $('li:only-child').css('background-color', 'pink')
+       $('#menu li').slice(1).css('color', 'red'); */
+      /*  $('a[title]').css('background-color', 'red');
+       $('a').css('color', 'green');
+       $("a[href='http://www.nate.com']").css('color', 'red'); */
+
+      /* $('p:visible').css('border', '1px solid red');
+      $('p:hidden').css('display','block'); */
+      /* $(':text').css('border', '1px dashed #f00');
+      $(':checked').attr('checked', false);
+      $(':selected').attr('selected', false); */
+
+      $("#menu li:contains('내용3')").css('border', '1px dashed red');
+      $("#menu li").has('strong').css('border', '2px solid blue');
+      $('#menu li').not(':first').css('background-color', 'yellow');
+      $('#menu li:eq(1)').find('strong').css('font-size', '22px');
+    })
   </script>
 </head>
 
 <body>
-  <div class="box">Test</div>
-  <div class="box"><span>Test</span></div>
-  <div><a href="#!">Test</a></div>
-  <div class="box">Test</div>
-  <ul>
-    <li>1</li>
-    <li>12</li>
-    <li>123</li>
-    <li>1234</li>
-    <li>12345</li>
-    <li class="ch">12345</li>
-    <li class="ch">123456</li>
-    <li class="ch">123457</li>
-  </ul>
-  <div class="tag">
-    <h1>홍길동</h1>
-    <h2>김나박</h2>
+  <h1>탐색 선택자</h1>
+  <div id="wrap">
+    <div id="inner_wrap">
+      <ul id="menu">
+        <li>내용1</li>
+        <li><span>내용<strong>2</strong></span></li>
+        <li><a href="#">내용3</a></li>
+        <li>내용4</li>
+        <li>내용5</li>
+      </ul>
+    </div>
   </div>
-
-  <input type="checkbox" name="complete_yn" id="chk">
-  <label for="chk">버튼</label>
+  <!--  <p>
+    <label for="user_name">이름</label>
+    <input type="text" name="user_name" id="user_name">
+  </p>
+  <p>
+    <input type="checkbox" name="accept" id="accept" checked="checked">
+    <label for="accept">사용자 동의</label>
+  </p>
+  <p>
+    <select name="rel_site" id="resl_site">
+      <option value="네이버">네이버</option>
+      <option value="네이트" selected="selected">네이트</option>
+    </select>
+  </p> -->
 </body>
 
 </html>
