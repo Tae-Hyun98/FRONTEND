@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/jquery-3.6.4.min.js"></script>
+  <style>
+    .box {
+      width: 300px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      border: 1px solid black;
+    }
+  </style>
+
+  <script>
+    $(function () {
+      /* $('.btn').click(function () {
+        $('.box').css('background-color', 'red');
+      }); */
+      /*  $('.btn').mouseover(function () {
+         $('.box').css('border', '5px solid green');
+         $(this).css('background-color', 'yellow');
+       });
+       $('.btn').mouseout(function () {
+         $('.box').css('border', '1px solid black')
+         $(this).css('background-color', 'white');
+       }) */
+
+      /* $('.btn_red').click(function(){
+        $('.box').css('background-color','red');
+      })
+      $('.btn').click(function(){
+        $('.box').css('background-color','white');
+      }) */
+
+      /* let count = 0; //상태변수선언
+
+      $('.btn').click(function () {
+          if (count === 0) {
+            $('.box').css('background-color', 'green');
+            count = 1;
+          }else{
+            $('.box').css('background-color','white');
+            count=0;
+          };
+      });*/
+
+      /* $(function () {
+        let a = 0;
+        $('#btn1').click(function () {
+          if (a === 0) {
+            $('p').css('background-color', 'yellow');
+            a = 1;
+          } else {
+            $('p').css('background-color', 'white');
+            a = 0;
+          }
+        });
+        $('#btn2').dblclick(function () {
+          $('p').css('background-color', 'purple');
+        });
+        $('#btn2').dblclick();
+      }); */
+
+      /* $('#btn1').click(function () {
+        $('p').css('background-color', 'purple');
+        return false;
+      });
+      $('#btn2').click(function (e) {
+        e.preventDefault();
+        $('p').css('background-color', 'yellow');
+      });
+      $('#btn3').click(function () {
+        $('p').css('background-color', 'aqua');
+        return false;
+      }); */
+      /* $('#btn1').mouseover(function () {
+        $('p').css('background', 'yellow');
+      });
+      $('#btn1').mouseout(function () {
+        $('p').css('background-color', 'white');
+      });
+      $('#btn2').hover(function () {
+        $('p').css('background-color', 'yellow');
+      }, function () {
+        $('p').css('background-color', 'purple');
+      }); */
+
+      /* $('#wrap').mouseout(function () {
+        $('p').css('border', '2px solid red');
+      });
+      $('#wrap').mouseleave(function () {
+        $('p').css('border', '2px dashed red');
+      }); */
+
+      /* $(document).mousemove(function (e) {
+        let x = e.pageX;
+        let y = e.pageY;
+        $('p').text('x: ' + x + ' y: ' + y);
+      }); */
+
+      /*  $('#user_name').focus();
+       $('#user_id').focus(function () {
+         $(this).val('');
+       });
+       $('#user_id').blur(function () {
+         $(this).val('아이디 입력');
+       }); */
+
+      /* $('#btn1').mouseover(function () {
+        alert('good');
+      });
+      $('#btn2').on('mouseover focus', function () {
+        alert('hello');
+      }); */
+
+      /* $('#user_id').keydown(function (e) {
+        $(this).css('background-color', 'purple');
+        $('#txt1').text(e.keyCode);
+      });
+      $('#user_id').keypress(function (e) {
+        $('#txt2').text(e.keyCode);
+      })
+      $('#user_id').keyup(function(){
+        $(this).css('background-color','yellow');
+      }) */
+
+      /* $('#rel_site').change(function () {
+        $('#txt').text($(this).val());
+      }); */
+      /*  $(window).scroll(function () {
+         $('#txt').text($(this).scrollTop());
+       }); */
+
+      /* $('#menu a').mouseover(function () {
+        $('#menu a').css('background', 'none');
+        $(this).css('background', 'yellow');
+        let num = $('#menu a').index(this);
+        $('.txt').text(num);
+      }); */
+
+      /* $('h1 a').on({
+        'mouseover focus': function () {
+          $(this).css('color', 'red');
+        },
+        'mouseout blur': function () {
+          $(this).css('color', 'yellow');
+        }
+      });
+      $('h2').on('mouseover focus', function () {
+        $(this).css('background-color', 'yellow');
+      })
+      $(document).on('mouseout blur', 'h2', function () {
+        $(this).css('background-color', 'aqua');
+      });
+      $('h2').append("<a href='#'>생성된 요소</a>") */
+
+      /* $('h1 a').bind('mouseover focus', function () {
+        $(this).css('background-color', 'yellow');
+      }); */
+
+      $('h1 a').on('mouseover focus', function () {
+        $(this).css('background-color', 'yellow');
+      });
+      $('button').on('click', function () {
+        $('h1 a').css('background', 'none');
+        $('h1 a').off();
+      });
+    });
+  </script>
+
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+  /*   body {
+      height: 3000px;
+    }
+
+    #txt {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+    }
+
+    #user_id {
+      ime-mode: disabled;
+    } */
+
+    /* body {
+      margin: 20px;
+    }
+
+    #wrap {
+      background-color: #ccc;
+      padding: 10px;
+    }
+
+    p {
+      background-color: #999;
+    } */
+  </style>
+</head>
+
+<body>
+  <!-- <div class="box">jQuery Event Test</div>
+ <button class="btn_red">red button</button>
+  <button class="btn">click</button> -->
+
+  <!-- <button id="btn1">click</button>
+  <button id="btn2">dblclick</button>
+  <p>내용</p> -->
+
+  <!-- <a href="http://w3.org" id="btn1">버튼1</a>
+  <a href="http://w3.org" id="btn2">버튼2</a>
+  <a href="http://w3.org" id="btn3">버튼3</a>
+  <p>내용</p> -->
+  <!-- <button id="btn1">mouseover/out</button>
+  <button id="btn2">hover</button>
+  <p>내용</p> -->
+
+  <!-- <div id="wrap">
+    <p>내용</p>
+  </div>
+  <p></p> -->
+  <!-- <p>
+    <input type="text" name="user_name" id="user_name">
+  </p>
+  <p>
+    <input type="text" name="user_id" id="user_id" value="아이디입력">
+  </p> -->
+  <!-- <p>
+    <input type="text" name="user_id" id="user_id">
+  </p>
+  <p id="txt1"></p>
+  <p id="txt2"></p> -->
+
+  <!-- <select name="" id="rel_site">
+    <option value="">사이트 선택</option>
+    <option value="www.naver.com">네이버</option>
+    <option value="www.nate.com">네이트</option>
+    <option value="www.daum.net">다음</option>
+  </select>
+  <p id="txt"></p> -->
+  <!-- <p id="txt">0</p> -->
+  <!-- <ul id="menu">
+    <li><a href="#">내용1</a></li>
+    <li><a href="#">내용2</a></li>
+    <li><a href="#">내용3</a></li>
+    <li><a href="#">내용4</a></li>
+  </ul>
+  <p class="txt"></p> -->
+  <!-- <h1><a href="#">버튼</a></h1>
+  <h2><a href="">1</a></h2> -->
+
+  <h1><a href="#">내용</a></h1>
+  <button>이벤트 삭제</button>
+</body>
+
+</html>
