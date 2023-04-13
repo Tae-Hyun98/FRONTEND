@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/jquery-3.6.4.min.js"></script>
+
+  <script>
+    $(function () {
+      /*  let a = 0;
+      $('#btn1').click(function () {
+        if (a === 0) {
+          $('h1').hide(1000, function () {
+            alert('숨김');
+            a = 1;
+          });
+        } else {
+          $('h1').show(1000, function () {
+            alert('보임');
+            a = 0;
+          });
+        }
+          if (a === 0) {
+            $('h1').animate({
+              marginLeft: 250
+            }, 3000, function () {
+              a = 1;
+            });
+          } else {
+            $('h1').animate({
+              marginLeft: 0
+            }, 3000, function () {
+              a = 0;
+            })
+          }
+      });
+
+      $('#btn2').click(function () {
+        $('h1').toggle('slow');
+      });
+ */
+
+      /* $('#btn1').click(function () {
+        $('h1').fadeOut(2000, function () {
+          alert('사라짐');
+        });
+      });
+      $('#btn2').click(function () {
+        $('h1').fadeIn(2000, function () {
+          alert('나옴');
+        });
+      });
+      $('#btn3').click(function () {
+        $('h1').fadeToggle('fast');
+      }); */
+
+      /* $('#btn1').click(function () {
+        $('h1').fadeTo('slow', 0.3);
+      });
+      $('#btn2').click(function () {
+        $('h1').fadeTo('fast', 1);
+      }); */
+     /*  $('#btn1').click(function () {
+        $('h1').slideUp(1000);
+      });
+      $('#btn2').click(function () {
+        $('h1').slideDown('fast');
+      });
+      $('#btn3').click(function(){
+        $('h1').slideToggle('slow');
+      }); */
+
+      $('#btn1').animate({
+        marginLeft:250
+      })
+    });
+  </script>
+</head>
+
+<body>
+  <!-- <button id="btn1">hide/show</button>
+  <button id="btn2">toggle</button> -->
+  <!-- <button id="btn1">fadeout</button>
+  <button id="btn2">fadein</button>
+  <button id="btn3">fadetoggle</button> -->
+  <!-- <button id="btn1">투명도(30%)</button>
+  <button id="btn2">투명도(100%)</button> -->
+  <button id="btn1">slideUp</button><br />
+  <button id="btn2">slideDown</button><br />
+  <button id="btn3">slideToggle</button><br />
+  <h1>내용</h1>
+</body>
+
+</html>
