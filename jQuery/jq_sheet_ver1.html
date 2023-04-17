@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery_sheet_ver1</title>
+  <script src="./js/jquery-3.6.4.min.js"></script>
+  <script>
+    $(function () {
+      const tabli = $('.season .season_tab li');
+      const sheetS = $('#season_sheet');
+
+      tabli.click(function () {
+        tabli.removeClass('on')
+        $(this).addClass('on')
+      });
+      $('.tab_spring').click(function () {
+        sheetS.removeClass().addClass('spring')
+      });
+      $('.tab_summer').click(function () {
+        sheetS.removeClass().addClass('summer')
+      });
+      $('.tab_autumn').click(function () {
+        sheetS.removeClass().addClass('autumn')
+      });
+      $('.tab_winter').click(function () {
+        sheetS.removeClass().addClass('winter')
+      });
+
+    });
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .season {
+      width: 500px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    .season .season_tab {
+      overflow: hidden;
+    }
+
+    .season .season_tab li {
+      width: 25%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background-color: #eee;
+      border-radius: 10px 10px 0 0;
+      float: left;
+      cursor: pointer;
+    }
+
+    .season .season_tab li.on {
+      background-color: yellow;
+    }
+
+    .season #season_sheet {
+      width: 500px;
+      height: 500px;
+      border: 1px solid #ccc;
+    }
+
+    .spring {
+      background: url(./images/spring.jpg);
+    }
+
+    .summer {
+      background: url(./images/summer.jpg);
+    }
+
+    .autumn {
+      background: url(./images/autumn.jpg);
+    }
+
+    .winter {
+      background: url(./images/winter.jpg);
+    }
+
+    img {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="season">
+    <ul class="season_tab">
+      <li class="tab_spring on">Spring</li>
+      <li class="tab_summer">Summer</li>
+      <li class="tab_autumn">Autumn</li>
+      <li class="tab_winter">Winter</li>
+    </ul>
+    <div id="season_sheet" class="spring"></div>
+  </section>
+</body>
+
+</html>
