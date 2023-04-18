@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/jquery-3.6.4.min.js"></script>
+
+  <script>
+    $(function () {
+      const tabLi = $('.season .season_tab li');
+      const sheetLi = $('.season .season_sheet li');
+      let index = 0;
+
+      tabLi.click(function () {
+        tabLi.removeClass('on');
+        $(this).addClass('on');
+
+        index = $(this).index(); //현재 선택한 인덱스 추출해서 변수에담음
+        sheetLi.removeClass('season_on');
+        sheetLi.eq(index).addClass('season_on'); //추출한 인덱스와 같으면 addclass추가
+      console.log(index);
+
+      });
+    });
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .season .season_tab {
+      overflow: hidden;
+    }
+
+    .season .season_tab li {
+      float: left;
+      width: 25%;
+      height: 50px;
+      line-height: 50px;
+      background-color: #eee;
+      text-align: center;
+      border-right: 1px solid black;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
+
+    .season .season_tab li.on {
+      background-color: yellow;
+    }
+
+    .season .season_sheet {
+      position: relative;
+    }
+
+    .season .season_sheet li {
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
+      box-sizing: border-box;
+    }
+
+    .season .season_sheet li.season_on {
+      display: block;
+    }
+
+    .season .season_sheet li img {
+      height: 700px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="season">
+    <ul class="season_tab">
+      <li class="on">Spring</li>
+      <li>Summer</li>
+      <li>Autumn</li>
+      <li>Winter</li>
+    </ul>
+
+    <ul class="season_sheet">
+      <li class="season_on"><img src="./images/spring.jpg" alt="season_img"></li>
+      <li><img src="./images/summer.jpg" alt="season_img"></li>
+      <li><img src="./images/autumn.jpg" alt="season_img"></li>
+      <li><img src="./images/winter.jpg" alt="season_img"></li>
+    </ul>
+  </section>
+</body>
+
+</html>
