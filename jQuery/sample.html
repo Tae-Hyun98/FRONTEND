@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="sample.css">
+  <script src="./js/jquery-3.6.4.min.js"></script>
+  <script>
+    $(function () {
+      const labelLi = $('.sample .recommand .label li');
+      const sheetLi = $('.sample .sheet li')
+      let index = 0;
+
+      labelLi.click(function () {
+        labelLi.removeClass('label_on');
+        $(this).addClass('label_on');
+
+        index=$(this).index();
+        sheetLi.removeClass('on');
+        sheetLi.eq(index).addClass('on');
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <section class="sample">
+    <div class="recommand">
+      <ul class="label">
+        <li class="da label_on">데일리</li>
+        <li class="as">기분전환</li>
+        <li>선물</li>
+        <li>힐링</li>
+      </ul>
+    </div>
+
+    <ul class="sheet">
+      <li class="happy sh on">
+        <div class="rec_box">
+          <a href="#!">
+            <div class="product_img">
+              <img src="디테일이미지4.jpg" alt="product1">
+            </div>
+            <p class="pa">
+              <span class="bold">[이디야]</span> 스페셜 골드블렌드
+            </p>
+          </a>
+          <div class="price">
+            <span class="won">7,500원</span>
+            <div class="price_icon">
+              <i class="fas fa-shopping-cart"></i>
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="rec_box">
+          <a href="#!">
+            <div class="product_img">
+              <img src="디테일이미지7.jpg" alt="product1">
+            </div>
+            <p class="pa">
+              <span class="bold">[이디야]</span> 스페셜 골드블렌드
+            </p>
+          </a>
+          <div class="price">
+            <span class="won">7,500원</span>
+            <div class="price_icon">
+              <i class="fas fa-shopping-cart"></i>
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="sad sh">
+        <div class="rec_box">
+          <a href="#!">
+            <div class="product_img">
+              <img src="./images/autumn.jpg" alt="product1">
+            </div>
+            <p class="pa">
+              <span class="bold">[이디야]</span> 스페셜 골드블렌드
+            </p>
+          </a>
+          <div class="price">
+            <span class="won">7,500원</span>
+            <div class="price_icon">
+              <i class="fas fa-shopping-cart"></i>
+              <i class="far fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li class="id sh">1</li>
+      <li class="ang sh">2</li>
+    </ul>
+  </section>
+
+</body>
+
+
+</html>

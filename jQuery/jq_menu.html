@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .lnb {
+      width: 1050px;
+      height: 50px;
+      margin: 0 auto;
+      line-height: 50px;
+      text-align: center;
+      background-color: black;
+      color: #fff;
+    }
+
+    .lnb .btn_menu {
+      float: left;
+      width: 50px;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .lnb ul {
+      overflow: hidden;
+    }
+
+    .lnb ul li {
+      float: left;
+      width: 20%;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .list_menu {
+      width: 1050px;
+      height: 300px;
+      border: 1px solid black;
+      margin: 0 auto;
+      font-size: 50px;
+      text-align: center;
+      display: none;
+    }
+
+    .on {
+      background-color: yellow;
+    }
+  </style>
+  <script src="./js/jquery-3.6.4.min.js"></script>
+  <script>
+    $(function () {
+      const menuLi = $('.lnb ul li');
+      let index = 0;
+      /* $('.btn_menu').mouseover(function () {
+        $('.list_menu').stop().slideDown(300);
+
+      }).mouseout(function () {
+        $('.list_menu').stop().slideUp(300);
+      }); */
+      /*  $('.btn_menu').mouseout(function () {
+         $('.list_menu').stop().slideUp(300);
+       }); */
+      /* $('.btn_menu').hover(function () {
+        $('.list_menu').stop().slideToggle(300);
+      }); */
+
+      /*  menuLi.mouseover(function () {
+         menuLi.addClass('on');
+       }).mouseout(function () {
+         $(this).removeClass('on');
+       }); */
+      menuLi.click(function () {
+        index = $(this).index();
+        menuLi.removeClass('on');
+        menuLi.eq(index).addClass('on');
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <nav class="lnb">
+    <div class="btn_menu">메뉴</div>
+    <ul>
+      <li>menu01</li>
+      <li>menu02</li>
+      <li>menu03</li>
+      <li>menu04</li>
+      <li>menu05</li>
+    </ul>
+  </nav>
+
+  <div class="list_menu">
+    <p>Full_down_menu</p>
+  </div>
+</body>
+
+</html>
