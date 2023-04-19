@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/jquery-3.6.4.min.js"></script>
+  <script src="./jquery.scrollTo-master/jquery.scrollTo.min.js"></script>
+  <script src="./js/jquery.easing.min.js"></script>
+  <script>
+    $(function () {
+      const btn = $('.lnb ul li');
+      const page = $('.contents div');
+      let index = 0;
+      let top = 0
+
+      btn.click(function () {
+        index = $(this).index();
+        top = page.eq(index).offset().top;
+        console.log(index, top);
+        $('html,body').stop().animate({
+          scrollTop: top
+        }, 800, 'easeOutBounce');
+      });
+      /* btn.click(function () {
+        $(window).scrollTo(this.hash || 0, 1000);
+      }); */
+
+    });
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .lnb {
+      width: 100%;
+      background-color: black;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .lnb ul {
+      width: 1000px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+
+    .lnb ul li {
+      width: 25%;
+      height: 50px;
+      line-height: 50px;
+      float: left;
+    }
+
+    .lnb ul li a {
+      display: block;
+      color: #fff;
+      background-color: black;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .contents div {
+      width: 100%;
+      text-align: center;
+      height: 100vh;
+      line-height: 100vh;
+      border-bottom: 1px solid black;
+      box-sizing: border-box;
+      font-size: 50px;
+    }
+
+    .contents div:nth-child(1) {
+      background-color: aliceblue;
+    }
+
+    .contents div:nth-child(2) {
+      background-color: skyblue;
+    }
+
+    .contents div:nth-child(3) {
+      background-color: bisque;
+    }
+
+    .contents div:nth-child(4) {
+      background-color: blueviolet;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="lnb">
+    <ul>
+      <li>
+        <a href="#page1">menu1</a>
+      </li>
+      <li>
+        <a href="#page2">menu2</a>
+      </li>
+      <li>
+        <a href="#page3">menu3</a>
+      </li>
+      <li>
+        <a href="#page4">menu4</a>
+      </li>
+    </ul>
+  </nav>
+  <section class="contents">
+    <div id="page1">page1</div>
+    <div id="page2">page2</div>
+    <div id="page3">page3</div>
+    <div id="page4">page4</div>
+  </section>
+</body>
+
+</html>

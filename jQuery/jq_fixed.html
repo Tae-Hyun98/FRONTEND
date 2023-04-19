@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./js/jquery-3.6.4.min.js"></script>
+  <script src="./jquery.scrollTo-master/jquery.scrollTo.min.js"></script>
+  <script>
+    $(function () {
+      $(window).scroll(function () {
+        if ($(window).scrollTop() >= 200) {
+          $('.lnb').addClass('fixed');
+        } else {
+          $('.lnb').removeClass('fixed');
+        };
+      }); //window_scroll_event
+
+      $('.btn_top').click(function (e) {
+        e.preventDefault();
+        /*  $(window).scrollTo({
+           top: 0,
+           left: 0
+         }, 1000); */
+
+        /* $('html, body').stop().animate({
+          scrollTop: 0
+        }, 1000) */
+
+        $(window).scrollTo(this.hash || 0, 1000)
+      }); //btn_top_click_event
+    });
+  </script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 5000px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .header {
+      background-color: aqua;
+    }
+
+    .lnb {
+      width: 100%;
+      height: 50px;
+      background-color: yellow;
+    }
+
+    .fixed {
+      position: fixed;
+      left: 0;
+      top: 0;
+    }
+
+    .btn_top {
+      display: block;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      color: white;
+      background-color: red;
+      font-weight: bold;
+      position: fixed;
+      bottom: 100px;
+      right: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header" id="header">
+    <h1>header</h1>
+  </header>
+
+  <nav class="lnb">
+    <h1>lnb</h1>
+  </nav>
+
+  <a href="#" class="btn_top">TOP</a>
+</body>
+
+</html>
