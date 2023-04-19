@@ -14,7 +14,16 @@
   <script src="./js/jquery.mousewheel.min.js"></script>
   <script src="./js/jquery.scrollTo.min.js"></script>
 
-  <script></script>
+  <script>
+    $(function () {
+      $('.up').click(function (e) {
+        e.preventDefault();
+        $('html, body').stop().animate({
+          scrollTop: 0
+        }, 1000);
+      });
+    });
+  </script>
 </head>
 
 <body>
@@ -28,7 +37,8 @@
       </a>
     </div>
     <div class="popup_close">
-      <label for="today_chk" class="today"><i class="far fa-check-circle"></i> 오늘하루동안 닫을래요
+      <label for="today_chk" class="today">
+        <i class="far fa-check-circle"></i> 오늘하루동안 닫을래요
       </label>
       <label for="popup_chk" class="popup_cl">닫기 X</label>
     </div>
@@ -250,7 +260,7 @@
           <img src="./img/visual_banner1_m.jpg" alt="이미지" style="width:100%">
         </picture>
       </div>
-      
+
       <div>
         <picture>
           <source media="(min-width:1170px)" srcset="./img/visual_banner2.jpg">
@@ -277,7 +287,7 @@
           <img src="./img/visual_banner2-mobile.jpg" alt="이미지" style="width:100%">
         </picture>
       </div>
-      
+
       <div>
         <picture>
           <source media="(min-width:1170px)" srcset="./img/visual_banner5.jpg">
@@ -2871,7 +2881,7 @@
       <i class="far fa-eye"></i>
       <p class="dis">최근본상품</p>
     </a>
-    <a href="#top" class="up"><i class="fas fa-chevron-up"></i></a>
+    <a href="#" class="up"><i class="fas fa-chevron-up"></i></a>
   </div>
 
 
