@@ -83,27 +83,34 @@ label {
   color: #fff;
 }
 
-.popup_close p {
+.popup_close .today {
   float: left;
   cursor: pointer;
 }
 
-.popup_close p i {
+.popup_close .today i {
   font-size: 1rem;
-  color: #ccc;
+  color: white;
+  border-radius: 50%;
 }
 
-.popup_close label {
+.popup_close .popup_cl {
   float: right;
   padding-right: 2%;
 }
 
-#popup_chk {
+#popup_chk,
+#today_chk {
   display: none;
 }
 
 #popup_chk:checked~.popup {
   display: none;
+}
+
+#today_chk:checked~.popup .popup_close .today i {
+  color: black;
+  background-color: #ccc;
 }
 
 /**********sub_popup***********/
