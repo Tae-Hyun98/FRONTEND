@@ -35,32 +35,56 @@ li {
   color: #8869ed;
 }
 
-.container_02 {
-  width: 500px;
-  height: 300px;
-  border: 1px solid black;
-  background-color: #eee;
+/* .container_02 {
+  @include size(500px, 300px);
+  @include box_style();
   position: fixed;
   top: 400px;
   left: 50%;
-  margin-left: -250px;
+  margin-left: center(500px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-.container_02 > div {
-  width: 150px;
-  height: 100px;
+
+  >div {
+    @include size(150px, 100px);
+    @include box_style();
+    @include line(100px);
+
+    &:nth-child(2) {
+      @include size(100px, 150px);
+      @include line(150px);
+    }
+  }
+} */
+.container_03 {
+  width: 620px;
+  height: 200px;
   border: 1px solid black;
   background-color: #eee;
-  text-align: center;
-  line-height: 100px;
+  display: flex;
+  padding: 10px;
 }
-.container_02 > div:nth-child(2) {
-  width: 100px;
-  height: 150px;
-  text-align: center;
-  line-height: 150px;
+.container_03 div {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  background-color: #eee;
+}
+.container_03 div.box02 {
+  margin: 0 10px;
+}
+.container_03 div:nth-child(1) {
+  background-image: url(/img_01.c30f03d7.jpg);
+  background-size: cover;
+}
+.container_03 div:nth-child(2) {
+  background-image: url(/img_02.24eadf78.jpg);
+  background-size: cover;
+}
+.container_03 div:nth-child(3) {
+  background-image: url(/img_03.8818e202.jpg);
+  background-size: cover;
 }
 
 /*# sourceMappingURL=/main.39afc03c.css.map */

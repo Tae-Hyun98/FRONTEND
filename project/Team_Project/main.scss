@@ -67,7 +67,7 @@ $color:#8869ed;
   line-height: $height;
 }
 
-.container_02 {
+/* .container_02 {
   @include size(500px, 300px);
   @include box_style();
   position: fixed;
@@ -86,6 +86,29 @@ $color:#8869ed;
     &:nth-child(2) {
       @include size(100px, 150px);
       @include line(150px);
+    }
+  }
+} */
+
+.container_03 {
+  @include size(620px, 200px);
+  @include box_style();
+  display: flex;
+  padding: 10px;
+
+  div {
+    @include size(200px, 200px);
+    @include box_style();
+
+    &.box02 {
+      margin: 0 10px;
+    }
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        background-image: url(./images/img_0#{$i}.jpg);
+        background-size: cover;
+      }
     }
   }
 }
