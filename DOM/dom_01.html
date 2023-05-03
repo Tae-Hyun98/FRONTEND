@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JavaScript_DOM</title>
-  <script src="./main.js" defer></script>
+  <!-- <script src="./main.js" defer></script> -->
 
   <script>
     /* window.onload=function(){
@@ -14,15 +14,32 @@
     }
     //document.getElementById('box01').style.color = 'blue';
      */
-    /* document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function () {
       document.getElementById('box01').style.color = 'blue';
-    }); */
+      document.getElementById('box01').style.fontSize = '24px';
+
+      document.getElementsByClassName('box02')[0].style.color = 'red';
+      
+      const li = document.querySelectorAll('.box03 li');
+      for (let i = 0; i < li.length; i++) {
+        li[i].style.color = 'green';
+        li[i].style.fontSize = '30px';
+      }
+      li.forEach((value) => {
+        value.style.color = 'blue';
+      })
+      document.querySelector('#box01').style.backgroundColor = '#ccc';
+      document.querySelector('.box02').style.fontSize = '50px';
+      //querySelector는 단일객체
+      document.querySelectorAll('.box03 li')[2].style.backgroundColor = 'black'
+      //querySelectorAll은 배열객체로
+    });
   </script>
 </head>
 
 <body>
   <div id="box01">Text_box01</div>
-  <p class="box2">Text_box02</p>
+  <p class="box02">Text_box02</p>
   <ul class="box03">
     <li>Text_box03_1</li>
     <li>Text_box03_2</li>
