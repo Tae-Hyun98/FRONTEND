@@ -1,0 +1,1 @@
+document.getElementById('box01').style.color = 'red';
