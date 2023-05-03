@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const showBtn = document.querySelector('.show_btn');
+      const hiddenBtn = document.querySelector('.hidden_btn');
+      const textBox = document.querySelector('.box');
+      showBtn.onclick = showBox;
+      hiddenBtn.onclick = hiddenBox;
+
+      function showBox() {
+        textBox.style.display = 'block';
+      }
+
+      function hiddenBox() {
+        textBox.style.display = 'none';
+      }
+
+    });
+  </script>
+  <style>
+    .box {
+      width: 300px;
+      height: 200px;
+      background-color: blue;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="show_btn">show</button>
+  <button class="hidden_btn">hidden</button>
+  <div class="box">Text_box</div>
+</body>
+
+</html>

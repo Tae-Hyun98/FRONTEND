@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const Btn = document.querySelector('.btn');
+      const textBox = document.querySelector('.box');
+      // let state = 0;
+      let state = false;
+
+      Btn.addEventListener('click', () => {
+        /* if (state == 1) {
+          textBox.style.display = 'block';
+          state = 1;
+        } else {
+          textBox.style.display = 'none';
+          state = 0;
+        } */
+        if (!state) {
+          textBox.style.display = 'block';
+          textBox.style.position = 'fixed'
+          textBox.style.top = '100px'
+          state = true;
+        } else {
+          textBox.style.display = 'none';
+          textBox.style.position = 'unset'
+          textBox.style.top = '0'
+          state = false;
+        }
+        console.log(state);
+      });
+
+    });
+  </script>
+
+  <style>
+    .box {
+      width: 300px;
+      height: 200px;
+      background-color: blue;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn">click</button>
+  <div class="box">Text_box</div>
+</body>
+
+</html>
