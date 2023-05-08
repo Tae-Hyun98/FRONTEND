@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>썸네일 출력</title>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const mainImg = document.querySelector('.main_img > img');
+      const thumnailImg = document.querySelectorAll('.thumnail_img > li');
+
+      /* for (let i in thumnailImg) {
+        thumnailImg[i].onclick = mainBox;
+      }
+
+      function mainBox() {
+        let imgSrc = this.children[0].src;
+        mainImg.setAttribute('src', imgSrc);
+      } */
+
+      for (let i = 0; i < thumnailImg.length; i++) {
+        thumnailImg[i].addEventListener('click', function() {
+          mainImg.src = this.children[0].src;
+        });
+      }
+      /* thumnailImg[0].addEventListener('click', () => {
+        mainImg.setAttribute('src', './images/bx_img01.jpg');
+      });
+      thumnailImg[1].addEventListener('click', () => {
+        mainImg.setAttribute('src', './images/bx_img02.jpg');
+      });
+      thumnailImg[2].addEventListener('click', () => {
+        mainImg.setAttribute('src', './images/bx_img03.jpg');
+      }); */
+    });
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .container {
+      position: relative;
+      width: 600px;
+      height: 500px;
+    }
+
+    .container img {
+      display: block;
+      width: 100%;
+    }
+
+    .container .thumnail_img {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      border: 1px solid black;
+    }
+
+    .container .thumnail_img li {
+      width: 200px;
+      cursor: pointer;
+    }
+
+    .container .thumnail_img li img {
+      width: 100%;
+      height: 150px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Front_End</h2>
+    <div class="main_img">
+      <img class="box" src="./images/bx_img01.jpg" alt="main_img">
+    </div>
+    <ul class="thumnail_img">
+      <li><img src="./images/bx_img01.jpg" alt="thumnail_img01"></li>
+      <li><img src="./images/bx_img02.jpg" alt="thumnail_img02"></li>
+      <li><img src="./images/bx_img03.jpg" alt="thumnail_img03"></li>
+    </ul>
+  </div>
+</body>
+
+</html>

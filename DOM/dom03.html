@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript_DOM</title>
+
+  <script>
+    //클릭시 안에 텍스트바꾸기
+    document.addEventListener('DOMContentLoaded', () => {
+      const welcome = document.querySelector('.welcome');
+      const bye = document.querySelector('.bye');
+      const text = document.querySelector('.text');
+
+      welcome.addEventListener('click', () => {
+        text.style.color = 'red';
+        text.textContent = '방문을 환영합니다.';
+      });
+
+      bye.addEventListener('click', () => {
+        text.style.color = 'blue';
+        text.innerHTML = '<a href="http://www.naver.com">다음에 또 방문해주세요.';
+      });
+
+      //상세보기누르면 열림닫힘
+        const btnOpen = document.querySelector('.open');
+      const btnClose = document.querySelector('.close');
+      const detailBox = document.querySelector('.detail');
+
+      btnOpen.onclick = showDetail;
+      btnClose.onclick = hiddenDetail;
+
+      function showDetail() {
+        detailBox.style.display = 'block';
+        btnOpen.style.display = 'none';
+      };
+
+      function hiddenDetail() {
+        detailBox.style.display = 'none';
+        btnOpen.style.display = 'block';
+      }
+
+      //버튼하나로 열기닫기
+      const btn = document.querySelector('.btn');
+      const detail = document.querySelector('.detail1');
+      let cnt = 0;
+
+      btn.addEventListener('click', () => {
+        if (cnt === 0) {
+          detail.style.display = 'block';
+          btn.innerHTML = '상세설명닫기';
+          cnt = 1;
+        } else {
+          detail.style.display = 'none';
+          btn.innerHTML = '상세설명보기';
+          cnt = 0;
+        }
+      });
+    });
+  </script>
+
+
+  <style>
+    .text {
+      width: 500px;
+      height: 300px;
+      line-height: 300px;
+      border: 1px solid black;
+      text-align: center;
+      font-size: 30px;
+      margin-top: 10px;
+    }
+
+    .container {
+      width: 500px;
+      margin-top: 50px;
+    }
+
+    .container img {
+      display: block;
+      width: 100%;
+    }
+
+    .container .detail {
+      display: none;
+    }
+
+    .container .detail1 {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="welcome">Welcome</button>
+  <button class="bye">bye</button>
+  <div class="text">버튼을 눌러주세요~</div>
+
+  <div class="container">
+    <img src="./images/bx_img01.jpg" alt="detail_img">
+    <button class="open">상세설명보기</button>
+
+    <div class="detail">
+      <h3>Front_End</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem at, vitae velit eos explicabo incidunt
+        magnam odit consectetur. Labore iusto sint ad impedit molestiae sapiente consectetur aut id modi, sed, aliquam
+        deserunt excepturi nesciunt, voluptatem asperiores. Perferendis asperiores quod quae at optio quidem
+        exercitationem reprehenderit perspiciatis dolores voluptates ut distinctio fugit eaque dolore in deserunt
+        reiciendis, quos quasi et porro dolorum voluptatum consequuntur non. Voluptates recusandae nulla dolores hic
+        explicabo earum, et optio veritatis repudiandae, odit ad dolor. Saepe nesciunt iure aspernatur quaerat
+        voluptatum, numquam culpa eaque dignissimos nisi sed tenetur voluptates labore ratione doloremque commodi enim
+        consequuntur pariatur ipsa.
+      </p>
+      <button class="close">상세설명닫기</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="./images/bx_img01.jpg" alt="detail_img">
+
+    <div class="detail1">
+      <h3>Front_End</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem at, vitae velit eos explicabo incidunt
+        magnam odit consectetur. Labore iusto sint ad impedit molestiae sapiente consectetur aut id modi, sed, aliquam
+        deserunt excepturi nesciunt, voluptatem asperiores. Perferendis asperiores quod quae at optio quidem
+        exercitationem reprehenderit perspiciatis dolores voluptates ut distinctio fugit eaque dolore in deserunt
+        reiciendis, quos quasi et porro dolorum voluptatum consequuntur non. Voluptates recusandae nulla dolores hic
+        explicabo earum, et optio veritatis repudiandae, odit ad dolor. Saepe nesciunt iure aspernatur quaerat
+        voluptatum, numquam culpa eaque dignissimos nisi sed tenetur voluptates labore ratione doloremque commodi enim
+        consequuntur pariatur ipsa.
+      </p>
+    </div>
+    <button class="btn">상세설명보기</button>
+
+  </div>
+</body>
+
+</html>

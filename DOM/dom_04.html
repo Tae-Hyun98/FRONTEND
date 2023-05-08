@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS hover Event</title>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const img = document.querySelector('.thumnail img');
+
+      /* img.onmouseover = overImg;
+      img.onmouseout = outImg;
+
+      function overImg() {
+        img.src = './images/new01_on.jpg';
+      }
+
+      function outImg() {
+        img.src = './images/new01_off.jpg';
+      } */
+
+
+      img.addEventListener('mouseover',()=>{
+        img.setAttribute('src','./images/new01_on.jpg');
+      });
+      img.addEventListener('mouseout',()=>{
+        img.setAttribute('src','./images/new01_off.jpg');
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="thumnail">
+    <img src="./images/new01_off.jpg" alt="mouser_over">
+  </div>
+</body>
+
+</html>
