@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let section = document.createElement('section');
+      let Tit = document.createElement('h1');
+      let Text = document.createTextNode('추가하기');
+      let ul = document.createElement('ul');
+      let btn = document.createElement('button');
+      let btnD = document.createElement('button');
+      let Add = document.createTextNode('추가');
+      let Del = document.createTextNode('삭제');
+      let div = document.createElement('div');
+
+      section.appendChild(Tit);
+      Tit.appendChild(Text);
+      section.appendChild(btn);
+      section.appendChild(btnD);
+      section.appendChild(ul);
+
+      btn.appendChild(Add);
+      btnD.appendChild(Del);
+      document.body.appendChild(section);
+
+      btn.addEventListener('click', function () {
+        let li = document.createElement('li');
+        let div = document.createElement('div');
+        div.setAttribute('class', 'box');
+        ul.appendChild(li);
+        li.appendChild(div);
+      });
+
+      btnD.addEventListener('click', function () {
+        let li = document.querySelector('ul li');
+        ul.removeChild(li);
+      });
+    });
+  </script>
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      display: flex;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    section {
+      border: 1px solid black;
+    }
+
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
