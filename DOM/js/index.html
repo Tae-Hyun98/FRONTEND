@@ -6,11 +6,60 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <script src="./data.js" defer></script>
+  <script type="module" src="./main.js" defer></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .wrap .best_product {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .wrap .best_product .best_box {
+      width: 20%;
+      border: 1px solid black;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    /* .wrap .best_product .best_box:nth-child(4) {
+      margin-right: 0;
+    } */
+
+    .wrap .best_product .best_box img {
+      width: 100%;
+      height: 300px;
+      border-bottom: 1px solid #000;;
+    }
+
+    .wrap .best_product .best_box p.center {
+      text-align: center;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .wrap .best_product .best_box p:nth-child(3){
+      text-align: right;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="wrap">
+    <h2>Best 상품</h2>
 
+    <section class="best_product">
+
+    </section>
+  </div>
 </body>
 
 </html>
