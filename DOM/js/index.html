@@ -7,105 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="./data.js" defer></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelector('.add_btn').addEventListener('click', function () {
-        const subject = document.querySelector('.subject');
-        const subjectList = document.querySelector('.subject_list');
-        if (subject.value != "") {
-          let newP = document.createElement('p');
-          let newText = document.createTextNode(subject.value);
-          let newSpan = document.createElement('span');
-          let spanText = document.createTextNode('X');
-
-          newP.style.paddingLeft = '10px';
-          newP.appendChild(newText);
-          newP.appendChild(newSpan);
-
-          newSpan.appendChild(spanText);
-
-          newSpan.setAttribute('class', 'delete');
-
-          //subjectList.appendChild(newP);
-
-          subjectList.insertBefore(newP, subjectList.children[0]);
-          //insertBefore(추가되는노드, 기준노드)
-
-          //버튼누르면 안에내용초기화되고 다시 쓸수있게
-          subject.value = '';
-          subject.focus();
-
-          let delBtn = document.querySelectorAll('.delete');
-          for (let i = 0; i < delBtn.length; i++) {
-            delBtn[i].addEventListener('click', function () {
-              if (delBtn[i].parentNode.parentNode) {
-                this.parentNode.parentNode.removeChild(this.parentNode);
-              }
-            });
-          }
-        } else {
-          alert('값을 입력하세요');
-        }
-      }); //추가버튼 클릭이벤트
-
-
-    });
-  </script>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-
-    h2 {
-      margin-bottom: 10px;
-      color: green;
-    }
-
-    .container {
-      border: 1px solid black;
-    }
-
-    .delete {
-      margin-left: 100px;
-      opacity: 0.5;
-      cursor: pointer;
-    }
-
-    .delete:hover {
-      opacity: 1;
-      font-weight: bold;
-    }
-
-    .subject_list {
-      width: 40%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .subject_list p {
-      display: flex;
-    }
-
-    .subject_list p span {
-      display: block;
-    }
-  </style>
 </head>
 
 <body>
-  <div class="container">
-    <h2>Front_End Subject List</h2>
 
-    <form action="">
-      <input type="text" class="subject" placeholder="과목이름" autofocus>
-      <button class="add_btn" type="button">추가</button>
-    </form>
-    <hr>
-    <div class="subject_list"></div>
-  </div>
 </body>
 
 </html>
