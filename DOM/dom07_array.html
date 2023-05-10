@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript_DOM</title>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let itemList = [];
+      const item = document.querySelector('.item');
+      const addBtn = document.querySelector('.add_btn');
+      const itemBox = document.querySelector('.item_box');
+
+      /* addBtn.addEventListener('click', function () {
+        addList();
+      }); */
+      addBtn.addEventListener('click', addList);
+
+      function addList() {
+        if (item.value !== '' && !Number(item.value)) {
+          //itemList.unshift(item.value); //앞으로추가
+          itemList.push(item.value); //뒤로추가
+          item.value = '';
+          showList();
+        }
+        item.focus();
+      }
+
+      function showList() {
+        let list = '<ul>';
+        for (let i = 0; i < itemList.length; i++) {
+          //list += '<li>' + itemList[i] + '</li>';
+          list += '<li>' + itemList[i] + '<a href="#!"><img src="./images/img01.jpg" id=' + i +
+            '></a></img><span class="delete"> X </span></li>';
+          list += '<div>' + itemList[i] + '</div>'
+        }
+        itemBox.innerHTML = list;
+        list += '</ul>';
+
+        let remove = document.querySelectorAll('.delete');
+        for (let i = 0; i < remove.length; i++) {
+          remove[i].addEventListener('click', removeList);
+        }
+      }
+
+      function removeList() {
+        //getAttribute 값얻을때, setAttribute 
+        let id = this.getAttribute('id');
+        itemList.splice(id, 1);
+        showList();
+      }
+      console.log(itemList)
+    });
+  </script>
+
+  <style>
+    li {
+      list-style: none;
+    }
+
+    .delete {
+      padding-left: 50px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Item List</h2>
+
+    <form action="">
+      <input type="text" class="item" autofocus>
+      <input type="button" class="add_btn" value="추가">
+    </form>
+    <hr>
+    <div class="item_box"></div>
+  </div>
+</body>
+
+</html>

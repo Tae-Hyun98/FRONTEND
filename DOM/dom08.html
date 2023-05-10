@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const infoChk = document.getElementById('info_chk');
+
+      infoChk.addEventListener('click', function () {
+        if (infoChk.checked) {
+          document.getElementById('deli_name').value = document.getElementById('user_name').value;
+          document.getElementById('deli_tel').value = document.getElementById('user_tel').value;
+          document.getElementById('deli_address').value = document.getElementById('user_address').value;
+        } else {
+          document.getElementById('deli_name').value = null;
+          document.getElementById('deli_tel').value = null;
+          document.getElementById('deli_address').value = null;
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>로그인</h1>
+    <form action="" name="login">
+      <div class="log_in">
+        <input type="text" name="user_id" id="user_id" class="user_id" placeholder="아이디입력" required autofocus>
+        <input type="password" name="user_pw" id="user_pw" class="user_pw" placeholder="비밀번호입력" required>
+      </div>
+      <button type="button" class="log_btn">로그인</button>
+    </form>
+    <br><br>
+
+    <form action="" name="order">
+      <fieldset>
+        <legend>주문정보</legend>
+        <ul>
+          <li>
+            <label for="user_name">이름 : </label>
+            <input type="text" id="user_name">
+          </li>
+          <li>
+            전화번호 : <input type="text" id="user_tel">
+          </li>
+          <li>
+            <label for="user_address">주소 : </label>
+            <input type="text" id="user_address">
+          </li>
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>배송정보</legend>
+        <ul>
+          <li>
+            <input type="checkbox" name="" id="info_chk">
+            <label for="info_chk">주문정보와 배송정보가 같습니다.</label>
+          </li>
+          <li>
+            <label for="deli_name">이름 : </label>
+            <input type="text" id="deli_name">
+          </li>
+          <li>
+            <label for="deli_tel">전화번호 :</label>
+            <input type="text" id="deli_tel">
+          </li>
+          <li>
+            <label for="deli_address">주소 : </label>
+            <input type="text" id="deli_address">
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
