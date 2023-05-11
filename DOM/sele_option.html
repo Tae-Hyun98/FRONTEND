@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      //fruits
+      const fruits = document.selectForm.fruits;
+
+      fruits.addEventListener('change', function () {
+        let fruitsName = fruits.options[fruits.selectedIndex].innerText;
+
+        document.getElementById('name').value = fruitsName;
+      });
+
+      //family_site
+      const family = document.getElementById('family');
+      /* family.addEventListener('change', function () {
+        let options = this.options;
+        let index = options.selectedIndex;
+
+        location.href = options[index].value;
+      }); */
+
+      family.addEventListener('change', (e) => {
+        let options = e.currentTarget.options; //선택된 옵션값 받아오는거
+        let index = options.selectedIndex;
+        let openNewWindow = window.open('about:blank'); //새창에서 띄우기 코드
+
+        openNewWindow.location.href = options[index].value;
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <form action="" name="selectForm">
+      <fieldset>
+        <legend>좋아하는것들</legend>
+        <ul>
+          <li>
+            <label for="name">이름 : </label>
+            <input type="text" id="name">
+          </li>
+          <li>
+            <label for="fruits">과일 : </label>
+            <select name="fruits" id="fruits">
+              <option value="">--------선택--------</option>
+              <option value="apple">사과</option>
+              <option value="banana">바나나</option>
+              <option value="mango">망고</option>
+            </select>
+          </li>
+          <br />
+          <li>
+            <label for="family">패밀리사이트 : </label>
+            <select name="family" id="family">
+              <option value="">----- Family Site -----</option>
+              <option value="http://www.naver.com">Naver</option>
+              <option value="http://www.daum.net">Daum</option>
+              <option value="http://www.nate.com">Nate</option>
+              <option value="http://www.google.co.kr">Google</option>
+            </select>
+          </li>
+        </ul>
+      </fieldset>
+    </form>
+  </div>
+</body>
+
+</html>
