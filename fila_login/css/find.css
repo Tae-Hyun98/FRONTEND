@@ -435,4 +435,12 @@ img {
   padding-left: 15px;
 }
 
-.find_wrap .find_box .find_tel{margin-top: 10px;}
+.find_wrap .find_box .find_tel {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.find_wrap .find_box .find_tel label{
+  font-size: 18px;
+}

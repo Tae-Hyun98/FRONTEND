@@ -480,11 +480,11 @@ img {
 }
 
 .social_login .social_naver {
-  background: url(./img/ico_naver_13x12.png) no-repeat center left 20px;
+  background: url(../img/ico_naver_13x12.png) no-repeat center left 20px;
 }
 
 .social_login .social_kakao {
-  background: url(./img/ico_kakao_17x16.png) no-repeat center left 20px;
+  background: url(../img/ico_kakao_17x16.png) no-repeat center left 20px;
 }
 
 .logbtn {
