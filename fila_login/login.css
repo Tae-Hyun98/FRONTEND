@@ -388,34 +388,138 @@ img {
 
 /**********login***************/
 .login_section {
+  width: 100%;
+  margin: 0 auto;
   padding-top: 100px;
 }
 
 .login_wrap {
-  width: 100%;
+  width: 600px;
   margin: 0 auto;
+  padding: 0 50px;
   text-align: center;
 }
 
 .login_wrap h1 {
-  font-size: 2.2em;
+  font-size: 2.3em;
   margin: 30px 0;
 }
 
 .login_wrap .input_box {
-  width: 940px;
-  padding: 0 20px;
-  margin: 0 auto;
+  position: relative;
 }
 
 .login_wrap .input_box input {
-  width: 50%;
+  width: 100%;
   line-height: 50px;
   margin-bottom: 10px;
+  padding-left: 15px;
 }
-.login_wrap .input_box input:last-child{
+
+.login_wrap .input_box input:last-child {
   margin-bottom: 0;
 }
-.login_wrap .input_box input::placeholder{
-  margin-left: 20px;
+
+.eye {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.eye_off {
+  display: none;
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.id_box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+.login_wrap .id_box>label,
+#id_save {
+  cursor: pointer;
+}
+
+.id_box a {
+  color: #888;
+  text-decoration: underline;
+}
+
+.social_login {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social_login a {
+  display: block;
+  width: 50%;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  padding: 10px 0;
+  margin-right: 10px;
+  text-align: center;
+  transition: .3s;
+}
+
+.social_login a:hover {
+  border: 1px solid black;
+}
+
+.social_login a:last-child {
+  margin-right: 0;
+}
+
+.social_login .social_naver {
+  background: url(./img/ico_naver_13x12.png) no-repeat center left 20px;
+}
+
+.social_login .social_kakao {
+  background: url(./img/ico_kakao_17x16.png) no-repeat center left 20px;
+}
+
+.logbtn {
+  margin: 30px 0;
+}
+
+.logbtn a {
+  display: block;
+  background-color: #002053;
+  color: #fff;
+  padding: 15px 0;
+  border-radius: 40px;
+  font-size: 20px;
+}
+
+.join_box {
+  margin: 30px 0;
+}
+
+.join_box:hover a {
+  background-color: #002053;
+  color: #fff;
+}
+
+.join_box a {
+  display: block;
+  font-size: 20px;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 15px 0;
+  border-radius: 40px;
+  transition: .3s;
+}
+
+.login_wrap a.border {
+  text-decoration: underline;
+  color: #777;
 }

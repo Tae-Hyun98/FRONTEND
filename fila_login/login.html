@@ -394,12 +394,45 @@
   <section class="login_section">
     <div class="login_wrap">
       <h1>로그인</h1>
+
       <form action="" name="login">
         <div class="input_box">
           <input type="text" id="login_id" class="login_id" placeholder="아이디" autofocus required>
           <input type="password" id="login_pw" class="login_pw" placeholder="비밀번호" required>
+
+          <div class="eye">
+            <span class="material-icons-outlined">
+              visibility
+            </span>
+          </div>
+
+          <div class="eye_off">
+            <span class="material-icons-outlined">
+              visibility_off
+            </span>
+          </div>
+        </div>
+
+        <div class="id_box">
+          <label for="id_save"><input type="checkbox" id="id_save"> 아이디 저장</label>
+          <a href="#!">아이디 / 비밀번호 찾기</a>
+        </div>
+        <div class="social_login">
+          <a href="#!" class="social_naver">네이버로그인</a>
+          <a href="#!" class="social_kakao">카카오로그인</a>
+        </div>
+
+        <div class="logbtn">
+          <a href="#!" id="login_btn">로그인</a>
         </div>
       </form>
+      <hr />
+
+      <div class="join_box">
+        <a href="#!">회원가입</a>
+      </div>
+
+      <a href="#!" class="border">비회원 주문조회</a>
     </div>
   </section>
 </body>
