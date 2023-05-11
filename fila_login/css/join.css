@@ -46,7 +46,7 @@ img {
 
 /**********join section************/
 .join_container {
-  width: 80%;
+  width: 768px;
   margin: 0 auto;
 }
 
@@ -61,16 +61,12 @@ img {
   margin-bottom: 5px;
 }
 
-.join_section {
-  padding: 20px 0;
-}
-
 .join_inner {
   width: 630px;
-  margin: 0 auto;
+  margin: 30px auto;
 }
 
-.join_inner ul li {
+.join_form_box>ul>li {
   margin-bottom: 20px;
 }
 
@@ -78,8 +74,8 @@ img {
   margin-bottom: 0;
 }
 
-.join_inner ul li label {
-  font-size: 24px;
+.join_form_box>ul>li>label {
+  font-size: 20px;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -170,7 +166,7 @@ p.rule {
 }
 
 .phone_num {
-  width: 100%;
+  width: 70%;
   height: 50px;
   padding: 10px;
   margin-top: 7px;
@@ -180,8 +176,7 @@ p.rule {
 
 .phone_num select {
   border: none;
-  height: 30px;
-  line-height: 18px;
+  height: 34px;
   margin-top: 0;
   padding-left: 0;
   outline: none;
@@ -190,54 +185,54 @@ p.rule {
 
 
 /**********약관동의***********/
-.join_inner .terms_box label {
-  font-size: 14px;
-}
-
-.join_inner .terms_box label input {
+.join_inner .terms_agree_box label input {
   width: auto;
   height: auto;
 }
 
-.join_inner .termbox {
-  margin-top: 50px;
-}
-
-.join_inner .term_tit {
-  font-size: 24px;
-  padding: 0 5px;
-}
-
 .terms_box {
-  padding: 15px 0 15px 25px;
+  margin: 50px 0;
+}
+
+.terms_box .term_tit {
+  font-size: 24px;
+  margin-left: 5px;
 }
 
 .terms_box .all_terms {
   margin-bottom: 10px;
 }
 
-.terms_sel {
-  padding: 0 25px 15px 18px;
+.terms_agree_box {
+  padding: 15px 15px 20px 20px;
 }
 
-.terms_sel .terms_flex {
-  display: flex;
-  flex-direction: column;
+.terms_agree_box .terms_agree_all label {
+  font-size: 18px;
 }
 
-.terms_sel .terms_flex>div {
+.terms_agree_box label {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.terms_agree_box .terms_agree {
+  padding: 5px 0 0 15px;
+}
+
+.terms_agree_box .terms_agree ul li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  line-height: 30px;
 }
 
-.terms_sel .terms_flex>div a {
-  color: #777;
+.terms_agree_box .terms_agree ul li a {
   text-decoration: underline;
+  color: #777;
 }
 
 .join_btn_box {
-  display: flex;
-  justify-content: center;
   margin: 40px 0;
 }
 
@@ -247,7 +242,8 @@ p.rule {
 }
 
 .join_btn_box a {
-  width: 630px;
+  display: block;
+  width: 100%;
   text-align: center;
   color: #000;
   border: 1px solid #ccc;
