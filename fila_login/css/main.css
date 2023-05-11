@@ -71,7 +71,7 @@ img {
   display: block;
   width: 120px;
   height: 45px;
-  background: url(./img/Logo/blue_fila.png) no-repeat center;
+  background: url(../img/Logo/blue_fila.png) no-repeat center;
   background-size: contain;
 }
 
@@ -385,141 +385,43 @@ img {
   backdrop-filter: blur(20px);
 }
 
+/**********main_wrap*************/
+.main_wrap {
+  height: 100vh;
+  padding-top: 90px;
+  background-color: #002053;
+}
 
-/**********login***************/
-.login_section {
+.inner {
   width: 100%;
   margin: 0 auto;
+}
+
+.login_nav {
+  display: flex;
+  flex-direction: column;
   padding-top: 100px;
 }
 
-.login_wrap {
-  width: 600px;
-  margin: 0 auto;
-  padding: 0 50px;
-  text-align: center;
-}
-
-.login_wrap h1 {
-  font-size: 2.3em;
-  margin: 30px 0;
-}
-
-.login_wrap .input_box {
-  position: relative;
-}
-
-.login_wrap .input_box input {
-  width: 100%;
-  line-height: 50px;
-  margin-bottom: 10px;
-  padding-left: 15px;
-}
-
-.login_wrap .input_box input:last-child {
-  margin-bottom: 0;
-}
-
-.eye {
-  position: absolute;
-  bottom: 20px;
-  right: 25px;
-  cursor: pointer;
-  color: #ccc;
-}
-
-.eye_off {
-  display: none;
-  position: absolute;
-  bottom: 20px;
-  right: 25px;
-  cursor: pointer;
-  color: #ccc;
-}
-
-.id_box {
+.login_nav>div {
   display: flex;
-  justify-content: space-between;
-  margin-top: 5px;
+  justify-content: center;
+  margin: 20px 0;
 }
 
-.login_wrap .id_box>label,
-#id_save {
-  cursor: pointer;
+.login_nav div a:hover {
+  box-shadow: 0px 0px 20px yellow;
 }
 
-.id_box a {
-  color: #888;
-  text-decoration: underline;
-}
-
-.social_login {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.social_login a {
+.login_nav a {
+  width: 400px;
   display: block;
-  width: 50%;
-  color: #000;
-  border: 1px solid #ccc;
-  border-radius: 30px;
-  padding: 10px 0;
-  margin-right: 10px;
+  border: 1px solid #777;
+  padding: 50px;
+  font-size: 30px;
+  font-weight: bold;
   text-align: center;
+  color: black;
   transition: .3s;
-}
-
-.social_login a:hover {
-  border: 1px solid black;
-}
-
-.social_login a:last-child {
-  margin-right: 0;
-}
-
-.social_login .social_naver {
-  background: url(./img/ico_naver_13x12.png) no-repeat center left 20px;
-}
-
-.social_login .social_kakao {
-  background: url(./img/ico_kakao_17x16.png) no-repeat center left 20px;
-}
-
-.logbtn {
-  margin: 30px 0;
-}
-
-.logbtn a {
-  display: block;
-  background-color: #002053;
-  color: #fff;
-  padding: 15px 0;
-  border-radius: 40px;
-  font-size: 20px;
-}
-
-.join_box {
-  margin: 30px 0;
-}
-
-.join_box:hover a {
-  background-color: #002053;
-  color: #fff;
-}
-
-.join_box a {
-  display: block;
-  font-size: 20px;
-  color: #000;
-  border: 1px solid #ccc;
-  padding: 15px 0;
-  border-radius: 40px;
-  transition: .3s;
-}
-
-.login_wrap a.border {
-  text-decoration: underline;
-  color: #777;
+  background-color: #fff;
 }
