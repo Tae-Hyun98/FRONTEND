@@ -384,3 +384,45 @@ img {
   z-index: -1;
   backdrop-filter: blur(20px);
 }
+
+
+/***********아이디/비밀번호 찾기**************/
+.find_section {
+  padding-top: 100px;
+}
+
+.find_wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.find_wrap .find_inner {
+  width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.find_wrap h1 {
+  font-size: 2.3em;
+  margin: 30px 0;
+}
+
+.find_wrap .find_tab {
+  display: flex;
+  justify-content: center;
+}
+
+.find_wrap .find_tab label {
+  cursor: pointer;
+  width: 50%;
+  padding: 20px 30px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+
+#find_id,
+#find_pw {
+  display: none;
+}
+
+
