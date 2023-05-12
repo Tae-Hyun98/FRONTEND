@@ -388,7 +388,7 @@ img {
 
 /***********아이디/비밀번호 찾기**************/
 .find_section {
-  padding-top: 100px;
+  padding-top: 120px;
 }
 
 .find_wrap {
@@ -397,7 +397,7 @@ img {
 }
 
 .find_wrap .find_inner {
-  width: 600px;
+  width: 500px;
   margin: 0 auto;
   text-align: center;
 }
@@ -412,12 +412,13 @@ img {
   justify-content: center;
 }
 
-.find_wrap .find_tab label {
+.find_wrap .find_tab>label {
   cursor: pointer;
   width: 50%;
   padding: 20px 30px;
   border: 1px solid #ccc;
   font-size: 18px;
+  transition: .3s;
 }
 
 #find_id,
@@ -438,9 +439,61 @@ img {
 .find_wrap .find_box .find_tel {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 15px;
+  margin: 15px 0;
 }
 
-.find_wrap .find_box .find_tel label{
+.find_wrap .find_box .find_tel label {
   font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.tel_flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tel_flex select {
+  width: 100px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.tel_flex span {
+  margin: 0 10px;
+}
+
+.find_id_box,
+.find_pw_box {
+  display: none;
+}
+
+.find_box .btn a {
+  display: block;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 15px 0;
+  border-radius: 30px;
+  transition: .2s;
+  margin-top: 30px;
+}
+
+.find_box .btn a:hover {
+  background-color: #002053;
+  color: #fff;
+}
+
+#find_id:checked~.find_wrap .find_tab .f_id,
+#find_pw:checked~.find_wrap .find_tab .f_pw {
+  background-color: #002053;
+  color: #fff;
+}
+
+#find_id:checked~.find_wrap .find_box .find_id_box,
+#find_pw:checked~.find_wrap .find_box .find_pw_box {
+  display: block;
+}
+
+.find_pw_box>input:nth-child(2) {
+  margin-top: 15px;
 }

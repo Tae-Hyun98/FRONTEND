@@ -393,31 +393,69 @@
 
 
   <section class="find_section">
-    <input type="radio" name="find" id="find_id">
+    <input type="radio" name="find" id="find_id" checked>
     <input type="radio" name="find" id="find_pw">
     <div class="find_wrap">
       <div class="find_inner">
-        <h1>아이디 비밀번호 찾기</h1>
+        <h1>아이디 / 비밀번호 찾기</h1>
         <div class="find_tab">
-          <label for="find_id">아이디 찾기</label>
-          <label for="find_pw">비밀번호 찾기</label>
+          <label for="find_id" class="f_id">아이디 찾기</label>
+          <label for="find_pw" class="f_pw">비밀번호 찾기</label>
         </div>
 
         <form action="" name="find_form" class="find_form">
           <div class="find_box">
-            <input type="text" id="user_id" placeholder="이름">
-            <div class="find_tel">
-              <label for="user_phone">휴대전화</label>
-              <select name="" id="">
-                <option value="kt">KT</option>
-                <option value="skt">SKT</option>
-                <option value="lg">LG</option>
-              </select>
-              <input type="text" id="user_phone">
-              <input type="text" id="user_phone1">
-              <input type="text" id="user_phone2">
+            <div class="find_id_box">
+              <input type="text" id="user_id" placeholder="이름">
+              <div class="find_tel">
+                <label for="user_phone">휴대전화</label>
+                <div class="tel_flex">
+                  <div class="tel_select">
+                    <select name="" id="">
+                      <option value="kt">KT</option>
+                      <option value="skt">SKT</option>
+                      <option value="lg">LG</option>
+                    </select>
+                  </div>
+                  <input type="text" id="user_phone">
+                  <span>-</span>
+                  <input type="text" id="user_phone1">
+                  <span>-</span>
+                  <input type="text" id="user_phone2">
+                </div>
+              </div>
+
+              <div class="id_find_btn btn">
+                <a href="#!">아이디 찾기</a>
+              </div>
             </div>
-            
+
+            <div class="find_pw_box">
+              <input type="text" id="find_id_chk" placeholder="아이디">
+              <input type="text" id="find_name_chk" placeholder="이름">
+              <div class="find_tel">
+                <label for="user_phone">휴대전화</label>
+                <div class="tel_flex">
+                  <div class="tel_select">
+                    <select name="" id="">
+                      <option value="kt">KT</option>
+                      <option value="skt">SKT</option>
+                      <option value="lg">LG</option>
+                    </select>
+                  </div>
+                  <input type="text" id="user_phone">
+                  <span>-</span>
+                  <input type="text" id="user_phone1">
+                  <span>-</span>
+                  <input type="text" id="user_phone2">
+                </div>
+              </div>
+
+              <div class="id_find_btn btn">
+                <a href="#!">비밀번호 찾기</a>
+              </div>
+            </div>
+
           </div>
         </form>
       </div>
