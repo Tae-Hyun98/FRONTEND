@@ -436,7 +436,7 @@ img {
   padding-left: 15px;
 }
 
-.find_wrap .find_box .find_tel {
+.find_wrap .find_box .find_idcard {
   display: flex;
   flex-wrap: wrap;
   margin: 15px 0;
@@ -448,15 +448,10 @@ img {
 }
 
 .tel_flex {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.tel_flex select {
-  width: 100px;
-  height: 50px;
-  margin-right: 10px;
 }
 
 .tel_flex span {
