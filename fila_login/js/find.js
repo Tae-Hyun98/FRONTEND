@@ -22,9 +22,10 @@ function clickBtn() {
     for (let i = 0; i < userData.length; i++) {
       if (findName.value === userData[i].username && idcardFront.value === userData[i].idcard_front && idcardBack.value === userData[i].idcard_back) {
         alert('회원님의 아이디는 : ' + userData[i].userid + '입니다.');
-      } else {
+        break;
+      } /* else {
         alert('정보를 확인해주세요');
-      }
+      } */
     }
   } else {
     alert('정보를 입력해주세요');
@@ -38,10 +39,9 @@ function clickPwBtn() {
       if (userId.value === userData[i].userid && userName.value === userData[i].username && idcardFrontPw.value === userData[i].idcard_front && idcardBackPw.value === userData[i].idcard_back) {
         alert('회원님의 비밀번호는 : ' + userData[i].password + '입니다.');
         break;
-
       } else {
-        break;
         alert('정보를 확인해주세요');
+        break;
       }
     }
   } else {
