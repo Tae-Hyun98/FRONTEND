@@ -92,27 +92,21 @@ span.red {
   color: red;
 }
 
-p.rule {
+p.id_rule,
+p.pw_rule {
   color: #002053;
   font-size: 12px;
 }
 
-.birth {
+.idcard {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.birth input,
-.birth select {
-  margin-right: 10px;
-}
-
-.birth_month select {
-  width: 100%;
-}
-
-.birth input:last-child {
-  margin-right: 0;
+.idcard span {
+  margin: 0 10px;
+  font-size: 18px;
 }
 
 .e_mail {
