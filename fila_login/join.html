@@ -5,12 +5,13 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>FILA 회원가입</title>
   <link rel="stylesheet" href="./css/join.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" />
   <link
     href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
     rel="stylesheet">
+  <script src="./js/join.js" defer></script>
 </head>
 
 <body>
@@ -138,7 +139,7 @@
               <div class="terms_agree_box">
                 <div class="terms_agree_all">
                   <label for="all_terms">
-                    <input type="checkbox" id="all_terms" class="all_terms"> 약관 전체 동의합니다.
+                    <input type="checkbox" id="all_terms"> 약관 전체 동의합니다.
                   </label>
                 </div>
 
@@ -146,27 +147,28 @@
                   <ul class="terms_agree_chk">
                     <li>
                       <label for="term_1">
-                        <input type="checkbox" id="term_1" required> 이용약관 동의 <span class="red">(필수)</span></label>
-                      <span class="show"><a href="#!">전문보기</a></span>
+                        <input type="checkbox" id="term_1" class="term" required> 이용약관 동의 <span
+                          class="red">(필수)</span></label>
+                      <a href="#!">전문보기</a>
                     </li>
 
                     <li>
                       <label for="term_2">
-                        <input type="checkbox" id="term_2" required> 개인정보의 수집 및 이용에 관한 동의 <span
+                        <input type="checkbox" id="term_2" class="term" required> 개인정보의 수집 및 이용에 관한 동의 <span
                           class="red">(필수)</span></label>
-                      <span class="show"><a href="#!">전문보기</a></span>
+                      <a href="#!">전문보기</a>
                     </li>
 
                     <li>
                       <label for="term_3">
-                        <input type="checkbox" id="term_3"> 개인정보수집 및 활용에 대한 동의 <span>(선택)</span></label>
-                      <span class="show"><a href="#!">전문보기</a></span>
+                        <input type="checkbox" id="term_3" class="term"> 개인정보수집 및 활용에 대한 동의 <span>(선택)</span></label>
+                      <a href="#!">전문보기</a>
                     </li>
 
                     <li>
                       <label for="term_4">
-                        <input type="checkbox" id="term_4"> 혜택 알림 이메일, 문자 수신 동의 <span>(선택)</span></label>
-                      <span class="show"><a href="#!">전문보기</a></span>
+                        <input type="checkbox" id="term_4" class="term"> 혜택 알림 이메일, 문자 수신 동의 <span>(선택)</span></label>
+                      <a href="#!">전문보기</a>
                     </li>
 
                   </ul>
@@ -178,7 +180,7 @@
           <hr />
 
           <div class="join_btn_box">
-            <a href="#!">가입하기</a>
+            <button type="submit">가입하기</button>
           </div>
 
         </form>
@@ -186,4 +188,5 @@
     </section>
   </div>
 </body>
+
 </html>
