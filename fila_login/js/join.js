@@ -10,6 +10,7 @@ const pwRule = document.querySelector('.pw_rule');
 const idPattern = /^[a-z0-9]{5,15}$/;
 const pwPattern = /^(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{5,15}$/
 const namePattern = /^[가-힣]{2,}$/;
+const idcardPattern = /[0-9]{6,}/;
 
 const equlChk = document.getElementById('user_pw_chk');
 const eqSpan = document.querySelector('.eq_chk');
@@ -17,12 +18,27 @@ const eqSpan = document.querySelector('.eq_chk');
 const userName = document.getElementById('user_name');
 const nameSpan = document.querySelector('.chk_name');
 
-const userIdcard=document.getElementById('user_idcard');
+const userIdcard = document.getElementById('user_idcard');
+const userIdcard1 = document.getElementById('user_idcard1');
+const idcardSpan = document.querySelector('.idcard_chk');
+
+const userGender = document.getElementById('user_gender');
+const genderSpan = document.querySelector('.gender_chk');
+
+const userPhone = document.getElementById('phone1');
+const userPhone1 = document.getElementById('phone2');
+const userPhone2 = document.getElementById('phone3');
+
 
 userId.addEventListener('change', checkId);
 userPw.addEventListener('change', checkPw);
 equlChk.addEventListener('change', checkEqul);
 userName.addEventListener('change', checkName);
+userIdcard.addEventListener('keyup', checkIdcard);
+userGender.addEventListener('change', checkGender);
+userPhone.addEventListener('keyup', checkPhone);
+userPhone1.addEventListener('keyup', checkPhone);
+
 
 //아이디 유효성검사
 function checkId() {
@@ -32,6 +48,7 @@ function checkId() {
     idSpan.innerHTML = '사용불가능한 아이디';
     idSpan.style.color = 'red';
     idRule.style.display = 'block';
+    return false;
   } else {
     idSpan.innerHTML = '사용가능한 아이디'
     idSpan.style.color = 'blue';
@@ -46,6 +63,7 @@ function checkPw() {
     pwSpan.innerHTML = '사용불가능한 비밀번호';
     pwSpan.style.color = 'red';
     pwRule.style.display = 'block';
+    return false;
   } else {
     pwSpan.innerHTML = '사용가능한 비밀번호';
     pwSpan.style.color = 'blue';
@@ -78,8 +96,40 @@ function checkName() {
 }
 
 //주민등록번호
-function checkIdcard(){
+function checkIdcard() {
+  const idcardValue = userIdcard.value;
+  const idcardLength = userIdcard.value.length;
+  if (!idcardPattern.test(idcardValue) || idcardValue === '' || idcardLength <= 5) {
+    idcardSpan.innerHTML = '형식을 지켜주세요'
+    userIdcard.style.background = 'none'
+  } else {
+    userIdcard1.focus();
+    userIdcard.style.background = 'lightsteelBlue';
+  }
+}
 
+//성별선택
+function checkGender() {
+  const genderValue = userGender.value;
+  if (genderValue === '') {
+    genderSpan.innerHTML = '성별을 선택해주세요';
+    genderSpan.style.color = 'red';
+  } else {
+    genderSpan.innerHTML = '';
+  }
+}
+
+//휴대전화
+function checkPhone() {
+  const phoneValue = userPhone.value;
+  const phoneValue1 = userPhone1.value;
+
+  if (phoneValue.length >= 3) {
+    userPhone1.focus();
+  }
+  if (phoneValue1.length >= 4) {
+    userPhone2.focus();
+  }
 }
 
 //약관동의
@@ -128,6 +178,20 @@ joinBtn.addEventListener('click', btnClick);
 
 function btnClick() {
   if (userId.value === '') {
-    alert('아이디입력하세요');
+    userId.focus();
+  } else if (userPw.value === '') {
+    userPw.focus();
+  } else if (equlChk.value === '') {
+    equlChk.focus();
+  } else if (userName.value === '') {
+    userName.focus();
+  } else if (userIdcard.value === '' || userIdcard1.value === '') {
+    userIdcard.focus();
+  } else if (userGender.value === '') {
+    userGender.focus();
+  } else if (userPhone.value === '' || userPhone1.value === '' || userPhone2.value === '') {
+    userPhone.focus();
+  } else {
+    alert('가입완료');
   }
 }
