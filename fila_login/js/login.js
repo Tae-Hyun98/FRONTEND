@@ -25,10 +25,24 @@ function inputPassword() {
 
 loninBtn.addEventListener('click', () => {
   for (let i = 0; i < userData.length; i++) {
-    if (loginId.value === userData[i].userid && loginPw.value === userData[i].password) {
-      alert('로그인성공');
-    } else {
-      alert('회원가입해주세요');
+    if ((loginId.value !== '' && loginPw.value !== '') && (loginId.value === userData[i].userid || loginPw.value === userData[i].password)) {
+      if (loginId.value === userData[i].userid && loginPw.value === userData[i].password) {
+        alert('로그인성공');
+      } else if (loginId.value !== userData[i].userid && loginPw.value === userData[i].password) {
+        alert('아이디가 틀렸습니다.');
+      } else if (loginId.value === userData[i].userid && loginPw.value !== userData[i].password) {
+        alert('비밀번호가 틀렸습니다.');
+      } else if (loginId.value !== userData[i].userid && loginPw.value !== userData[i].password) {
+        alert('일치하는 정보 없음');
+      }
     }
   }
+  if (loginId.value === '' && loginPw.value === '') {
+    alert('아이디/비밀번호를 입력해주세요.');
+  } else if (loginId.value !== '' && loginPw.value === '') {
+    alert('비밀번호를 입력해주세요.');
+  } else if (loginId.value === '' && loginPw.value !== '') {
+    alert('아이디를 입력해주세요.');
+  }
+
 });
