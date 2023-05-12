@@ -21,14 +21,12 @@ function clickBtn() {
   if (findName.value !== '' && idcardFront.value !== '' && idcardBack.value !== '') {
     for (let i = 0; i < userData.length; i++) {
       if (findName.value === userData[i].username && idcardFront.value === userData[i].idcard_front && idcardBack.value === userData[i].idcard_back) {
-        alert('회원님의 아이디는 : ' + userData[i].userid + '입니다.');
+        alert('회원님의 아이디는' + userData[i].userid + '입니다.');
         break;
-      } /* else {
-        alert('정보를 확인해주세요');
-      } */
+      } 
     }
   } else {
-    alert('정보를 입력해주세요');
+    alert('정보를 입력해주세요.');
   }
 }
 
