@@ -11,7 +11,7 @@
     //scope(스코프) : 변수가 존재하는 범위 => const / let vs var
 
     //선언적 함수
-    function func() {
+    /* function func() {
       document.write('function_1', '<br/>');
     }
     func();
@@ -26,7 +26,52 @@
     const func02 = () => {
       document.write('function_3', '<br/>');
     }
-    func02();
+    func02(); */
+
+    //단순 함수 호출
+    /* function func() {
+      let a = 2;
+      let b = 3;
+      let add = a + b;
+
+      document.write(`add=${add}`); //templet string``
+    } */
+
+    /* const func = () => {
+      let a = 42;
+      let b = 3;
+      let add = a + b;
+
+      document.write(`add=${add}`);
+    }
+    func(); */
+
+    //매개변수 전달 함수 호출
+    /* function func(a, b) {
+      let add = a + b;
+      document.write(`add=${add}`);
+    } */
+
+    /*  const func = (a, b) => {
+       let add = a + b;
+       document.write(`add=${add}`);
+     }
+     func(10, 18); */
+
+    //리턴문이 있는 함수 호출
+    /* function func(a, b) {
+      let add = a + b;
+      return add;
+    } */
+
+    /* const func = (a, b) => {
+      //let add = a + b;
+      return a+b;
+    } */
+
+    const func = (a, b) => a + b;
+    let result = func(1101, 100);
+    document.write(`add=${result}`);
   </script>
 </head>
 
