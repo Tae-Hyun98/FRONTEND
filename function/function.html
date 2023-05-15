@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript function</title>
+
+  <script>
+    //scope(스코프) : 변수가 존재하는 범위 => const / let vs var
+
+    //선언적 함수
+    function func() {
+      document.write('function_1', '<br/>');
+    }
+    func();
+
+    //익명 함수
+    const func01 = function () {
+      document.write('function_2', '<br/>');
+    }
+    func01();
+
+    //화살표 함수
+    const func02 = () => {
+      document.write('function_3', '<br/>');
+    }
+    func02();
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

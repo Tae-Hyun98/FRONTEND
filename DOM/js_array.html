@@ -29,7 +29,7 @@
     } */
 
 
-    const arr = [23, 57, 86, 94, 31, 423];
+    //const arr = [23, 57, 86, 94, 31, 423];
 
     //인덱스번호로 돌리는거
     /* for(let i in arr){
@@ -37,9 +37,37 @@
     } */
 
     //인덱스말고 그냥 안에 내용으로만 돌리는거
-    for (let value of arr) {
+    /* for (let value of arr) {
       document.write(value, '<br/>');
+    } */
+
+    /* const fruits = ['apple', 'mango', 'banana', 'melon'];
+
+    for (let i in fruits) {
+      document.write(fruits[i], '&nbsp;&nbsp;');
     }
+    fruits[0] = 'orange';
+    fruits.unshift('orange2');
+    fruits.push('kiwi');
+    fruits[fruits.length] = 'kiwi2';
+    fruits.shift();
+    fruits.pop(); */
+
+    //fruits.splice(2,1);
+    /*  let index = fruits.indexOf('mango');
+     console.log(index); */
+    //fruits.splice(index,1);
+    /*  fruits.splice(index, 0, 'kiwi');
+     document.write('<br/>');
+     for (let item of fruits) {
+       document.write(item, '&nbsp;&nbsp;');
+     } */
+
+    const str = 'hello, javascript!';
+    document.write(str, '<br/>');
+    document.write(str[4], '<br/>');
+    document.write(str[str.length - 1], '<br/>');
+
   </script>
 </head>
 
