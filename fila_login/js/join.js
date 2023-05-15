@@ -198,8 +198,7 @@ function btnClick() {
 
 //전문보기 클릭
 const seeBtn = document.querySelectorAll('.see');
-const agreePopup = document.querySelector('.agree_popup');
-const popupBoxs = document.querySelectorAll('.popup_box');
+const agreePopup = document.querySelectorAll('.agree_popup');
 const closeBtn = document.querySelector('.agree_close_btn');
 
 closeBtn.addEventListener('click', () => {
@@ -207,8 +206,9 @@ closeBtn.addEventListener('click', () => {
 });
 
 seeBtn.addEventListener('click', () => {
-  agreePopup.style.display = 'block';
-  agreePopup.style.position = 'fixed';
-  for(let i=0;i<popupBoxs.length;i++){
+  for (let i = 0; i < seeBtn.length; i++) {
+    if(seeBtn[i]===agreePopup[i]){
+      
+    }
   }
 });

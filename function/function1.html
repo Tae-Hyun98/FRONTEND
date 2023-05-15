@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    //최소값에서 최대값까지의 누적합 구하기
+    /*  const min = 1;
+    const max = 1000;
+
+    function sum(num1, num2) {
+      let sum = 0;
+      for (let i = num1; i <= num2; i++) {
+        sum += i;
+      }
+      return sum;
+    }
+    let result = sum(min, max)
+    document.write(`${min}에서${max}까지의 합 : ${result}`);
+ */
+
+    //세 수중 최대값 구하기
+    /* function max(a, b, c) {
+      let max = 0;
+      if (a > b && a > c) {
+        max = a;
+      } else if (b > a && b > c) {
+        max = b;
+      } else if (c > a && c > b) {
+        max = c;
+      }
+      return max;
+    }
+
+    let result = max(5, 6, 3);
+    document.write(`max=${result}`); */
+
+
+    //정해진 배열 데이터에서 최대값 구하기
+    /* function max(array) {
+      let max = array[0];
+       for (let i in array) {
+        if (array[i] > max) {
+          max = array[i];
+        }
+      }
+      for (let value of array) {
+        if (value > max) {
+          max = value;
+        }
+      }
+      return max;
+      
+    } 
+    const numArray = [25, 1, 92, 43, 10, 103, 64];
+    document.write(`max=${max(numArray)}`);*/
+
+    //정해지지않은 가변 데이터에서 최소값 구하기
+
+    //가변 매개변수 함수=나머지 매개변수
+    //function func(...items){}
+
+    /*  function func(...items){
+       document.write(items,'<br/>');
+       console.log(items);
+     }
+
+     func(1,2);
+     func(1,2,3);
+     func(1,2,4); */
+    function min(...items) {
+      let min = items[0];
+      for (let i = 0; i < items.length; i++) {
+        if (items[i] < min) {
+          min = items[i];
+        }
+      }
+      /* for (let item of items) {
+        if (item < min) {
+          min = item;
+        }
+      } */
+      return min;
+    }
+    document.write(min(45, 10, 83, 12, 65, 59));
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
