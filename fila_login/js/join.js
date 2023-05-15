@@ -197,18 +197,24 @@ function btnClick() {
 }
 
 //전문보기 클릭
-const seeBtn = document.querySelectorAll('.see');
-const agreePopup = document.querySelectorAll('.agree_popup');
+const seeBtn1 = document.querySelector('.see_1');
+const seeBtn2 = document.querySelector('.see_2');
+const seeBtn3 = document.querySelector('.see_3');
+const seeBtn4 = document.querySelector('.see_4');
+const agreePopup = document.querySelectorAll('.agree_popup>div');
+const agreeBox = document.querySelector('.agree_popup');
 const closeBtn = document.querySelector('.agree_close_btn');
 
-closeBtn.addEventListener('click', () => {
-  agreePopup.style.display = 'none';
+
+seeBtn1.addEventListener('click', () => {
+  agreeBox.style.display = 'block';
+  agreePopup[0].style.display = 'block';
 });
 
-seeBtn.addEventListener('click', () => {
-  for (let i = 0; i < seeBtn.length; i++) {
-    if(seeBtn[i]===agreePopup[i]){
-      
-    }
-  }
+seeBtn2.addEventListener('click', () => {
+  agreePopup[1].style.display = 'block';
+});
+
+closeBtn.addEventListener('click', () => {
+  agreeBox.style.display = 'none';
 });
