@@ -195,3 +195,18 @@ function btnClick() {
     alert('가입완료');
   }
 }
+
+//전문보기 클릭
+const seeBtn = document.querySelector('.see');
+const agreePopup = document.querySelector('.agree_popup');
+const popupBoxs = document.querySelectorAll('.popup_box');
+const closeBtn = document.querySelector('.agree_close_btn');
+
+closeBtn.addEventListener('click', () => {
+  agreePopup.style.display = 'none';
+});
+
+seeBtn.addEventListener('click', () => {
+  agreePopup.style.display = 'block';
+  agreePopup.style.position = 'fixed';
+});
