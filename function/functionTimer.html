@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,40 @@
 
   <script>
     //타이머 함수
-    //setTimeout(함수, 시간): 특정시간이 지난 후에 함수를 한번 호출해서 실행
+    //setTimeout(함수, 시간): 특정 시간이 지난 후에 함수를 한번 호출해서 실행
+    //setInterval(함수, 시간): 특정 시간마다 함수를 호출해서 실행
+    //clearInterval(): setInterval() 실행을 멈춤
+
+    /*  setTimeout(function () {
+       document.write('1초 후에 실행', '<br/>');
+     }, 1000);
+
+     let cnt = 1;
+     let time = setInterval(function () {
+       document.write('1초 마다 실행', '<br/>');
+       cnt++;
+       if (cnt === 6) {
+         clearInterval(time);
+       }
+     }, 1000);
+     setTimeout(time); */
+
+    // 1초마다 수행되는 setInterval 5초후에 clearInterval
+    let cnt = 10;
+    let time = setInterval(() => {
+      cnt--;
+      document.write(`${cnt}초후 종료<br/>`);
+    }, 1000);
+
+    setTimeout(() => {
+      document.write('타이머 종료');
+      clearInterval(time);
+    },9000);
   </script>
 </head>
+
 <body>
-  
+
 </body>
+
 </html>
