@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /* function func(a, b, ...items) {
+      document.write(a, b, items, '<br/>');
+      console.log(items);
+    }
+
+    func(1, 2);
+    func(1, 2, 3);
+    func(1, 2, 3, 4); */
+
+    //기본 매개변수 - DEFAULT 매개변수
+    /*  function func(a, b = 3) {
+       document.write(`${a} and ${b} <br/>`);
+     }
+
+     func(1, 1);
+     func(1);
+     func(); */
+
+    /* function studyTime(name, hours = 8, days = 5) {
+      document.write(`${name}님의 주 수업시간<br/>`);
+      document.write(`하루 수업 시간 : ${hours}<br/>`);
+      document.write(`주 수업일수 : ${days}<br/>`);
+      document.write(`일주일 수업 시수 : ${hours*days}<br/>`);
+    }
+    studyTime('권태현');
+    studyTime('홍길동', 5, 6); */
+
+    //비동기 프로그램 : 함수의 위치를 고정할 필요가 없고, 필요할 때 중간에서 만들어서 사용
+    //콜백함수 : 매개변수로 전달되는 함수
+    /* function func(callback) {
+      for (let i = 1; i <= 10; i++) {
+        callback(i);
+      }
+    }
+
+   function output(index) {
+      document.write(`${index} 번째 <br/>`);
+    }
+    func(output);
+
+    func(function (index) {
+      document.write(`${index} 번째 <br/>`);
+    }) */
+
+
+
+    //배열 함수 : forEach(), map(), filter() *배열중요
+    //forEach(function(value, index, array)) : 단순히 배열 내부 요소(콜백함수)를 사용
+
+    /* const numbers = [23, 5, 13, 20, 50, 100];
+
+     numbers.forEach(function (value, index, array) {
+       document.write(`${value} - ${index}<br/>`);
+     });
+
+      numbers.forEach((value, index) => {
+       document.write(`${value} - ${index}<br/>`);
+     }); */
+
+    //map() : 콜백함수에서 리턴하는 값을 이용해 새로운 배열을 생성
+
+    //const numbers = [10, 5, 30, 40, 100, 20];
+    /* const numbers_01 = numbers.map((value,index) => {
+      return value * 2;
+    }); */
+    // const numbers_01 = numbers.map((value) => value * 2);
+
+    /* for (let number of numbers_01) {
+      document.write(`${number}<br/>`);
+    } */
+    /* numbers_01.forEach(value => {
+      document.write(`${value}<br/>`);
+    }); */
+
+    // numbers_01.forEach((value) => {document.write(`${value}<br/>`)}); 
+
+
+    /* const numbers_01 = numbers.map((value) => value * 2).forEach((value) => {
+      document.write(`${value}<br/>`);
+    }); */ //여러기능이 들어갓을때 이거
+
+
+    //filter() : 콜뱀함수에서 리턴되는 값이 true인것을 배열로 생성
+    //return문 뒤에 조건문 작성
+    //filter함수는 if문사용안되고 return 뒤에 조건만
+    /* const numbers = [10, 20, 30, 50, 40, 63, 80, 90];
+    const evenNumbers = numbers.filter((value) => {
+      return value % 2 === 0;
+    });
+    evenNumbers.forEach((value)=>{
+      document.write(`${value}<br/>`);
+    }); */
+
+    
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
