@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DAY</title>
+  <script>
+    //날짜계산
+    /* const today = new Date();
+    const startDay = new Date('2022-12-30');
+    document.write(today, '<br/>');
+    document.write(startDay, '<br/>');
+
+    const passDay = today - startDay;
+    document.write(passDay, '<br/>');
+    //const day = Math.ceil(passDay / (1000 * 60 * 60 * 24)); //올림함수 Math.ceil
+    const day = Math.floor(passDay / (1000 * 60 * 60 * 24)); //내림함수 Math.floor
+    //const day = Math.round(passDay / (1000 * 60 * 60 * 24)); //반올림함수 Math.round
+    document.write(day); */
+
+    /* const today = new Date();
+    const hundredDay = today.getTime() + (100 * 1000 * 60 * 60 * 24);
+    const someDay = new Date(hundredDay);
+    document.write(today, '<br/>', hundredDay, '<br/>', someDay, '<br/>');
+
+    const someYear = someDay.getFullYear();
+    const someMonth = someDay.getMonth() + 1;
+    const someDate = someDay.getDate();
+    const some = someDay.getDay();
+    let dayName = '';
+
+    switch (some) {
+      case 0:
+        dayName = '일요일'
+        break;
+      case 1:
+        dayName = '월요일'
+        break;
+      case 2:
+        dayName = '화요일'
+        break;
+      case 3:
+        dayName = '수요일'
+        break;
+      case 4:
+        dayName = '목요일'
+        break;
+      case 5:
+        dayName = '금요일'
+        break;
+      case 6:
+        dayName = '토요일'
+        break;
+    }
+    document.write(someYear, '년', someMonth, '월', someDate, '일', dayName);
+
+    const setDay = new Date(today.setFullYear('2025'));
+    const set = new Date(today.setDate('12'));
+    document.write(setDay, set); */
+
+    let num = 0;
+
+    for (let i = 1; i <= 10; i++) {
+      num = Math.random() * (10 - 1) + 1;
+      num = Math.ceil(num);
+      document.write(num, '<br/>');
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
