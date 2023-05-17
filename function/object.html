@@ -6,12 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>object</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
   <script>
     //객체 : 속성, 메서드
     //키: 키값 = 객체명['키'] or 객체명.키
     //메서드 : 함수 형태의 객체 데이터
 
-    const student = {
+    /* const student = {
       name: '홍길동',
       class: '3-1',
       kor: 100,
@@ -26,7 +27,189 @@
     delete student.kor;
     document.write(student.kor);
     document.write(JSON.stringify(student));
-    console.log(JSON.stringify(student,null,2));
+    console.log(JSON.stringify(student,null,2)); */
+
+    /* const classInfo = {
+      name: 'Front_End',
+      hours: 8,
+      days: 135,
+      info: function () {
+        document.write(`${this.name}클래스는 하루 ${this.hours}시간, ${this.days}일 과정입니다.`);
+      }
+    }
+    classInfo.info(); */
+
+    /* const tv = {
+      name: 'smasung',
+      width: '30cm',
+      height: '25cm',
+      weight: '20kg',
+      color: 'black',
+      on: function (start) {
+        document.write(`${tv.name}, tv를 ${start} 합니다.<br/>`);
+      },
+      useTv: function (time) {
+        document.write(`현재 시간은 ${time} 입니다.<br/>`);
+      },
+      off: function (time, end) {
+        document.write(`${tv.color}인 tv는 ${time}에 자동으로 ${end}됩니다.<br/>`);
+        //setTimeout() 이용 10시가되면 종료
+      }
+    }
+    tv.on('시작');
+
+    let cnt = 1;
+    let useTime = setInterval(() => {
+      tv.useTv(cnt);
+      cnt++
+    }, 1000);
+
+    setTimeout(() => {
+      tv.off('오후 10시', '종료');
+      clearInterval(useTime);
+    },10000); */
+
+    /* function classInfo(name, hours, days) {
+      this.name = name,
+        this.hours = hours,
+        this.days = days,
+        this.info = function () {
+          document.write(`${this.name}클래스의 하루 ${this.hours}시간, ${this.days}일 과정입니다.<br/>`);
+        }
+    } //객체 생성자 함수(정의)
+
+    const subject01 = new classInfo('Front_End', 8, 100);
+    const subject02 = new classInfo('Design', 7, 76);
+    const subject03 = new classInfo('UIUX', 8, 87);
+
+    document.write(JSON.stringify(subject01), '<br/>');
+    document.write(JSON.stringify(subject02), '<br/>');
+    document.write(JSON.stringify(subject03), '<br/>');
+
+    //subject01.info();
+    //subject02.info();
+    //subject03.info();
+
+    const classList = [subject01, subject02, subject03];
+    classList.forEach((item)=>{
+      item.info();
+    }); */
+
+    /* const fruits = ['딸기', '사과', '망고', '오렌지', '바나나'];
+
+    for (let fruit of fruits) {
+      document.write(fruit, '<br/>');
+    }
+    document.write('<br/>');
+    //const sortFruits=fruits.sort(); //오름차순정렬
+    const sortFruits=fruits.sort().reverse(); //내림차순정렬
+    
+    for (let fruit of sortFruits) {
+      document.write(fruit, '<br/>');
+    } */
+
+    /* const fruits = [{
+        name: '사과',
+        price: 6000,
+      },
+      {
+        name: '오렌지',
+        price: 1000,
+      },
+      {
+        name: '바나나',
+        price: 10000,
+      },
+      {
+        name: '멜론',
+        price: 21000,
+      },
+      {
+        name: '망고',
+        price: 31000,
+      },
+      {
+        name: '키위',
+        price: 5000,
+      }
+    ]; */
+
+    /* for (let i = 0; i < fruits.length; i++) {
+      document.write(JSON.stringify(fruits[i]), '<br/>');
+    } */
+    /* const sortFruits = fruits.sort((itemA, itemB) => {
+      return (itemA.price - itemB.price); 
+    }); */ //숫자 오름차순
+
+    /*  const sortFruits = fruits.sort((itemA, itemB) => {
+       return (itemA.price - itemB.price) * -1;
+     }); //숫자 내림차순 */
+
+    /* const sortFruits = fruits.sort((itemA, itemB) => {
+      if (itemA.name < itemB.name) {
+        return -1;
+      } else if (itemA.name > itemB.name) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }); //문자 정렬
+
+    for (let i = 0; i < sortFruits.length; i++) {
+      document.write(JSON.stringify(sortFruits[i]), '<br/>');
+    } */
+
+
+    //lodash : 유틸리티 라이브러리(보조)
+    //_.sortBy(object, 'fieldName')
+    //_.sortBy(object, [fieldName1,filedName2...])
+    //_.sortBy().reverse()
+    const fruits = [{
+        id: 1,
+        name: '사과',
+        price: 5000,
+      },
+      {
+        id: 2,
+        name: '오렌지',
+        price: 1000,
+      },
+      {
+        id: 3,
+        name: '바나나',
+        price: 10000,
+      },
+      {
+        id: 4,
+        name: '멜론',
+        price: 21000,
+      },
+      {
+        id: 5,
+        name: '망고',
+        price: 31000,
+      },
+      {
+        id: 6,
+        name: '키위',
+        price: 5000,
+      },
+      {
+        id: 7,
+        name: '가위',
+        price: 5000,
+      }
+    ];
+
+    for (let fruit of fruits) {
+      document.write(JSON.stringify(fruit), '<br/>');
+    }
+    document.write('<br/>');
+    //const sortFruits = _.sortBy(fruits, 'name').reverse();
+    const sortFruits = _.sortBy(fruits, 'id', 'name');
+    for (let fruit of sortFruits) {
+      document.write(JSON.stringify(fruit), '<br/>');
+    }
   </script>
 </head>
 
