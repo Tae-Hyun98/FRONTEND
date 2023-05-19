@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setter Getter</title>
+
+  <script>
+    //getter, setter 메서드 : private로 선언된 속성과 속성을 사용하는 메서드는 외부에서 확인 및 수정이 불가능 => 가능하게 하는것
+
+    /*  class Square {
+       #length
+
+       constructor(length) {
+         this.setLength(length);
+       }
+
+       setLength(value) {
+         if (value <= 0) {
+           throw '길이는 0보다 커야한다.';
+         }
+         this.#length = value;
+       }
+
+       getLength(value) {
+         return this.#length;
+       }
+
+       getPerimeter() {
+         return this.#length * 4;
+       }
+
+       getArea() {
+         return this.#length * this.#length;
+       }
+
+     }
+
+     const square = new Square(10);
+
+     document.write(`사각형 둘레 : ${square.getPerimeter()}<br/>`);
+     document.write(`사각형 넓이 : ${square.getArea()}<br/>`);
+     document.write(`사각형 한변의 길이 : ${square.getLength()}<br/>`);
+
+     square.setLength(40);
+     document.write(`사각형 둘레 : ${square.getPerimeter()}<br/>`);
+     document.write(`사각형 넓이 : ${square.getArea()}<br/>`);
+     document.write(`사각형 한변의 길이 : ${square.getLength()}<br/>`); */
+
+
+    /* class Square {
+      #length
+
+      constructor(length) {
+        this.#length = length; //생성자 함수를 통해 처리되는 속성값
+      }
+
+      set length(length) { //생성자 함수를 통하지 않고 새로운 값이 입력될경우 호출(자동)
+        if (length <= 0) {
+          throw '길이는 0이상';
+        } else {
+          this.#length = length;
+        }
+      }
+
+      get length() {
+        return this.#length;
+      }
+
+      get perimeter() {
+        return this.#length * 4;
+      }
+
+      get area() {
+        return this.#length * this.#length;
+      }
+    }
+
+
+    const square = new Square(10);
+
+    document.write(`사각형 둘레 : ${square.perimeter}<br/>`);
+    document.write(`사각형 넓이 : ${square.area}<br/>`);
+    document.write(`사각형 한변의 길이 : ${square.length}<br/>`);
+
+    square.length = 40;
+    document.write(`사각형 둘레 : ${square.perimeter}<br/>`);
+    document.write(`사각형 넓이 : ${square.area}<br/>`);
+    document.write(`사각형 한변의 길이 : ${square.length}<br/>`); */
+
+
+    //오버라이드(override) : 부모가 가지고 있는 함수를 상속받은 후, 자식에서 다시 선언해서 덮어싀우는 것
+
+    class Information {
+      constructor(name, hobby, health) {
+        this.name = name;
+        this.hobby = hobby;
+        this.health = health;
+      }
+
+      myHobby() {
+        document.write(`나 ${this.name}의 취미는 ${this.hobby}입니다.<br/>`);
+      }
+
+      myHealth() {
+        document.write(`나 ${this.name}은 매우 ${this.health}?<br/>`);
+      }
+    }
+
+    const info = new Information('홍길동', '영화감상', '건강');
+    info.myHobby();
+    info.myHealth();
+
+    class Child extends Information {
+      //static count = 0;
+      constructor(name, hobby, weight, tall) {
+        super(name, hobby);
+
+        this.weight = weight;
+        this.tall = tall;
+      }
+
+      myHobby() {
+        document.write(`나 ${this.name}의 취미는 ${this.hobby}<br/>`);
+      }
+
+      myWeight() {
+        document.write(`나 ${this.name}의 몸무게는 ${this.weight}입니다<br/>`);
+      }
+
+      myTall() {
+        document.write(`나 ${this.name}의 키는 ${this.tall}`);
+      }
+    }
+
+    const child = new Child('이순신', '축구', '68kg', '180cm');
+    child.myHobby();
+    child.myWeight();
+    child.myTall();
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

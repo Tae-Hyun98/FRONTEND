@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS class</title>
+
+  <script>
+    //예외 처리
+    //exception(예외) or runtime error vs syntex error
+
+    //기본 예외처리
+    /* document.addEventListener('DOMContentLoaded',()=>{
+      const h1=document.querySelector('h1');
+      if(h1){
+        h1.textContent='Hello, JavaScript~'
+      }else{
+        console.log('h1이 없다.');
+      }
+    }); */
+
+    //try-catch-finally
+    /* try {
+      예외가 발생할 가능성이 있는 코드
+    } catch (exception) {
+      예외가 발생했을때 실행할 코드
+    } finally { //생략해도됨
+      무조건 실행되는 코드
+    } */
+
+    /*  const a = 1;
+     const b = 2;
+     try {
+
+       let add = a + b;
+       console.log(`${sum}`);
+       console.log('try구문');
+     } catch (exception) {
+       let sum = a + b;
+       console.log(`${sum}`);
+       console.log('catch구문');
+     } finally {
+       console.log('finally구문');
+     } */
+
+    //throw : 강제로 예외상황을 발생시킴
+    /* function test() {
+      try {
+        console.log('try구문');
+        throw '강제 예외처리 구문';
+      }catch(exception){
+        console.log('catch 구문');
+        return; //약간 swich에서 break느낌
+      }
+      console.log('test()_End');
+    }
+    test(); */
+
+
+    //private 속성 : 사용자가 클래스의 속성이나 메서드를 의도하지 않는 방향으로 
+    //사용하게되는 것을 방지하기 위한 방법 => 클래스의 안정성 유지
+
+    /* class Square {
+      constructor(length) {
+        if (length <= 0) {
+          throw '길이는 0보다 커야합니다.';
+        }
+        this.length = length;
+      }
+      getPerimeter() {
+        return this.length * 4;
+      }
+      getArea() {
+        return this.length * this.length;
+      }
+    }
+    const square = new Square(10);
+    //square.length = -10; //직접 값을 변경 클래스에서 이래만들면 안됨
+    // => 외부에서 length의 속성을 변경을 해도 막을 수가 없다.
+    // => private(#): constructor(속성선언) 외부에서 먼저 #으로 선언해주고 내부에서 사용
+    document.write(`사각형의 둘레는 ${square.getPerimeter()}<br/> 사각형의 넓이는 ${square.getArea()}`); */
+
+
+    /* class Square {
+      #length
+      constructor(length) {
+        if (length <= 0) {
+          throw '길이는 0보다 커야합니다.';
+        }
+        this.#length = length;
+      }
+      getPerimeter() {
+        return this.#length * 4;
+      }
+      getArea() {
+        return this.#length * this.#length;
+      }
+    }
+    const square = new Square(10);
+    square.length = -10;
+    document.write(`사각형의 둘레는 ${square.getPerimeter()}<br/> 사각형의 넓이는 ${square.getArea()}`); */
+
+
+  /*   class Square {
+      #length
+      constructor(length) {
+        if (length <= 0) {
+          throw '길이는 0보다 커야합니다.';
+        }
+        this.#length = length;
+      }
+      getPerimeter() {
+        return this.#length * 4;
+      }
+      getArea() {
+        return this.#length * this.#length;
+      }
+    }
+    const square = new Square(10);
+    //square.length = -10;
+    document.write(`사각형의 둘레는 ${square.getPerimeter()}<br/> 사각형의 넓이는 ${square.getArea()}<br/>`);
+    document.write(`정사각형의 한변의 길이 : ${square.length}`); */
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>
