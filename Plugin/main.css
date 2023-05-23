@@ -32,7 +32,8 @@ a {
 }
 
 .img_box,
-.txt_box {
+.txt_box,
+.not_box {
   width: 940px;
   height: 300px;
   margin: 200px auto;
@@ -41,13 +42,13 @@ a {
 }
 
 .img_box>div,
-.txt_box>div {
+.txt_box>div,
+.not_box>div {
   width: 300px;
   height: 300px;
   background-color: green;
   border: 1px solid black;
   box-sizing: border-box;
-  opacity: 0;
 }
 
 .swiper {
@@ -79,4 +80,31 @@ a {
   width: 50px;
   height: 50px;
   background-color: #fff;
+}
+
+
+.not_box {
+  margin-top: 1500px;
+}
+
+.origin {
+  opacity: 0;
+}
+
+.show .origin {
+  opacity: 1;
+  transition: 1s;
+}
+
+
+.show .not01 {
+  transition-delay: 0s;
+}
+
+.show .not02 {
+  transition-delay: .5s;
+}
+
+.show .not03 {
+  transition-delay: 1s;
 }
