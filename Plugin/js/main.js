@@ -87,3 +87,15 @@ const swiper = new Swiper('.swiper', {
   },
 
 });
+
+//scrollmagic
+const notEls = document.querySelectorAll('.not_box');
+notEls.forEach((notEl) => {
+  new ScrollMagic
+    .Scene({
+      triggerElement: notEl,
+      triggerHook: 0.3
+    })
+    .setClassToggle(notEl, 'show')
+    .addTo(new ScrollMagic.Controller)
+})
