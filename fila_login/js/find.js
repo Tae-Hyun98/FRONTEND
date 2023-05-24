@@ -19,30 +19,45 @@ findPwBtn.addEventListener('click', clickPwBtn);
 //아이디찾기 버튼
 function clickBtn() {
   if (findName.value !== '' && idcardFront.value !== '' && idcardBack.value !== '') {
-    for (let i = 0; i < userData.length; i++) {
-      if (findName.value === userData[i].username && idcardFront.value === userData[i].idcard_front && idcardBack.value === userData[i].idcard_back) {
-        alert('회원님의 아이디는' + userData[i].userid + '입니다.');
-        break;
-      } 
-    }
+    userData.forEach(vl => {
+      if (findName.value === vl.username && idcardFront.value === vl.idcard_front && idcardBack.value === vl.idcard_back) {
+        alert(`회원님의 아이디는 ${vl.userid} 입니다`);
+      } /* else if (findName.value !== vl.username || idcardFront.value !== vl.idcard_front || idcardBack.value !== vl.idcard_back) {
+        alert('다시 입력해주세요');
+      } */
+    });
   } else {
     alert('정보를 입력해주세요.');
   }
 }
 
+
 //비밀번호 찾기
 function clickPwBtn() {
   if (userId.value !== '' && userName.value !== '' && idcardFrontPw.value !== '' && idcardBackPw.value !== '') {
     for (let i = 0; i < userData.length; i++) {
-      if (userId.value === userData[i].userid && userName.value === userData[i].username && idcardFrontPw.value === userData[i].idcard_front && idcardBackPw.value === userData[i].idcard_back) {
+      if ((userId.value === userData[i].userid) && (userName.value === userData[i].username) && (idcardFrontPw.value === userData[i].idcard_front) && (idcardBackPw.value === userData[i].idcard_back)) {
         alert('회원님의 비밀번호는 : ' + userData[i].password + '입니다.');
-        break;
-      } else {
-        alert('정보를 확인해주세요');
-        break;
       }
+      /* else if ((userId.value !== userData[i].userid) || (userName.value !== userData[i].username) || (idcardFrontPw.value !== userData[i].idcard_front) || (idcardBackPw.value !== userData[i].idcard_back)) {
+             alert('정보를 확인해주세요');
+             break;
+           } */
     }
   } else {
     alert('정보를 입력해주세요');
   }
 }
+
+
+//검색버튼 클릭시 검색창
+const scr = document.querySelector('body');
+const searchOpen = document.getElementById('search');
+const searchClose = document.getElementById('close');
+
+searchOpen.addEventListener('click', () => {
+  scr.classList.add('search_on');
+});
+searchClose.addEventListener('click', () => {
+  scr.classList.remove('search_on');
+});
