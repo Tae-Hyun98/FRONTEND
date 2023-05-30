@@ -1,21 +1,97 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-<script>
-   /*JSON파일요청
-  0 - X ,
-  1 - 요청,
-  2 - 서버 ,
-  3 - 서버,로딩 ,
-  4 - 프로그램사용허가 */
-</script>
- 
+  <title>XMLHttpRequest</title>
+  <script>
+    /*
+  JSON파일요청
+  0 - X
+  1 - 요청
+  2 - 서버
+  3 - 서버, 로딩
+  4 - 프로그램사용허가
+   */
+
+    /* let student = {
+      name: '홍길동',
+      major: '컴퓨터공학',
+      grade: 2
+    }
+    console.log(student)
+    //let json = JSON.stringify(student);
+    let json = JSON.stringify(student, null, 2);
+    console.log(json)
+ */
+
+    /*  let student = '{"name": "이순신","major": "영문학과","grage": 3}'
+     console.log(student)
+
+     //JSON.parse() - 문자열로된 데이터를 객체데이터로변환
+     //JSON.stringify() - 객체로된 데이터를 문자열데이터로변환
+     console.log(JSON.parse(student));
+
+
+     let xhr = new XMLHttpRequest(); //XMLHttpRequest를 객체로 등록
+     xhr.open('GET', 'student.json') //요청하기
+     xhr.send(); //보내기
+     xhr.onreadystatechange = function () {
+       //if문안에 있는조건은 요청확인정상
+       if (xhr.readyState === 4 && xhr.status === 200) {
+         let student = JSON.parse(xhr.responseText);
+         //console.log(student)
+         document.getElementById('root').innerHTML = `<h1>${student.name}</h1>
+         <ul>
+           <li class='txt'>전공 : ${student.major}</li>
+           <li>학년 : ${student.grade}</li>
+         </ul>`
+       }
+     } */
+
+    let xhr = new XMLHttpRequest(); //인스턴스
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
+    xhr.send();
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        let students = JSON.parse(xhr.responseText);
+        //console.log(students)
+        viewStudents(students);
+      }
+    }
+
+    function viewStudents(contents) {
+      let output = '';
+      for (let content of contents) {
+        output += `
+        <ul>
+          <h3>이름 : ${content.name}</h3>
+          <li>username : ${content.username}</li>
+          <li>email : ${content.email}</li>
+          <li>email : ${content.email}</li>
+          <li>주소 : ${content.address.street}</li>
+        </ul>`
+      }
+      document.getElementById('root').innerHTML = output
+    }
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .txt {
+      color: blue;
+    }
+  </style>
 </head>
+
 <body>
-  
+  <div id="root"></div>
 </body>
+
 </html>
