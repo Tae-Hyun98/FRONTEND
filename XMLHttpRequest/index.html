@@ -51,7 +51,7 @@
        }
      } */
 
-    let xhr = new XMLHttpRequest(); //인스턴스
+    /* let xhr = new XMLHttpRequest(); //인스턴스
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
     xhr.send();
     xhr.onreadystatechange = function () {
@@ -75,7 +75,24 @@
         </ul>`
       }
       document.getElementById('root').innerHTML = output
-    }
+    } */
+
+    fetch('students.json')
+      .then(Response => Response.json())
+      .then(student => {
+        let output = ''
+        student.forEach(content => {
+          output += `
+          <ul>
+            <h3>${content.name}</h3>
+            <li><img src='${content.images}'</li>
+            <li>전공 : ${content.major}</li>
+            <li>학년 : ${content.grade}</li>
+          <ul>`
+        })
+        document.getElementById('root').innerHTML = output
+      })
+      .catch(error => console.log(error))
   </script>
 
   <style>
