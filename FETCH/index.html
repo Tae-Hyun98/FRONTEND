@@ -145,38 +145,38 @@
     }); */
 
 
-    const coffee = () => {
-      return new Promise((res, rej) => {
-        res('커피를 주문합니다.');
-      });
-    }
+    /*  const coffee = () => {
+       return new Promise((res, rej) => {
+         res('커피를 주문합니다.');
+       });
+     }
 
-    const stepA = (step) => {
-      console.log(step);
-      return new Promise((res, rej) => {
-        setTimeout(() => {
-          res('커피 컵 준비');
-        }, 1000);
-      })
-    }
+     const stepA = (step) => {
+       console.log(step);
+       return new Promise((res, rej) => {
+         setTimeout(() => {
+           res('커피 컵 준비');
+         }, 1000);
+       })
+     }
 
-    const stepB = (step) => {
-      console.log(step);
-      return new Promise((res, rej) => {
-        setTimeout(() => {
-          res('커피 내리기');
-        }, 3000)
-      })
-    }
+     const stepB = (step) => {
+       console.log(step);
+       return new Promise((res, rej) => {
+         setTimeout(() => {
+           res('커피 내리기');
+         }, 3000)
+       })
+     }
 
-    const stepC = (step) => {
-      console.log(step);
-      return new Promise((res, rej) => {
-        setTimeout(() => {
-          res('커피 준비완료');
-        }, 1000);
-      })
-    }
+     const stepC = (step) => {
+       console.log(step);
+       return new Promise((res, rej) => {
+         setTimeout(() => {
+           res('커피 준비완료');
+         }, 1000);
+       })
+     } */
 
     /* coffee()
       .then(result => stepA(result))
@@ -188,19 +188,66 @@
       }) */
 
 
-      coffee()
-      .then(stepA)
-      .then(stepB)
-      .then(stepC)
-      .then(console.log)
-      .then(()=>{
-        console.log('커피가 준비되었습니다.');
-      })
+    // coffee()
+    //   .then(stepA)
+    //   .then(stepB)
+    //   .then(stepC)
+    //   .then(console.log)
+    //   .then(() => {
+    //     console.log('커피가 준비되었습니다.');
+    //   })
   </script>
+
+  <style>
+    .active {
+      text-decoration: line-through;
+      color: #999;
+    }
+
+    .stop {
+      width: 300px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      color: black;
+      background-color: #777;
+    }
+  </style>
 </head>
 
 <body>
 
+  <div class="start"></div>
+  <div class="end"></div>
+
+
+  <script>
+    const order = new Promise((res, rej) => {
+      let coffee = prompt('어떤 커피를 주문하시겠습니까?', '');
+      if ((coffee != null) && (coffee != '')) {
+        document.querySelector('.start').textContent = `${coffee} 주문 접수`
+        setTimeout(() => {
+          res(coffee);
+        }, 3000);
+      } else {
+        rej('커피 주문하지 않음');
+      }
+    })
+
+    function display(result) {
+      document.querySelector('.end').textContent = `${result} 준비완료`;
+      document.querySelector('.start').classList.add('active');
+      document.querySelector('.end').classList.add('stop');
+    }
+
+    function showErr(err) {
+      console.log(err)
+    }
+
+    order
+      .then(display)
+      .catch(showErr)
+  </script>
 </body>
 
 </html>
