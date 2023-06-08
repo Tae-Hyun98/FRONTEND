@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- react -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- BABEL : JSX문법 사용할 수 있게-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your custom script here -->
+  <script type="text/babel" defer>
+    const rootGnb=document.querySelector('.gnb');
+    const rootLogo=document.querySelector('.logo');
+    const rootLnb=document.querySelector('.lnb');
+
+    const gnbElement= (
+      <ul className='gnb_ul'
+      children={[
+        <li children='로그인'/>,
+        <li children='회원가입'/>,
+        <li children='사이트맵'/>
+      ]}
+      />
+    )
+
+    const logoElement= (
+      <div className='logo_txt' children='Front_End'/>
+    )
+
+    const lnbElement=(
+      <React.Fragment>
+        <a href='#!'><li className='html'>HTML5</li></a>
+        <li children='CSS3'/>
+        <li children='JavaScript'/>
+        <li children='jQuery'/>
+        <li children='React'/>
+      </React.Fragment>
+   )
+  
+  ReactDOM.render(gnbElement,rootGnb);
+  ReactDOM.render(logoElement,rootLogo);
+  ReactDOM.render(lnbElement,rootLnb);
+  </script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .gnb_ul {
+      display: flex;
+    }
+
+    .lnb {
+      padding-left: 50px;
+    }
+
+    .lnb li {
+      list-style: square;
+      color: blueviolet;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="gnb">
+    <!-- <ul class="gnb_ul">
+      <li>로그인</li>
+      <li>회원가입</li>
+      <li>사이트맵</li>
+    </ul> -->
+  </nav>
+
+  <div class="logo">
+    <!-- <div class="logo_txt">Front_End</div> -->
+  </div>
+
+  <ul class="lnb">
+    <!-- <li class="html">HTML5</li>
+    <li>CSS3</li>
+    <li>JavaScript</li>
+    <li>jQuery</li>
+    <li>React</li> -->
+  </ul>
+
+</body>
+
+</html>

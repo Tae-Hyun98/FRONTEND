@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Component</title>
+  <!-- react -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- BABEL : JSX문법 사용할 수 있게-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your custom script here -->
+  <script type="text/babel" defer>
+    const root=document.getElementById('root');
+      //const element=<h1 className='title'>HH</h1>
+      //const element=<h1 clasName='title' children='HH1'/>
+      /* const ab='abcde'
+      const aa=({
+        userClassName : 'title',
+        text : 'Hello,dd',
+        text1 : ab
+      })
+      const element=<h1 className={aa.userClassName} children={aa.text + aa.text1}/> */
+
+      // const element=<h1 className='title' children={React.createElement('span',null,'Hello, abc')}/>
+
+     /*  const element=(
+        
+          // <div
+          //   className='title' children={[React.createElement('span',null,'hello, abcd'), React.createElement('br'),React.createElement('span',null,'Bye, sdjfksdajfsdal')]}
+          // />
+
+          //아래는 위코드를 JSX문법으로 표현한거
+          <div
+          className='title'
+          children={[
+          <span className='txt'>Hello, aaa~</span>,
+          <br/>,
+          <span children= 'fjdsklfjsdal'/>
+          ]}
+          />
+      ) */
+
+      /* const element=(
+        <React.Fragment
+            children={[
+              <span className='txt'>Hello</span>,
+              <br/>,
+              <span children='qweqweqrwqe'/>
+            ]}
+        />
+      ) */
+
+
+      /* const element = (
+        <React.Fragment>
+          <span className='txt'>Hello1</span>
+          <br/>
+          <span children='qweqweqrwqe'/>
+        </React.Fragment>
+      ) */
+
+      const element = (
+        <>
+          <span className='txt'>Hello1</span>
+          <br/>
+          <span id='123' class='title' children='qweqweqrwqe'/>
+        </>
+      )
+    ReactDOM.render(element,root)
+  </script>
+
+  <style>
+    .title {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
