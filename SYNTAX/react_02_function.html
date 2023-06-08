@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>react function</title>
+
+  <!-- react -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- BABEL : JSX문법 사용할 수 있게-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your custom script here -->
+  <script type="text/babel" defer>
+
+    /* function_component */
+    const root=document.getElementById('root');
+    //컴포넌트는 대문자로 변수시작
+    /* const FrontEnd = function(){
+      return(
+        <>
+          <h3>React</h3>
+          <div>function</div>
+          <div>function</div>
+        </>
+      )
+    } */
+
+    // const element = FrontEnd();
+    /* const element=(
+      <>
+      {FrontEnd()}
+      {FrontEnd()}
+      {FrontEnd()}
+      </>
+    ) */
+
+    /* const FrontEnd = function(subject, syntax){
+      return (
+        <>
+          <h3>{subject}</h3>
+          <div>{syntax}</div>
+        </>
+      )
+    } */
+
+    /* const FrontEnd = (subject, syntax)=>{
+      return (
+        <>
+          <h3>{subject}</h3>
+          <div>{syntax}</div>
+        </>
+      )
+    } */
+
+    /* const FrontEnd = (subject, syntax) => (
+        <>
+          <h3>{subject} {syntax}</h3>
+          <div>{syntax}</div>
+        </>
+    )
+    
+    const element= (
+      <>
+      {FrontEnd('react1','component')}
+      {FrontEnd('react1123','component')}
+      {FrontEnd('react1123123123','component')}
+      </>
+    ) */
+
+
+    const FrontEnd=({subject, syntax})=>(
+    // const FrontEnd=(props)=>( //비구조화 할당 //디스트럭처링
+      <>
+        <h3 className='title'>{subject}</h3>
+        <div>{syntax}</div>
+      </>
+    )
+
+    const element= (
+      <>
+        <FrontEnd subject='HTML5' syntax='tag'/>
+        <FrontEnd subject='CSS3' syntax='style'/>
+        <FrontEnd subject='React' syntax='javascript'/>
+      </>
+    )
+
+    ReactDOM.render(element,root);
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
