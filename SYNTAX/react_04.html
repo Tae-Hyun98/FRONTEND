@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- react -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- BABEL : JSX문법 사용할 수 있게-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your custom script here -->
+  <script type="text/babel" defer>
+
+    /* function_component */
+    const root=document.getElementById('root');
+
+    // const MyComponent = (props) => {
+    //   return (
+    //     <div>
+    //       지금 배우는 과목은 {props.subject} 입니다.
+    //       <br/>
+    //       {props.syntax}
+    //     </div>
+    //   )
+    // }
+
+    // /* const element = (
+    //   <MyComponent subject='react' syntax='sadfsda'/>
+    // ) */
+
+    // MyComponent.defaultProps = {
+    //   subject:'FrontEnd',
+    //   syntax:'뮻ㅇ'
+    // }
+
+    // ReactDOM.render(<MyComponent />,root);
+    // ReactDOM.render(<MyComponent subject='React' syntax='123123'/>,root);
+
+
+    // const MyComponent = ({myClass, subject}) => {
+      const MyComponent = (props) => {
+        const {myClass, subject} = props;
+    
+      /* const myClass= props.myClass;
+      const subject= props.subject; */
+
+      return(
+        <div>
+          지금배우는 과정은 {myClass}이고, <br/>
+          과목은 {subject}입니다.
+        </div>
+      )
+    }
+
+    MyComponent.defaultProps={
+      myClass : 'Front_End',
+      subject : 'React123'
+    }
+
+    //ReactDOM.render(<MyComponent myClass='Front_End' subject='React'/>,root)
+    ReactDOM.render(<MyComponent />,root)
+  </script>
+
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

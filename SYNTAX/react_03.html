@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- react -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- BABEL : JSX문법 사용할 수 있게-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your custom script here -->
+  <script type="text/babel" defer>
+
+    /* function_component */
+    const root=document.getElementById('root');
+
+    const Greet=({first, second, children}) => (
+      <>
+        <h1>{first}</h1>
+        <h2>{second}</h2>
+        {children}
+      </>
+    )
+
+    /* const element=(
+      <>
+        <Greet first='good' second='morning'>hi</Greet>
+        <Greet first='bed' second='afternoon'>
+          <span>hello</span>
+        </Greet>
+        <Greet first='happy' second='evening'>
+          <div class="ab">
+            <div>night</div>  
+            <div>night</div>  
+            <div>night</div>
+         </div> 
+        </Greet>
+
+        <Greet first='deep' second='sleeping'>
+          <div class="cc">
+           <Greet first='dream' second='sleeping'>hi</Greet>
+          </div>
+        </Greet>
+      </>
+    ) */
+    const Good = () => <h3 className='good'>Good</h3>
+    const element = (
+      <>
+        <Greet first='good' second='morning'>
+          <Good/>
+          <Good/>
+          <Good/>
+          <Good/>
+          <Good/>
+        </Greet>
+      </>
+    )
+
+    ReactDOM.render(element,root)
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
