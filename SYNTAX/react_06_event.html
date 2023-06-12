@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- react -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- BABEL : JSX문법 사용할 수 있게-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your custom script here -->
+  <script type="text/babel" defer>
+
+    /* function_component */
+     const root=document.getElementById('root');
+
+     /* const element=(
+      <button onMouseOver={()=>alert('Hi~~')}
+        onMouseOut={() =>  alert('Bye~~')}
+      >
+        button
+      </button>
+     ) */
+
+     const handleMouseOver = () => alert('Hi');
+     const handleMouseOut = () => alert('Bye');
+     const element = (
+      <button onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>button</button>
+     )
+
+    ReactDOM.render(element,root)
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

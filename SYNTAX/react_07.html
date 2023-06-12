@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- react -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- BABEL : JSX문법 사용할 수 있게-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your custom script here -->
+  <script type="text/babel" defer>
+
+    /* function_component */
+     const root=document.getElementById('root');
+
+     /* function Mycomponent() {
+      const name = 'React'
+      return (
+        <div className='title'>{name}</div>
+      )
+     } */
+
+     /* class Mycomponent extends React.Component {
+      render(){
+        const name = 'React';
+        return <div className='title'>{name}</div>
+      }
+     } */
+
+     /* class Mycomponent extends React.Component {
+      
+      render(){
+        const {myClass, subject, name} = this.props;
+
+        return (
+          <div>
+            교육과정 : {myClass}<br/>
+            교육과목 : {subject}<br/>
+            교육생 : {name} 
+          </div>
+        )
+      } //render
+
+      static defaultProps={
+        myClass:'FrontEnd',
+        subject:'React',
+        name:'qeqrqwewqe'
+      }
+     } */
+
+
+
+
+    //  ReactDOM.render(<Mycomponent myClass='frontEnd' subject='React' name='fsdafsda'/>,root)
+    //  ReactDOM.render(<Mycomponent/>,root)
+
+    //  state로 변경수정
+    /*  class Counter extends React.Component {
+      constructor(props){
+        super(props);
+        this.state = {
+          count:0,
+          count02:1
+        }
+      }
+
+      render() {
+        const {count, count02} = this.state;
+
+        return (
+          <div>
+            <h1>{count}</h1>
+            <h2>{count02}</h2>
+            <button 
+            onClick={() => 
+              {this.setState({
+                count:count+1
+              },
+              () => {this.setState({count02:count02+2})}
+              )
+              }
+            }>
+            clickMe!
+            </button>
+
+            <button 
+            onClick={() => 
+              {this.setState({count:count-1},
+              () => {this.setState({count02:count02-2})})
+              }
+            }>
+              clickMe!!!!
+            </button>
+          </div>
+        )
+      }
+     } */
+
+
+     /* class MyEvent extends React.Component{
+      state={
+        message:''
+      }
+
+      handleChange = (e) => {
+        this.setState({
+          message: e.target.value
+        })
+      }
+
+      handleClick = () => {
+        alert(this.state.message)
+        this.setState({
+          message:''
+        })
+        
+      }
+
+      render(){
+        return(
+          <div>
+            <h1>Evnet Message</h1>
+            <input 
+            type="text" name='message' placeholder='텍스트입력' value={this.state.message}
+            onChange={this.handleChange}
+            />
+            <button onClick={this.handleClick}>
+              click
+            </button>
+          </div>
+        )
+      }
+     }
+
+     ReactDOM.render(<MyEvent/>, root); */
+
+     class MyEvent extends React.Component {
+
+      state = {
+        userId: '',
+        message: ''
+      }
+
+      handleChange = (e) => {
+        this.setState({
+          [e.target.name]:e.target.value //[] 안에 name말고 다른거하면 input값 안받아짐?
+          // []로 감싸면 내부 값이 가리키는 실제 key값이 key가 된다.
+          //[] : 만들어진 값을 키값으로 받겠다
+        }) 
+        /* 바로위에 코드 풀어쓰면
+        const name='key'
+        const object = {
+          [name]:value
+        } */
+      }
+
+      handleClick = () => {
+        alert(this.state.userId + ' : ' + this.state.message)
+        this.setState({
+          userId:'',
+          message:'' //메모리낭비를 방지하기위해 ''으로 초기화
+        })
+      }
+
+      render(){
+        return (
+          <div>
+            <input type="text" name='userId' placeholder='아이디 입력' value={this.state.userId} onChange={this.handleChange}/>
+
+            <input type="text" name='message' placeholder='텍스트 입력' value={this.state.message} onChange={this.handleChange}/>
+
+            <button onClick={this.handleClick}>click</button>
+          </div>
+        )
+      }
+    }
+     ReactDOM.render(<MyEvent/>,root)
+  </script>
+
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
