@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- react -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- BABEL : JSX문법 사용할 수 있게-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your custom script here -->
+  <script type="text/babel" defer>
+
+    /* function_component */
+      const root=document.getElementById('root');
+        const Season = () => {
+          const [names, setNames] = React.useState([ //기존 배열선언
+            {id:1, season:'spring'},
+            {id:2, season:'summer'},
+            {id:3, season:'authum'},
+            {id:4, season:'winter'}
+          ])
+
+          const [nextId, setNextId] = React.useState(5); //아이디값
+          const [input, setInput] = React.useState(''); //계절텍스트
+
+          const handleChange = (e) => setInput(e.target.value); //input값 받아오기
+
+          const handleClick = () => {
+            const nextNames = names.concat({ //아이디값과 계절추가
+              id: nextId,
+              season: input
+            })
+            setNextId(nextId + 1); //버튼클릭되면 id값증가
+            setNames(nextNames); //추가된 아이디랑 계절값을 setNames로 새로 useState함
+            setInput(''); //input박스 값 초기화
+          }
+
+          const nameList = names.map(name=> <li key={name.id}>{name.id} {name.season}</li>) 
+
+          return (
+            <>
+              <input type="text" value={input} onChange={handleChange}/>
+              <button onClick={handleClick}>추가</button>
+              <ul>{nameList}</ul>
+            </>
+          )
+
+        }
+      ReactDOM.render(<Season/>, root);
+  </script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

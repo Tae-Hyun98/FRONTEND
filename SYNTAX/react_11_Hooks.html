@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- react -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- BABEL : JSX문법 사용할 수 있게-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your custom script here -->
+  <script type="text/babel" defer>
+
+    /* function_component */
+      const root=document.getElementById('root');
+
+      /* class Counter extends React.Component {
+        state={count:0}
+
+        render(){
+          return(
+            <>
+              <h1>{this.state.count}</h1>
+              <button onClick={
+                () => this.setState({count:this.state.count+1})
+              }>click</button>
+            </>
+          )
+        }
+      } */
+
+
+      //Hook 상태관리 메서드
+      /* const Counter = () => {
+        const [count, setCount] = React.useState(0) //현재상태, 상태변경setter함수, 초기값
+        const handleClick = () => setCount(count+1)
+
+        return (
+          <>
+          <h1>{count}</h1>
+          <button onClick={handleClick}>click</button>
+          </>
+        )
+
+      } */
+
+      /* const Counter = () => {
+        const [count,setCount] = React.useState(0)
+        
+        return (
+          <div>
+            <h1>{count}</h1>
+            <button onClick={() =>
+              {setCount(count+1)}
+            }>증가</button>
+            <button onClick={() =>
+              {setCount(count-1)}
+            }>감소</button>
+          </div>
+        )
+      }
+      ReactDOM.render(<Counter/>, root) */
+
+
+      const Intro= () => {
+        const [message, setMessage] = React.useState('홍길동의 누리집입니다.');
+        const handleEnter = () => setMessage('방문을 환영합니다.')
+        const handleLeave = () => setMessage('다음에 다시 방문해 주세요');
+
+        const [color, Setcolor] = React.useState('black');
+        const red = () => Setcolor('red');
+
+        return (
+          <div>
+            <h1 style={{color}}>{message}</h1> 
+            <button onClick={handleEnter}>입장</button> 
+            <button onClick={handleLeave}>퇴장</button> 
+            <button className='btn' style={{backgroundColor:'red',color:'white'}} onClick={red}>빨강</button>
+            <input className='aa' type="text"/>
+            <button className='click'>클릭</button>
+
+          </div>
+        )
+      }
+
+      ReactDOM.render(<Intro/>, root);
+  </script>
+  <style>
+    .btn {
+      width: 100px;
+      height: 50px;
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>

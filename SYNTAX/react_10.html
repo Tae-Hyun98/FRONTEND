@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- react -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <!-- BABEL : JSX문법 사용할 수 있게-->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <!-- Your custom script here -->
+  <script type="text/babel" defer>
+
+    /* function_component */
+      const root=document.getElementById('root');
+      
+      const Season = () =>{
+        const names = ['spring', 'summer', 'autumn',' winter'];
+        const nameList = names.map((name, index) => {
+          return <li key={index}>{name}</li>})
+
+        return <ul>{nameList}</ul>
+      }
+
+      ReactDOM.render(<Season/>,root)
+    </script>
+
+  <!-- <script>
+    const numbers = [1, 2, 3, 4, 5];
+    const result = numbers.map((number,index) => number <= 4);
+    const result = numbers.map((number, index) => number * 5).filter((number) => number > 15)
+    console.log(result)
+  </script> -->
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
+</html>
