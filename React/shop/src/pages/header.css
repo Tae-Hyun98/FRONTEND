@@ -1,0 +1,15 @@
+.header ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header ul li a {
+  display: block;
+  padding: 10px 15px;
+  color: #ccc;
+  transition: .3s;
+}
+
+.header ul li a:hover {
+  color: #777;
+}

@@ -1,0 +1,35 @@
+.best_section {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.best_section .product {
+  position: relative;
+  border: 1px solid #ccc;
+  margin: 10px;
+  transition: .3s;
+}
+
+.best_section .product:hover {
+  border: 1px solid black;
+}
+
+.best_section .product img {
+  display: block;
+  width: 100%;
+  height: 280px;
+}
+
+.best_section .product .best_desc {
+  font-size: 14px;
+  padding: 5px 0 5px 10px;
+}
+
+
+.best_section .product .btn {
+  width: 100%;
+  bottom: 0;
+}
