@@ -15,7 +15,8 @@ export default function Members() {
 
       <Routes>
         <Route path='/*' element={<div>사용자를 선택해주세요</div>}/>
-        <Route path=':userName' element={<Profile/>}/>
+        <Route path=':userName' element={<Profile/>}/> 
+        {/* path로 값넘기는거같음 */}
       </Routes>
     </>      
   )
