@@ -1,13 +1,28 @@
 // import logo from './logo.svg';
 import './App.css';
-import Shop from './pages/Shop';
+import {Routes, Route, Link} from 'react-router-dom';
+import Home from './components/Home';
+import About from './components/About';
+import Members from './components/Members';
+
 
 function App() {
   return (
-    <div className="Wrap">
-      <img src={process.env.PUBLIC_URL + './images/visual_main_01.jpg'} alt='vm' width='100%'/>
-      <Shop/>
-    </div>
+    <>
+      <ul>
+        <li><Link to='/'>Home</Link></li>
+        <li><Link to='about'>About</Link></li>
+        <li><Link to='members'>Members</Link></li>
+      </ul>
+
+      <hr/>
+
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='about' element={<About/>}/>
+        <Route path='members/*' element={<Members/>}/>
+      </Routes>
+    </>
   );
 }
 
