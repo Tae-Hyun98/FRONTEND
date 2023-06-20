@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.best_tit {
+  text-align: center;
+  margin: 30px 0;
+  font-weight: 700;
+}
+
+.visual_main {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar-brand {
+  cursor: pointer;
+}
+
+.row .box {
+  width: 25%;
+  flex: unset;
+  margin-bottom: 20px;
+}
+
+.row .box a {
+  position: relative;
+  display: block;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.col img {
+  display: block;
+  width: 100%;
+}
+
+.row .desc {
+  padding: 15px;
+}
+
+.row p {
+  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.row p.tit {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.row p.price {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+.row .btn {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  border: none;
+}
