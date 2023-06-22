@@ -18,8 +18,8 @@ export default function Header() {
         <nav>
           <ul>
             <Li><Link to='/'>Home</Link></Li>
-            <Li><Link to='login'>로그인</Link></Li>
-            <Li><Link to='sub'>장바구니</Link></Li>
+            <Li><Link to='/login'>로그인</Link></Li>
+            <Li><Link to='/sub'>장바구니</Link></Li>
             <Li>검색</Li>
           </ul>
         </nav>
