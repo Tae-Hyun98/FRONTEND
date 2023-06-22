@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import data from './pages/productData';
 import About from './pages/About';
 import Detail from './pages/Detail';
+import Cart from './pages/Cart';
 
 import {useState } from 'react';
 import {Container, Nav, Navbar, Row, Col} from 'react-bootstrap';
@@ -35,6 +36,7 @@ function App() {
             <Nav.Link onClick={()=>{navigate('/about')}}>About</Nav.Link>
             <Nav.Link onClick={()=>{navigate('/about/info')}}>Infomation</Nav.Link>
             <Nav.Link onClick={()=>{navigate('/about/loca')}}>Location</Nav.Link>
+            <Nav.Link onClick={()=>{navigate('/cart')}}>Cart</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
@@ -79,7 +81,7 @@ function App() {
         </Route>
 
         <Route path='detail/:id' element={<Detail bests={bests}/>}></Route>
-
+        <Route path='cart' element={<Cart/>}/>
       </Routes>
     </div>
   );
