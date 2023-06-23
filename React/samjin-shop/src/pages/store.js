@@ -1,5 +1,6 @@
 import {configureStore, createSlice} from '@reduxjs/toolkit';
 
+//user_state
 const user = createSlice({ //state생성
   name:'user',
   // initialState:'홍길동',
@@ -22,10 +23,49 @@ const user = createSlice({ //state생성
   }
 
 })//createSlice
+
 export const {changeName, changeYear} = user.actions; //actions는 변경함수
+
+//cart_state
+const cart = createSlice({
+  name: 'cart',
+  initialState: [],
+  reducers: {
+    addItem(state, action){
+      // state.push(action.payload)
+      const index = state.findIndex((findId)=>{return findId.id === action.payload.id});
+      if(index > -1){
+        state[index].count++
+      }else{
+        state.push(action.payload)
+      }
+    },
+
+    deleteItem(state, action){
+      const index = state.findIndex((findId)=>{return findId.id === action.payload});
+      state.splice(index,1)
+    },
+
+    addCount(state, action){
+      const index = state.findIndex((findId)=>{return findId.id === action.payload});
+      state[index].count++
+    },
+
+    subCount(state, action){
+      const index = state.findIndex((findId)=>{return findId.id === action.payload});
+      if(state[index].count > 1){
+      state[index].count--
+      }
+    }
+
+  }
+})
+
+export const {addItem, deleteItem, addCount, subCount}= cart.actions;
 
 export default configureStore({
   reducer:{
-    user:user.reducer
+    user:user.reducer,
+    cart:cart.reducer
   }
 })

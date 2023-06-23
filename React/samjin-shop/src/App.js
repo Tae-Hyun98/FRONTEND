@@ -9,6 +9,8 @@ import {useState } from 'react';
 import {Container, Nav, Navbar, Row, Col} from 'react-bootstrap';
 import {Routes, Route, Link, useNavigate} from 'react-router-dom';
 import styled from 'styled-components';
+import { useDispatch, useSelector } from 'react-redux';
+import { addItem } from './pages/store';
 
 const Button = styled.button`
   width: 50%;
@@ -25,6 +27,8 @@ function App() {
 
   const navigate = useNavigate()
   const [bests] = useState(data)  //useState로 상태관리
+  const state = useSelector((state)=> state)
+  const dispatch = useDispatch()
 
   return (
     <div className="App">
@@ -59,12 +63,14 @@ function App() {
                         <p>{best.desc}</p>
                         <p className='price'>{best.price}</p>
                       </div>
+                    </Link>
                       
                       <div className='btn'>
-                        <Button>장바구니</Button>
+                        <Button onClick={()=>{
+                          dispatch(addItem({id:best.id, title:best.title, count:1, price:best.price})
+                          )}}>장바구니</Button>
                         <Button>구매하기</Button>
                       </div>
-                    </Link>
                    
                   </Col>
                 )

@@ -3,14 +3,14 @@ const data = [{
     image: process.env.PUBLIC_URL + '/images/best_01.png',
     desc: '쫄깃하고 탱글탱글한 식감이 일품!',
     title: '캠핑어묵탕(순한맛)',
-    price: '8,900원'
+    price: 8900
   },
   {
     id: 'best-02',
     image: process.env.PUBLIC_URL + '/images/best_02.png',
     desc: '간편하게 어묵탕을 만들 수 있는 모듬어묵',
     title: '어묵탕모듬어묵 플러스',
-    price: '19,000원'
+    price: 19000
   },
   {
     id: 'best-03',
