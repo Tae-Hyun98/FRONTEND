@@ -65,7 +65,3 @@ export default function Cart() {
     </div>
   )
 }
-const count=document.querySelector('.count')
-const price=document.querySelector('.price')
-function tot(){
-}
