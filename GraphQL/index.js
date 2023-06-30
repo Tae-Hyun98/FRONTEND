@@ -6,8 +6,14 @@ const typeDefs = gql`
         teams: [Team],
         team(id: Int): Team,
         equipments: [Equipment],
-        supplies: [Supply]
+        supplies: [Supply],
     }
+
+    type Mutation {
+      insertEquipment(id: String, used_by: String, count:Int, new_or_used:String): Equipment
+      deleteEquipment(id: String): Equipment
+    }
+
     type Team {
         id: Int
         manager: String
@@ -42,8 +48,26 @@ const resolvers = {
     team:(parent, args, context, info) => database.teams.filter((team)=>{
       return team.id===args.id
     })[0]
+  },
 
-  }
+  Mutation:{
+    insertEquipment:(parent, args, context, info) => { 
+      database.equipments.push(args) //배열으로들어오니 push로한다.
+      return args
+    },
+    deleteEquipment:(parent, args, context, info) => {
+      const deleted = database.equipments.filter((equipment) => {
+        return equipment.id===args.id
+      })[0] //[0]은 하나만삭제 id같은거 반환
+
+      database.equipments = database.equipments.filter((equipment) => {
+        return equipment.id!==args.id
+      }) //id값이 같지않은것들을 보여준다
+
+      return deleted
+    }
+  },
+ 
 }
 
 const server = new ApolloServer({ typeDefs, resolvers })
