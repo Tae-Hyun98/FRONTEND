@@ -10,8 +10,9 @@ const typeDefs = gql`
     }
 
     type Mutation {
-      insertEquipment(id: String, used_by: String, count:Int, new_or_used:String): Equipment
+      insertEquipment(id: String, used_by: String, count:Int, new_or_used:String, aa:Int): Equipment
       deleteEquipment(id: String): Equipment
+      editEquipment(id: String used_by: String, count: Int, new_or_used: String, aa: Int): Equipment
     }
 
     type Team {
@@ -30,6 +31,7 @@ const typeDefs = gql`
         used_by: String
         count: Int
         new_or_used: String
+        aa: Int
     }
 
     type Supply{
@@ -39,7 +41,7 @@ const typeDefs = gql`
 `
 //resolvers 서버에 넘겨주는역할
 const resolvers = {
-  Query: {
+  Query: { //query는 조회
     teams: () => database.teams.map((team)=>{
       team.supplies = database.supplies.filter((supply)=>{return supply.team===team.id})
       return team
@@ -50,7 +52,7 @@ const resolvers = {
     })[0]
   },
 
-  Mutation:{
+  Mutation:{ //삽입삭제갱신 조작
     insertEquipment:(parent, args, context, info) => { 
       database.equipments.push(args) //배열으로들어오니 push로한다.
       return args
@@ -65,6 +67,14 @@ const resolvers = {
       }) //id값이 같지않은것들을 보여준다
 
       return deleted
+    },
+    editEquipment:(parent, args, context, info) => {
+      return database.equipments.filter((equipment)=>{
+        return equipment.id===args.id
+      }).map((equipment) => {
+        Object.assign(equipment, args) //Object에 assign(할당)
+        return equipment
+      })[0]
     }
   },
  
